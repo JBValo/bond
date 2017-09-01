@@ -1,0 +1,89 @@
+/* =============================================================================
+
+    LANGUAGE TOGGLE (SIDEBAR) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables: Basic ========================================================= */
+
+    /* Containers */
+    $language-toggle-background--sidebar: black;
+
+    /* Items */
+    $language-toggle-item-font-family--sidebar: $global-font-family;
+    $language-toggle-item-font-size--sidebar: 0.8rem;
+    $language-toggle-item-padding--sidebar: 1rem;
+    $language-toggle-count: 3;
+
+    /* Links */
+    $language-toggle-item-link-color--sidebar: gray;
+    $language-toggle-item-text-decoration--sidebar: none;
+
+        /* Links: Current */
+        $language-toggle-item-link-color--sidebar--current: white;
+
+        /* Links: Hover */
+        $language-toggle-item-link-color--sidebar--hover: white;
+
+/* Basic ==================================================================== */
+
+    /* Basic: Container */
+    .language-toggle--sidebar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: -1;
+        bottom: 100%;
+        left: 0;
+        background: $language-toggle-background--sidebar;
+        min-width: 100%;
+        transform: translate3d(0,100%,0);
+        transition: transform 300ms $global-easing 0ms;
+
+        @media $menu-media-query {
+            transform: translate3d(-100%,0,0);
+            bottom: auto;
+            left: 100%;
+            top: 0;
+            white-space: nowrap;
+        }
+
+        &.show {
+            transform: translate3d(0,0,0);
+            transition: transform 300ms $global-easing 0ms;
+        }
+
+        /* Basic: Items */
+        .language-toggle__item,
+        .language-toggle__item--current {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: $language-toggle-item-font-family--sidebar;
+            font-size: $language-toggle-item-font-size--sidebar;
+        }
+
+        /* Basic: Links */
+        .language-toggle__item-link {
+            color: $language-toggle-item-link-color--sidebar;
+            padding: $language-toggle-item-padding--sidebar;
+            text-decoration: $language-toggle-item-text-decoration--sidebar;
+            display: block;
+        }
+
+            /* Basic: Items: Current */
+            .language-toggle__item--current .language-toggle__item-link {
+                color: $language-toggle-item-link-color--sidebar--current;
+                pointer-events: none;
+            }
+
+    }
+
+    /* Basic: Hovers */
+    .no-touchevents .language-toggle--sidebar .language-toggle__item:not([class*="--current"]) .language-toggle__item-link:hover {
+        color: $language-toggle-item-link-color--sidebar--hover;
+    }

@@ -1,0 +1,22 @@
+/* =============================================================================
+
+    CARDS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $card-padding: 2rem;
+    $card-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    $card-border: 1px solid #ebebeb;
+
+/* Containers =============================================================== */
+.is-card {
+    box-shadow: $card-shadow !important;
+    padding: $card-padding !important;
+    border: $card-border !important;
+}

@@ -1,0 +1,260 @@
+/* =============================================================================
+
+    CONTENT AREA CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Tables: Global */
+    $table-alt-row-background: #ebebeb;
+
+        /* Tables: Headings */
+        $table-heading-background: black;
+        $table-heading-border: 1px solid #222;
+        $table-heading-padding: 1rem;
+        $table-heading-font-family: $global-font-family;
+        $table-heading-font-size: 1rem;
+        $table-heading-font-weight: normal;
+        $table-heading-font-style: normal;
+        $table-heading-text-transform: none;
+        $table-heading-color: white;
+        $table-heading-alignment: left;
+
+        /* Tables: Cells */
+        $table-cell-background: transparent;
+        $table-cell-border: 1px solid #ccc;
+        $table-cell-padding: $table-heading-padding;
+        $table-cell-font-family: $global-font-family;
+        $table-cell-font-size: 1rem;
+        $table-cell-font-weight: normal;
+        $table-cell-font-style: normal;
+        $table-cell-text-transform: none;
+        $table-cell-color: black;
+        $table-cell-alignment: left;
+
+    /* Images */
+    /* TRANSLATION-ITEM */
+    $broken-image-content: "Sorry, this image seems to be missing.";
+
+    /* Horizonal Rules */
+    $hr-border: 2px solid #ccc;
+    $hr-margin: 2rem 0;
+
+    /* Links */
+    $link-color: teal;
+    $link-text-decoration: underline;
+
+        /* Links: Active */
+        $link-color--active: blue;
+
+        /* Links: Visited */
+        $link-color--visited: gray;
+
+        /* Links: Hover */
+        $link-color--hover: green;
+
+/* All Styles =============================================================== */
+.content-area {
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+
+    }
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+
+    h4 {
+
+    }
+
+    h5 {
+
+    }
+
+    h6 {
+
+    }
+
+    /* Paragraphs */
+    p {
+
+    }
+
+    /* Links */
+    a:not([class]) {
+        color: $link-color;
+        text-decoration: $link-text-decoration;
+
+        /* Links: Visited */
+        &:visited {
+            color: $link-color--visited;
+        }
+
+        /* Links: Active */
+        &:active {
+            color: $link-color--active !important;
+        }
+
+    }
+
+    /* Lists */
+
+        /* All */
+        ul, ol {
+
+            li {
+                font-size: $font-scale-baseline;
+                font-family: $list-font-family;
+
+                @media $(l-tablet) {
+                    line-height: $paragraph-leading--desktop;
+                }
+                
+            }
+
+        }
+
+        /* Unordered */
+        ul {
+
+            li {
+
+            }
+
+        }
+
+        /* Ordered */
+        ol {
+
+            li {
+
+            }
+
+        }
+
+    /* Tables */
+    table {
+        border-collapse: collapse;
+        overflow: auto;
+        width: 100%;
+
+        thead {
+
+            tr {
+
+                td {
+                    background: $table-heading-background;
+                    border: $table-heading-border;
+                    padding: $table-heading-padding;
+                    font-family: $table-heading-font-family;
+                    font-size: $table-heading-font-size;
+                    font-weight: $table-heading-font-weight;
+                    font-style: $table-heading-font-style;
+                    text-transform: $table-heading-text-transform;
+                    color: $table-heading-color;
+                    text-align: $table-heading-alignment;
+                }
+
+            }
+
+        }
+
+        tbody {
+
+            tr {
+
+                td {
+                    background: $table-cell-background;
+                    border: $table-cell-border;
+                    padding: $table-cell-padding;
+                    font-family: $table-cell-font-family;
+                    font-size: $table-cell-font-size;
+                    font-weight: $table-cell-font-weight;
+                    font-style: $table-cell-font-style;
+                    text-transform: $table-cell-text-transform;
+                    color: $table-cell-color;
+                    text-align: $table-cell-alignment;
+                }
+
+                &:nth-child(even) {
+                    background: $table-alt-row-background;
+                }
+
+            }
+
+        }
+
+    }
+
+    /* Horizontal Rules */
+    hr {
+        height: 0;
+        margin: $hr-margin;
+        border: $hr-border;
+    }
+
+    /* Broken Images */
+    img {
+        text-align: center;
+        font-weight: normal;
+        line-height: 2;
+        height: auto;
+        display: block;
+        position: relative;
+        font-weight: bold;
+        font-family: $global-font-family;
+        background: #ebebeb;
+
+        /* Broken Images: Custom Text */
+        &:before {
+            content: $broken-image-content;
+            display: block;
+            font-weight: normal;
+            background: #ebebeb;
+            border-bottom: 0;
+            padding: 1rem 0 0;
+        }
+
+        /* Broken Images: URL */
+        &:after {
+            content: "(url: " attr(src) ")";
+            display: block;
+            font-weight: normal;
+            background: #ebebeb;
+            border-top: 0;
+            padding: 0 0 1rem;
+            word-break: break-all;
+        }
+
+    }
+
+}
+
+/* Hovers =================================================================== */
+.no-touchevents {
+
+    .content-area {
+
+        /* Links */
+        a:not([class]):hover {
+            color: $link-color--hover;
+        }
+
+    }
+
+}

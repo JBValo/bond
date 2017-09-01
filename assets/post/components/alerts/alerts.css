@@ -1,0 +1,135 @@
+/* =============================================================================
+
+    ALERTS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Items */
+    $alert-item-padding: 0.5rem 1rem;
+    $alert-item-radius: 3px;
+    $alert-item-border-width: 1px;
+
+    /* Content */
+    $alert-item-font-family: $global-font-family;
+    $alert-item-font-size: 0.9rem;
+    $alert-item-font-weight: bold;
+    $alert-item-font-style: normal;
+
+    /* Close Icon */
+    $alert-close-icon-stroke-width: 2px;
+    $alert-close-icon-size: 1.5rem;
+    $alert-close-icon-color: black;
+
+/* Containers =============================================================== */
+.alert__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Items ==================================================================== */
+[class*="alert__list-item--"] {
+    padding: $alert-item-padding;
+    font-family: $alert-item-font-family;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1rem;
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+}
+
+/* Alert Types ============================================================== */
+
+    /* Danger */
+    .alert__list-item--danger {
+        background: $color-utility--danger--pale;
+        color: $color-utility--danger;
+        border: $alert-item-border-width solid $color-utility--danger;
+        border-radius: $alert-item-radius;
+    }
+
+    /* Warning */
+    .alert__list-item--warning {
+        background: $color-utility--warning--pale;
+        color: $color-utility--warning;
+        border: $alert-item-border-width solid $color-utility--warning;
+        border-radius: $alert-item-radius;
+    }
+
+    /* Success */
+    .alert__list-item--success {
+        background: $color-utility--success--pale;
+        color: $color-utility--success;
+        border: $alert-item-border-width solid $color-utility--success;
+        border-radius: $alert-item-radius;
+    }
+
+    /* Neutral */
+    .alert__list-item--neutral {
+        background: $color-utility--neutral--pale;
+        color: $color-utility--neutral;
+        border: $alert-item-border-width solid $color-utility--neutral;
+        border-radius: $alert-item-radius;
+    }
+
+/* Content ================================================================== */
+.alert__list-item-content {
+    font-size: $alert-item-font-size;
+    font-weight: $alert-item-font-weight;
+    font-style: $alert-item-font-style;
+    padding: 0 1rem 0 0;
+    margin: 0;
+
+    a {
+        color: inherit;
+    }
+
+}
+
+/* Close Icon =============================================================== */
+.alert__list-item-close {
+    display: block;
+    position: relative;
+    width: $alert-close-icon-size;
+    height: $alert-close-icon-size;
+    transform: rotate(45deg) translate(25%,-25%);
+    transform-origin: center;
+    opacity: 0.5;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $alert-close-icon-color;
+    }
+
+    &:before {
+        height: calc($alert-close-icon-size / 2);
+        width: $alert-close-icon-stroke-width;
+    }
+
+    &:after {
+        width: calc($alert-close-icon-size / 2);
+        height: $alert-close-icon-stroke-width;
+    }
+
+}
+
+/* Hover */
+.alert__list-item-close:hover {
+    opacity: 0.75;
+}

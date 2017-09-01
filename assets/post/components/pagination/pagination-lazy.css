@@ -1,0 +1,52 @@
+/* =============================================================================
+
+    PAGINATION (LAZY LOAD) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $pagination-spacing--lazy: 2rem 0 0;
+
+
+/* Containers =============================================================== */
+.pagination--lazy {
+    margin: $pagination-spacing--lazy;
+}
+
+/* Button =================================================================== */
+
+    /* State: Loading */
+    .pagination--lazy .pagination__button.loading {
+        opacity: 0.5;
+        animation: breathe 1s infinite;
+        pointer-events: none;
+    }
+
+    /* State: All Loaded */
+    .pagination--lazy .pagination__button.all-loaded {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+/* Animation ================================================================ */
+@keyframes breathe {
+
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+
+}

@@ -1,0 +1,188 @@
+/* =============================================================================
+
+    TYPOGRAPHY CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Global */
+    $global-font-family: Arial, Helvetica, sans-serif;
+
+    /* Headings */
+    $heading-font-family: $global-font-family;
+
+    /* Paragraphs */
+    $paragraph-font-family: $global-font-family;
+    $paragraph-leading--desktop: 1.5;
+
+    /* Lists */
+    $list-font-family: $global-font-family;
+
+    /* Responsive Tables */
+    /* TRANSLATION-ITEM */
+    $table-scroll-hint-content: "Hint: You can scroll the table horizontally.";
+    $table-scroll-hint-color: gray;
+    $table-scroll-hint-font-size: 0.8rem;
+    $table-min-width: 250%; /* Minimum width of tables in responsive state. */
+
+    /* Blockquotes */
+    $blockquote-padding: 2rem;
+    $blockquote-margin: 2rem 0;
+    $blockquote-font-family: $paragraph-font-family;
+    $blockquote-font-size: 1.5rem;
+    $blockquote-font-style: italic;
+    $blockquote-font-weight: normal;
+    $blockquote-color: black;
+    $blockquote-border-size: 5px;
+    $blockquote-border-width: $blockquote-border-size 0;
+    $blockquote-border-color: black;
+
+/* Font Standard ============================================================ */
+html {
+    font-size: responsive;
+    min-font-size: 16px;
+    /*max-font-size: 21px;*/
+    /*line-height: responsive;*/
+    /*min-line-height: 1.2em;*/
+    /*max-line-height: 1.5em;*/
+}
+
+/* Type Scale =============================================================== */
+$font-scale: 1.333; /* Perfect Fourth */
+
+$font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
+$font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));
+$font-scale-h3: calc(1rem*($font-scale*($font-scale)));
+$font-scale-h4: calc(1rem*($font-scale));
+$font-scale-baseline: 1rem;
+$font-scale-small: calc(1rem*($font-scale/2));
+
+/* Headings ================================================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+}
+
+h1 {
+    font-size: $font-scale-h1;
+}
+
+h2 {
+    font-size: $font-scale-h2;
+}
+
+h3 {
+    font-size: $font-scale-h3;
+}
+
+h4 {
+    font-size: $font-scale-h4;
+}
+
+h5 {
+    font-size: $font-scale-baseline;
+}
+
+h6 {
+    font-size: $font-scale-small;
+}
+
+/* Paragraphs =============================================================== */
+p {
+    font-size: $font-scale-baseline;
+    font-family: $paragraph-font-family;
+    line-height: normal;
+
+    @media $(l-tablet) {
+        line-height: $paragraph-leading--desktop;
+    }
+
+}
+
+/* Lists ==================================================================== */
+
+    /* All */
+    ul, ol {
+
+        li {
+
+        }
+
+    }
+
+    /* Lists: Unordered */
+    ul {
+
+        li {
+
+        }
+
+    }
+
+    /* Lists: Ordered */
+    ol {
+
+        li {
+
+        }
+
+    }
+
+/* Blockquotes ============================================================== */
+blockquote {
+    border: $blockquote-border-width solid $blockquote-border-color;
+    border-width: $blockquote-border-width;
+    padding: $blockquote-padding;
+    margin: $blockquote-margin;
+    font-family: $blockquote-font-family;
+    font-weight: $blockquote-font-weight;
+    font-style: $blockquote-font-style;
+    font-size: $blockquote-font-size;
+    color: $blockquote-color;
+}
+
+/* Responsive Tables ======================================================== */
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+
+    /* Scroll Hint */
+    &:before {
+        content: $table-scroll-hint-content;
+        color: $table-scroll-hint-color;
+        font-size: $table-scroll-hint-font-size;
+        font-family: $global-font-family;
+        text-align: left;
+        display: block;
+
+        @media $(p-tablet) {
+            display: none;
+        }
+
+    }
+
+    table {
+        min-width: $table-min-width;
+
+        @media $(p-tablet) {
+            min-width: 0;
+        }
+
+    }
+
+}
+
+/* Tel Links ================================================================ */
+/* Prevent clickable tel links on desktop / non-touch devices. */
+.no-touchevents {
+
+    a[href^="tel:"] {
+        pointer-events: none;
+    }
+
+}

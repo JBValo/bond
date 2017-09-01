@@ -1,0 +1,51 @@
+/* =============================================================================
+
+    COLUMNS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $columns-grid: 2fr 1fr;
+    $columns-grid-gap: 0;
+    $columns-breakpoint: $(p-tablet);
+
+    /* Columns */
+    $column-padding: $padding-unit 0;
+
+        /* Left */
+        $column-background--left: transparent;
+
+        /* Right */
+        $column-background--right: #ebebeb;
+
+/* Containers =============================================================== */
+.column-section {
+
+    @media $columns-breakpoint {
+        display: grid;
+        grid-template-columns: $columns-grid;
+        grid-gap: $columns-grid-gap;
+    }
+
+}
+
+/* Columns ================================================================== */
+[class*="column--"] {
+    padding: $column-padding;
+}
+
+    /* Columns: Left */
+    .column--left {
+        background: $column-background--left;
+    }
+
+    /* Columns: Right */
+    .column--right {
+        background: $column-background--right;
+    }

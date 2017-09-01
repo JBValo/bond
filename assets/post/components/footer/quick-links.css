@@ -1,0 +1,79 @@
+/* =============================================================================
+
+    FOOTER QUICK LINKS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Links */
+    $main-footer-quick-links-item-spacing: 0.5rem;
+    $main-footer-quick-links-font-family: $global-font-family;
+    $main-footer-quick-links-font-color: white;
+    $main-footer-quick-links-font-weight: normal;
+    $main-footer-quick-links-font-size: 1rem;
+    $main-footer-quick-links-font-style: normal;
+    $main-footer-quick-links-text-transform: none;
+
+        /* Links: Hover */
+        $main-footer-quick-links-font-color--hover: gray;
+
+/* Containers =============================================================== */
+.main-footer__quick-links-wrapper {
+    width: 100%;
+    margin: 0 0 2rem;
+
+    @media $(p-tablet) {
+        width: auto;
+        margin: 0;
+    }
+
+}
+
+.main-footer__quick-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Items ==================================================================== */
+.main-footer__quick-links-item {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media $(p-tablet) {
+        width: auto;
+    }
+
+}
+
+/* Links ==================================================================== */
+.main-footer__quick-links-item-link {
+    font-family: $main-footer-quick-links-font-family;
+    color: $main-footer-quick-links-font-color;
+    font-weight: $main-footer-quick-links-font-weight;
+    font-size: $main-footer-quick-links-font-size;
+    font-style: $main-footer-quick-links-font-style;
+    text-transform: $main-footer-quick-links-text-transform;
+    padding: $main-footer-quick-links-item-spacing 0;
+    display: block;
+
+    @media $(p-tablet) {
+        padding: 0 $main-footer-quick-links-item-spacing;
+    }
+
+}
+
+/* Hovers =================================================================== */
+.no-touchevents {
+
+    .main-footer__quick-links-item-link:hover {
+        color: $main-footer-quick-links-font-color--hover;
+    }
+
+}

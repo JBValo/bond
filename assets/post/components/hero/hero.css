@@ -1,0 +1,319 @@
+/* =============================================================================
+
+    HERO CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $hero-height: 85vh; /* Sets the minimum height of the hero */
+
+    /* Overlay */
+    $hero-overlay-background: rgba(255,255,255,0.1);
+
+    /* Slide Content */
+    $hero-slide-alignment: center;
+
+        /* Subtitle */
+        $hero-subtitle-font-weight: normal;
+        $hero-subtitle-font-style: normal;
+        $hero-subtitle-text-transform: none;
+        $hero-subtitle-color: black;
+        $hero-subtitle-spacing: 0;
+        $hero-subtitle-padding: 0;
+
+        /* Title */
+        $hero-title-font-weight: normal;
+        $hero-title-font-style: normal;
+        $hero-title-text-transform: none;
+        $hero-title-color: black;
+        $hero-title-spacing: 1rem 0;
+        $hero-title-padding: 0;
+
+        /* Content */
+        $hero-content-font-weight: normal;
+        $hero-content-font-style: normal;
+        $hero-content-text-transform: none;
+        $hero-content-color: black;
+        $hero-content-spacing: 0;
+        $hero-content-padding: 0;
+
+        /* Call to Action */
+        $hero-cta-spacing: $hero-title-spacing 0 0;
+
+    /* Arrows */
+    $hero-arrow-size: 3rem; /* Sets both width and height */
+    $hero-arrow-background: gray;
+    $hero-arrow-radius: 100%;
+    $hero-arrow-buffer: 2rem; /* Controls the space on the left and right */
+
+        /* Arrows: Icons */
+        $hero-arrow-icon-size: 50%;
+
+        /* Arrows: Hover */
+        $hero-arrow-background--hover: black;
+
+    /* Dots */
+    $hero-dot-size: 1rem; /* Sets both width and height */
+    $hero-dot-position: right; /* Uses text-align */
+    $hero-dot-spacing: 0.25rem; /* The space between each dot */
+    $hero-dot-radius: 100%;
+    $hero-dot-border: 2px solid black;
+    $hero-dot-color: white;
+
+        /* Dots: Current */
+        $hero-dot-color--current: black;
+
+/* Layering (Z-Index) ======================================================= */
+.slick-list {
+    z-index: 10;
+}
+
+.slick-arrow {
+    z-index: 20;
+}
+
+.slick-dots {
+    z-index: 20;
+}
+
+.hero__slide-content-container {
+    z-index: 20;
+}
+
+/* Base ===================================================================== */
+.hero {
+    position: relative;
+}
+
+/* Slick Specific =========================================================== */
+.slick-list {
+    min-height: $hero-height;
+    position: relative;
+}
+
+.slick-track {
+    min-height: $hero-height;
+}
+
+.slick-slide {
+    outline: none;
+    min-height: $hero-height;
+}
+
+/* Hero: Slides ============================================================= */
+.hero__slide {
+    text-align: $hero-slide-alignment;
+    display: flex !important;
+    flex-flow: column wrap;
+    justify-content: center;
+    cursor: grab;
+    position: relative;
+
+    &:active {
+        cursor: grabbing;
+    }
+
+}
+
+/* Hero: Slide Content ====================================================== */
+.hero__slide-subtitle {
+    font-weight: $hero-subtitle-font-weight;
+    font-style: $hero-subtitle-font-style;
+    text-transform: $hero-subtitle-text-transform;
+    color: $hero-subtitle-color;
+    margin: $hero-subtitle-spacing;
+    padding: $hero-subtitle-padding;
+}
+
+.hero__slide-title {
+    font-weight: $hero-title-font-weight;
+    font-style: $hero-title-font-style;
+    text-transform: $hero-title-text-transform;
+    color: $hero-title-color;
+    margin: $hero-title-spacing;
+    padding: $hero-title-padding;
+}
+
+.hero__slide-content {
+    font-weight: $hero-title-font-weight;
+    font-style: $hero-title-font-style;
+    text-transform: $hero-title-text-transform;
+    color: $hero-title-color;
+    margin: $hero-title-spacing;
+    padding: $hero-content-padding;
+}
+
+.hero__slide-cta {
+    margin: $hero-cta-spacing;
+}
+
+/* Hero: Navigation Arrows ================================================== */
+.slick-arrow {
+    font-size: $hero-arrow-icon-size;
+    border-radius: $hero-arrow-radius;
+    background: $hero-arrow-background;
+    width: $hero-arrow-size;
+    height: $hero-arrow-size;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+    cursor: pointer;
+    outline: none;
+    display: none;
+
+    @media $(p-tablet) {
+        display: block;
+    }
+
+    /* Prev */
+    &.slick-prev {
+        left: $hero-arrow-buffer;
+    }
+
+    /* Next */
+    &.slick-next {
+        right: $hero-arrow-buffer;
+    }
+
+}
+
+    /* Hero: Arrows (Hover) */
+    .no-touchevents {
+
+        .slick-arrow:hover {
+            background: $hero-arrow-background--hover;
+        }
+
+    }
+
+    /* Hero: Arrows: Icons */
+    [class*="hero__arrow-icon--"] {
+        width: $hero-arrow-icon-size;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+/* Hero: Dots =============================================================== */
+.slick-dots {
+    text-align: $hero-dot-position;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    margin: 0;
+    display: none;
+
+    @media $(p-tablet) {
+      display: block;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 $hero-dot-spacing;
+
+        &.slick-active {
+
+            button:after {
+                display: block;
+            }
+
+        }
+
+    }
+
+    button {
+        border-radius: $hero-dot-radius;
+        background: $hero-dot-color;
+        width: $hero-dot-size;
+        height: $hero-dot-size;
+        border: $hero-dot-border;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        text-indent: -9999px;
+
+        &:after {
+            width: calc($hero-dot-size / 2);
+            height: calc($hero-dot-size / 2);
+            background: $hero-dot-color--current;
+            border-radius: $hero-dot-radius;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-50%,0);
+            content: "";
+            display: none;
+        }
+
+    }
+
+}
+
+/* Hero: Overlay ============================================================ */
+.hero__slide:before {
+    background: $hero-overlay-background;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Hero: Video Background =================================================== */
+.touchevents {
+
+    .hero__video-container {
+
+        video {
+            display: none;
+        }
+
+        .hero__video-poster {
+            display: block !important;
+        }
+
+    }
+
+}
+
+.hero__video-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    video {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+}
+
+.hero__video-poster {
+    display: none;
+
+    img {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+}

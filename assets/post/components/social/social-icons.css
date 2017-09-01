@@ -1,0 +1,171 @@
+/* =============================================================================
+
+    SOCIAL ICONS CSS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Items */
+    $social-icons-spacing: 0 0.25rem;
+
+    /* Links */
+    $social-icons-link-radius: 100%;
+    $social-icons-link-size: 3rem; /* sets both width and height to the box */
+
+    /* Icons */
+    $social-icons-icon-size: 1.5rem;
+    $social-icons-icon-color: white;
+
+        /* Dribbble */
+        $social-icons-icon-size--dribbble: $social-icons-icon-size;
+
+        /* Facebook */
+        $social-icons-icon-size--facebook: 1.25rem;
+
+        /* Google Plus */
+        $social-icons-icon-size--google-plus: $social-icons-icon-size;
+
+        /* Instagram */
+        $social-icons-icon-size--instagram: $social-icons-icon-size;
+
+        /* Linkedin */
+        $social-icons-icon-size--linkedin: 1.25rem;
+
+        /* Pinterest */
+        $social-icons-icon-size--pinterest: $social-icons-icon-size;
+
+        /* Twitter */
+        $social-icons-icon-size--twitter: 1.25rem;
+
+        /* Youtube */
+        $social-icons-icon-size--youtube: $social-icons-icon-size;
+
+/* Container ================================================================ */
+.social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Items ==================================================================== */
+.social-icons__item {
+    padding: $social-icons-spacing;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Links ==================================================================== */
+.social-icons__item-link {
+    border-radius: $social-icons-link-radius;
+    width: $social-icons-link-size;
+    height: $social-icons-link-size;
+    text-align: center;
+    position: relative;
+    padding: 50% 0;
+    display: block;
+
+    /* Dribbble */
+    &[href*="dribbble.com"] {
+        background: $dribbble-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--dribbble;
+            height: $social-icons-icon-size--dribbble;
+        }
+
+    }
+
+    /* Facebook */
+    &[href*="facebook"] {
+        background: $facebook-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--facebook;
+            height: $social-icons-icon-size--facebook;
+        }
+
+    }
+
+    /* Google Plus */
+    &[href*="plus.google.com"] {
+        background: $gplus-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--google-plus;
+            height: $social-icons-icon-size--google-plus;
+        }
+
+    }
+
+    /* Instagram */
+    &[href*="instagram.com"] {
+        background: $instagram-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--instagram;
+            height: $social-icons-icon-size--instagram;
+        }
+
+    }
+
+    /* LinkedIn */
+    &[href*="linkedin"] {
+        background: $linkedin-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--linkedin;
+            height: $social-icons-icon-size--linkedin;
+        }
+
+    }
+
+    /* Pinterest */
+    &[href*="pinterest.com"] {
+        background: $pinterest-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--pinterest;
+            height: $social-icons-icon-size--pinterest;
+        }
+
+    }
+
+    /* Twitter */
+    &[href*="twitter"] {
+        background: $twitter-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--twitter;
+            height: $social-icons-icon-size--twitter;
+        }
+
+    }
+
+    /* YouTube */
+    &[href*="youtube.com"] {
+        background: $youtube-brand;
+
+        [class*="core-icon--"] {
+            width: $social-icons-icon-size--youtube;
+            height: $social-icons-icon-size--youtube;
+        }
+
+    }
+
+}
+
+/* Icons ==================================================================== */
+.social-icons__item [class*="core-icon--"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    fill: $social-icons-icon-color;
+    width: $social-icons-icon-size;
+    height: $social-icons-icon-size;
+}

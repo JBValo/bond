@@ -1,0 +1,190 @@
+/* =============================================================================
+
+    SEARCH RESULTS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Groups */
+    $search-results-group-margin: 2rem;
+    $search-results-group-padding: 2rem;
+
+        /* Groups: Title */
+        $search-results-group-title-margin: 0 0 2rem;
+
+    /* Single Results */
+    $search-results-result-margin: 0;
+    $search-results-result-padding: 2rem 0;
+    $search-results-result-border: 1px solid #ccc;
+
+        /* Single: Label */
+        $search-results-result-label-margin: 0;
+
+        /* Single: Title */
+        $search-results-result-title-margin: 0.5rem 0;
+
+        /* Single: Title Link */
+        $search-results-result-title-link-color: $link-color;
+        $search-results-result-title-link-text-decoration: underline;
+
+            /* Single: Title Link: Hover */
+            $search-results-result-title-link-color--hover: $link-color--hover;
+
+        /* Single: Meta */
+        $search-results-result-meta-margin: 0;
+
+        /* Single: Excerpt */
+
+
+        /* Single: CTA */
+
+
+    /* Categories */
+    $search-results-categories-margin: 1rem 0 0;
+
+        /* Categories: Links */
+        $search-results-categories-font-family: $global-font-family;
+        $search-results-categories-link-font-weight: bold;
+        $search-results-categories-link-font-size: 1rem;
+        $search-results-categories-link-padding: 1rem 0;
+        $search-results-categories-link-border: 1px solid #ccc;
+        $search-result-categories-link-color: teal;
+
+        /* Categories: Links: Hover */
+        $search-result-categories-link-color--hover: black;
+
+/* Groups =================================================================== */
+
+    /* Groups: Container */
+    .search-results__result-group {
+        margin-top: $search-results-group-margin;
+        padding-top: $search-results-group-padding;
+    }
+
+    /* Groups: Title */
+    .search-results__result-group-title {
+        margin: $search-results-group-title-margin;
+    }
+
+/* Single Results =========================================================== */
+
+    /* Single: Container */
+    .search-results__result {
+        margin: $search-results-result-margin;
+        padding: $search-results-result-padding;
+        border-bottom: $search-results-result-border;
+    }
+
+        /* Single: First Reset */
+        .search-results__result-group {
+
+            .search-results__result:first-of-type {
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            .search-results__result:last-of-type {
+                margin-bottom: 0;
+            }
+
+        }
+
+    /* Single: Label */
+    .search-results__result-label {
+        margin: $search-results-result-label-margin;
+    }
+
+    /* Single: Title */
+    .search-results__result-title {
+        margin: $search-results-result-title-margin;
+    }
+
+    /* Single: Title Link */
+    .search-results__result-title-link {
+        color: $search-results-result-title-link-color;
+        text-decoration: $search-results-result-title-link-text-decoration;
+    }
+
+        /* Single: Title Link: Hover */
+        .no-touchevents .search-results__result-title-link:hover {
+            color: $search-results-result-title-link-color--hover;
+        }
+
+    /* Single: Meta */
+    .search-results__result-meta {
+        margin: $search-results-result-meta-margin;
+    }
+
+    /* Single: Excerpt */
+    .search-results__result-excerpt {
+
+    }
+
+    /* Single: CTA */
+    .search-results__result-cta {
+
+    }
+
+/* Categories Sidebar ======================================================= */
+
+    /* Container */
+    .search-results__categories {
+
+    }
+
+    /* Title */
+    .search-results__categories-title {
+        margin: 0;
+    }
+
+    /* List */
+    .search-results__categories-list {
+        margin: $search-results-categories-margin;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* List Item */
+    .search-results__categories-list-item {
+
+    }
+
+    /* List Item Link */
+    .search-results__categories-list-item-link {
+        font-family: $search-results-categories-font-family;
+        font-weight: $search-results-categories-link-font-weight;
+        font-size: $search-results-categories-link-font-size;
+        padding: $search-results-categories-link-padding;
+        border-bottom: $search-results-categories-link-border;
+        color: $search-result-categories-link-color;
+        display: block;
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+        /* List Item Link: Hover */
+        .no-touchevents .search-results__categories-list-item-link:hover {
+            color: $search-result-categories-link-color--hover;
+        }
+
+    /* Count */
+    .search-results__categories-list-item-count {
+        display: block;
+        text-align: right;
+    }
+
+/* Mobile Filter Trigger ==================================================== */
+.search-results__filter-trigger {
+    display: inline-block;
+
+    @media $columns-breakpoint {
+        display: none;
+    }
+
+}

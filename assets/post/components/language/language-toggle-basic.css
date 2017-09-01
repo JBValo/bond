@@ -1,0 +1,76 @@
+/* =============================================================================
+
+    LANGUAGE TOGGLE (BASIC) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables: Basic ========================================================= */
+
+    /* Containers */
+    $language-toggle-background--basic: black;
+
+    /* Items */
+    $language-toggle-item-font-family--basic: $global-font-family;
+    $language-toggle-item-font-size--basic: 0.8rem;
+    $language-toggle-item-padding--basic: 0.25rem;
+
+    /* Links */
+    $language-toggle-item-link-color--basic: gray;
+    $language-toggle-item-text-decoration--basic: none;
+
+        /* Links: Current */
+        $language-toggle-item-link-color--basic--current: white;
+
+        /* Links: Hover */
+        $language-toggle-item-link-color--basic--hover: white;
+
+/* Basic ==================================================================== */
+
+    /* Basic: Container */
+    .language-toggle--basic {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: calc($main-header-padding / 2);
+        padding: $language-toggle-item-padding--basic;
+        background: $language-toggle-background--basic;
+
+        @media $menu-media-query {
+            right: $main-header-padding;
+        }
+
+        /* Basic: Items */
+        .language-toggle__item,
+        .language-toggle__item--current {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: $language-toggle-item-font-family--basic;
+            font-size: $language-toggle-item-font-size--basic;
+        }
+
+        /* Basic: Links */
+        .language-toggle__item-link {
+            color: $language-toggle-item-link-color--basic;
+            padding: $language-toggle-item-padding--basic;
+            text-decoration: $language-toggle-item-text-decoration--basic;
+            display: block;
+        }
+
+            /* Basic: Items: Current */
+            .language-toggle__item--current .language-toggle__item-link {
+                color: $language-toggle-item-link-color--basic--current;
+                pointer-events: none;
+            }
+
+    }
+
+    /* Basic: Hovers */
+    .no-touchevents .language-toggle--basic .language-toggle__item:not([class*="--current"]) .language-toggle__item-link:hover {
+        color: $language-toggle-item-link-color--basic--hover;
+    }

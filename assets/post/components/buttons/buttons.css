@@ -1,0 +1,101 @@
+/* =============================================================================
+
+    BUTTONS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Basic */
+    $button-padding: 0.75rem 1.25rem;
+    $button-radius: 3px;
+    $button-font-family: $global-font-family;
+    $button-font-size: 1rem;
+    $button-font-weight: bold;
+    $button-font-style: normal;
+    $button-text-transform: none;
+    $button-background: gray;
+    $button-color: black;
+
+        /* Basic: Hover */
+        $button-background--hover: black;
+        $button-color--hover: white;
+
+    /* Link */
+    $button-padding--link: 0;
+    $button-font-family--link: $global-font-family;
+    $button-font-size--link: 0.8rem;
+    $button-font-weight--link: bold;
+    $button-font-style--link: normal;
+    $button-text-transform--link: none;
+
+/* Form Buttons ============================================================= */
+button,
+input[type="submit"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Basic ==================================================================== */
+.button--basic {
+    padding: $button-padding;
+    border-radius: $button-radius;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    font-style: $button-font-style;
+    text-transform: $button-text-transform;
+    text-decoration: none;
+    background: black;
+    color: white;
+    display: inline-block;
+}
+
+    /* Basic: Hover */
+    .no-touchevents {
+
+        .button--basic:hover {
+            background: gray;
+        }
+
+    }
+
+/* Link ===================================================================== */
+.button--link {
+    padding: $button-padding--link;
+    font-family: $button-font-family--link;
+    font-size: $button-font-size--link;
+    font-weight: $button-font-weight--link;
+    font-style: $button-font-style--link;
+    text-transform: $button-text-transform--link;
+    color: gray;
+    display: inline-block;
+}
+
+    /* Basic: Hover */
+    .no-touchevents {
+
+        .button--link:hover {
+            color: black;
+        }
+
+    }
+
+/* State: Disabled ========================================================== */
+button,
+input[type="submit"],
+[class*="button--"] {
+
+    &.disabled,
+    &[disabled] {
+        pointer-events: none;
+        opacity: 0.35;
+    }
+
+}

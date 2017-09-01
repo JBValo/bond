@@ -1,0 +1,38 @@
+/* =============================================================================
+
+    HEADER CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $main-header-padding: 2rem;
+    $main-header-background: white;
+
+/* Main Header ============================================================== */
+.main-header {
+    padding: calc($main-header-padding / 2);
+    position: relative;
+    background: $main-header-background;
+
+    @media $menu-media-query {
+        padding: $main-header-padding;
+    }
+
+}
+
+.main-header__container {
+
+}
+
+/* Fixed Header ============================================================= */
+.main-header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

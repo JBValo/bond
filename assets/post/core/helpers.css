@@ -1,0 +1,126 @@
+/* =============================================================================
+
+    HELPERS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Dimensions =============================================================== */
+.full-width {
+    width: 100% !important;
+}
+
+/* Scroll =================================================================== */
+.hide-overflow {
+    overflow: hidden;
+}
+
+/* Alignments =============================================================== */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Padding ================================================================== */
+.flush-top {
+    padding-top: 0 !important;
+}
+
+.flush-bottom {
+    padding-bottom: 0 !important;
+}
+
+.flush {
+    padding: 0 !important;
+}
+
+/* Lists ==================================================================== */
+.ul-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-inline {
+
+    > li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
+
+/* Backgrounds ============================================================== */
+.bg-size--cover {
+    background-size: cover;
+}
+
+.bg-size--contain {
+    background-size: contain;
+}
+
+.bg-pos--center {
+    background-position: center;
+}
+
+/* Flexbox ================================================================== */
+
+    /* Base */
+    [class*="flex--"] {
+        display: flex;
+    }
+
+    /* Row */
+    .flex--row {
+        flex-flow: row wrap;
+    }
+
+    /* Column */
+    .flex--column {
+        flex-flow: column wrap;
+    }
+
+    /* Justification */
+    .flex--justify-between {
+        justify-content: space-between;
+    }
+
+    /* Alignments */
+    .flex--align-start {
+        align-items: flex-start;
+    }
+
+    .flex--align-middle {
+        align-items: center;
+    }
+
+    .flex--align-end {
+        align-items: flex-end;
+    }
+
+/* CSS Filters ============================================================== */
+
+    /* Grayscale */
+    .filter--gray {
+        filter: grayscale(1);
+    }
+
+    /* Blur */
+    .filter--blur {
+        filter: blur(3px);
+    }
+
+    /* Blur (Strong) */
+    .filter--blur-strong {
+        filter: blur(20px);
+    }

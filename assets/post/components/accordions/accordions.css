@@ -1,0 +1,101 @@
+/* =============================================================================
+
+    ACCORDIONS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Items */
+    $accordion-spacing: 1rem; /* space between each accordion */
+    $accordion-border: 1px solid #ccc;
+    $accordion-margin: 0 0 $accordion-spacing;
+    $accordion-padding: $accordion-spacing 0 calc($accordion-spacing * 2) 0;
+
+    /* Title */
+    $accordion-title-font-weight: bold;
+    $accordion-title-font-style: normal;
+    $accordion-title-color: $link-color;
+    $accordion-title-text-decoration: underline;
+
+        /* Title: Hover */
+        $accordion-title-color--hover: $link-color--hover;
+
+    /* Indicator */
+    $accordion-indicator-size: 7px;
+    $accordion-indicator-color: #ccc;
+
+/* Containers =============================================================== */
+.accordions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Items ==================================================================== */
+.accordions__item {
+    border-bottom: $accordion-border;
+    margin: $accordion-margin;
+    padding: $accordion-padding;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+/* Title ==================================================================== */
+.accordions__item-title {
+    font-weight: $accordion-title-font-weight;
+    font-style: $accordion-title-font-style;
+    color: $accordion-title-color;
+    margin: 0;
+}
+
+/* Title Link =============================================================== */
+.accordions__item-title-link {
+    text-decoration: $accordion-title-text-decoration;
+    display: block;
+    max-width: 95%;
+    position: relative;
+    color: inherit;
+}
+
+    /* Hovers */
+    .accordions__item-title-link:hover {
+        color: $accordion-title-color--hover;
+    }
+
+/* Indicator ================================================================ */
+.accordions__item-title-link:after {
+    border: $accordion-indicator-size solid $accordion-indicator-color;
+    border-color: $accordion-indicator-color transparent transparent transparent;
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+    display: block;
+}
+
+/* Content ================================================================== */
+.accordions__item-content {
+    display: none;
+}
+
+/* Hide / Show ============================================================== */
+.accordions__item.show {
+
+    .accordions__item-title-link:after {
+        border-color: transparent transparent $accordion-indicator-color transparent;
+    }
+
+    .accordions__item-content {
+        display: block;
+    }
+
+}

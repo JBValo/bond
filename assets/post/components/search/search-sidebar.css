@@ -1,0 +1,93 @@
+/* =============================================================================
+
+    SEARCH (SIDEBAR) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Title */
+    $sidebar-search-title-margin: 0;
+    $sidebar-search-title-color: black;
+    $sidebar-search-title-font-family: $global-font-family;
+    $sidebar-search-title-font-weight: bold;
+    $sidebar-search-title-font-style: normal;
+    $sidebar-search-title-text-transform: none;
+
+    /* Content */
+    $sidebar-search-content-margin: 0;
+    $sidebar-search-content-color: black;
+    $sidebar-search-content-font-family: $global-font-family;
+    $sidebar-search-content-font-weight: normal;
+    $sidebar-search-content-font-style: normal;
+    $sidebar-search-content-text-transform: none;
+
+    /* Form */
+    $sidebar-search-form-margin: 1rem 0 0;
+    $sidebar-search-form-grid-gap: 1rem;
+
+        /* Input */
+        $sidebar-search-form-input-padding: 1rem;
+
+        /* Button */
+
+/* Container ================================================================ */
+[class*="sidebar-nav__pane--"].search-pane {
+
+    @media $menu-media-query {
+        height: auto;
+    }
+
+}
+
+/* Content ================================================================== */
+
+    /* Title */
+    .sidebar-nav__search-form-title {
+        margin: $sidebar-search-title-margin;
+        color: $sidebar-search-title-color;
+        font-family: $sidebar-search-title-font-family;
+        font-weight: $sidebar-search-title-font-weight;
+        font-style: $sidebar-search-title-font-style;
+        text-transform: $sidebar-search-title-text-transform;
+    }
+
+    /* Content */
+    .sidebar-nav__search-form-content {
+        margin: $sidebar-search-content-margin;
+        color: $sidebar-search-content-color;
+        font-family: $sidebar-search-content-font-family;
+        font-weight: $sidebar-search-content-font-weight;
+        font-style: $sidebar-search-content-font-style;
+        text-transform: $sidebar-search-content-text-transform;
+    }
+
+/* Form ===================================================================== */
+.sidebar-nav__search-form {
+    margin: $sidebar-search-form-margin;
+
+    @media $(l-phone) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: $sidebar-search-form-grid-gap;
+    }
+
+}
+
+    /* Input */
+    .sidebar-nav__search-input {
+        padding: $sidebar-search-form-input-padding;
+        width: 100%;
+        margin: 0 0 1rem;
+
+        @media $(l-phone) {
+            margin: 0;
+        }
+
+    }
+
+    /* Button */

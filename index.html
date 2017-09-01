@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    <head>
+
+        <!-- Meta Data -->
+        <meta charset="utf-8">
+        <title>Bond: Component Library</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex,follow">
+
+        <!-- Fonts -->
+        <!-- Use Google Fonts or Typekit -->
+
+        <!-- Favicons -->
+        <!-- Use realfavicongenerator.net -->
+
+        <!-- Vendor Dependencies -->
+        <!-- If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json -->
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="assets/vendor/modernizr.js"></script>
+
+        <!-- Vendor CSS: Normalize -->
+        <link rel="stylesheet" href="assets/vendor/normalize.css" type="text/css" media="all">
+
+        <!-- Vendor CSS: Slick -->
+        <link rel="stylesheet" href="assets/vendor/slick.css" type="text/css" media="all" />
+
+        <!-- Vendor CSS: Pikaday -->
+        <link rel="stylesheet" href="assets/vendor/pikaday.css" type="text/css" media="all" />
+
+        <!-- Vendor CSS: Photoswipe Core -->
+        <link rel="stylesheet" href="assets/vendor/photoswipe/photoswipe.css" type="text/css" media="all" />
+
+        <!-- Vendor CSS: Photoswipe Default Skin -->
+        <link rel="stylesheet" href="assets/vendor/photoswipe/default-skin/default-skin.css" type="text/css" media="all" />
+
+        <!-- Primary Stylesheet -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+
+    </head>
+
+    <body class="has-sidebar-nav">
+        <!--[if lt IE 10]>
+            <p class="dated-browser-note">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Core Icons Include -->
+        <div class="core-icons" style="display:none;"></div>
+
+        <!-- Sidebar Menu -->
+        <div class="sidebar-nav__overlay"></div>
+        <ul class="sidebar-nav tab-bar--4-up">
+            <li class="sidebar-nav__item in-tab-bar">
+                <a href="#" class="sidebar-nav__item-link" data-sidebar-pane="pane-search">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--search">
+                            <use xlink:href="#core-icon--search"></use>
+                        </svg>
+                        <span class="sidebar-nav__item-icon--close"></span>
+                    </div>
+                    <span class="sidebar-nav__item-text">Search</span>
+                </a>
+            </li>
+            <li class="sidebar-nav__item">
+                <a href="#" class="sidebar-nav__item-link" data-sidebar-pane="pane-about">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--twitter">
+                            <use xlink:href="#core-icon--twitter"></use>
+                        </svg>
+                        <span class="sidebar-nav__item-icon--close"></span>
+                    </div>
+                    <span class="sidebar-nav__item-text">About</span>
+                </a>
+            </li>
+            <li class="sidebar-nav__item in-tab-bar">
+                <a href="#" class="sidebar-nav__item-link" data-sidebar-pane="pane-projects">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--pinterest">
+                            <use xlink:href="#core-icon--pinterest"></use>
+                        </svg>
+                        <span class="sidebar-nav__item-icon--close"></span>
+                    </div>
+                    <span class="sidebar-nav__item-text">Projects</span>
+                </a>
+            </li>
+            <li class="sidebar-nav__item in-tab-bar">
+                <a href="#" class="sidebar-nav__item-link">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--instagram">
+                            <use xlink:href="#core-icon--instagram"></use>
+                        </svg>
+                    </div>
+                    <span class="sidebar-nav__item-text">Events</span>
+                </a>
+            </li>
+            <li class="sidebar-nav__item">
+                <a href="#" class="sidebar-nav__item-link">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--youtube">
+                            <use xlink:href="#core-icon--youtube"></use>
+                        </svg>
+                    </div>
+                    <span class="sidebar-nav__item-text">Contact</span>
+                </a>
+            </li>
+            <li class="sidebar-nav__item--language in-tab-bar">
+                <a href="#" class="sidebar-nav__item-link">
+                    <div class="sidebar-nav__item-icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon core-icon--youtube">
+                            <use xlink:href="#core-icon--youtube"></use>
+                        </svg>
+                    </div>
+                    <span class="sidebar-nav__item-text">English</span>
+                </a>
+                <ul class="language-toggle--sidebar">
+                    <li class="language-toggle__item--current">
+                        <a href="#" class="language-toggle__item-link">EN</a>
+                    </li>
+                    <li class="language-toggle__item">
+                        <a href="#" class="language-toggle__item-link">FR</a>
+                    </li>
+                    <li class="language-toggle__item">
+                        <a href="#" class="language-toggle__item-link">ES</a>
+                    </li>
+                    <li class="language-toggle__item">
+                        <a href="#" class="language-toggle__item-link">JP</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Sidebar Menu: Content Pane -->
+        <div class="sidebar-nav__pane--content" data-sidebar-pane="pane-about">
+            <h2 class="sidebar-nav__pane-title">About</h2>
+            <p>Commodo officia reprehenderit velit ex eiusmod labore commodo pariatur occaecat est eu quis anim fugiat in aliqua qui. Dolore qui commodo anim cupidatat Lorem occaecat est enim ad eiusmod deserunt labore nulla sint nulla reprehenderit anim. Ex eu deserunt elit magna ea eu nisi officia nisi elit dolor. Magna ullamco minim ullamco sunt reprehenderit irure irure. Deserunt laborum sit ipsum ut occaecat pariatur officia officia. Laboris cupidatat nostrud nulla Lorem occaecat aliquip cillum. Qui non proident enim ipsum reprehenderit fugiat ad sunt.</p>
+        </div>
+
+        <!-- Sidebar Menu: Search Pane -->
+        <div class="sidebar-nav__pane--content search-pane full" data-sidebar-pane="pane-search">
+            <h2 class="sidebar-nav__pane-title sidebar-nav__search-form-title">Search</h2>
+            <p class="sidebar-nav__pane-content sidebar-nav__search-form-content">Id amet velit sit proident pariatur ea sunt qui consequat reprehenderit quis in.</p>
+            <form class="sidebar-nav__search-form">
+                <input type="text" class="sidebar-nav__search-input" placeholder="What can we help you find today?">
+                <button class="sidebar-nav__search-button button--basic">Search</a>
+            </form>
+        </div>
+
+        <!-- Sidebar Menu: Menu Pane (Multilevel) -->
+        <div class="sidebar-nav__pane--nav" data-sidebar-pane="pane-projects">
+            <ul class="sidebar-nav__pane-nav--level-1">
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link" data-sidebar-level="level-2">Category 1</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Category 2</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav__pane-nav--level-2" data-sidebar-level="level-2">
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link back">Back</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link" data-sidebar-level="level-3">Project 1</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Project 1</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Project 1</a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav__pane-nav--level-3" data-sidebar-level="level-3">
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link back">Back</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Subproject 1</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Subproject 1</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#" class="sidebar-nav__pane-nav-item-link">Subproject 1</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Start .page-wrapper -->
+        <div class="page-wrapper">
+
+            <!-- Mobile Nav Trigger -->
+            <a href="#" class="nav-toggle">Menu</a>
+
+            <!-- Header -->
+            <header class="main-header">
+                <div class="main-header__container flex--justify-between flex--align-middle">
+                    <!-- Logo -->
+                    <a href="/" class="main-header__logo-link">
+                        <img src="http://placehold.it/250x125" class="main-header__logo" alt="Site Logo">
+                    </a>
+                    <!-- Language Toggle (Basic) -->
+                    <ul class="language-toggle--basic">
+                        <li class="language-toggle__item--current">
+                            <a href="#" class="language-toggle__item-link">EN</a>
+                        </li>
+                        <li class="language-toggle__item">
+                            <a href="#" class="language-toggle__item-link">FR</a>
+                        </li>
+                    </ul>
+                    <!-- Navigation -->
+                    <nav class="main-nav__wrapper">
+                        <ul class="main-nav">
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__item-link">Home</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__item-link">About</a>
+                            </li>
+                            <li class="main-nav__item has-submenu">
+                                <a href="#" class="main-nav__item-link">Projects</a>
+                                <ul class="main-nav__submenu--dropdown">
+                                    <li class="main-nav__submenu-item">
+                                        <a href="#" class="main-nav__submenu-item-link">Project 1</a>
+                                    </li>
+                                    <li class="main-nav__submenu-item has-submenu">
+                                        <a href="#" class="main-nav__submenu-item-link">Project 2</a>
+                                        <ul class="main-nav__submenu--flyout">
+                                            <li class="main-nav__submenu-item">
+                                                <a href="#" class="main-nav__submenu-item-link">Flyout 1</a>
+                                            </li>
+                                            <li class="main-nav__submenu-item">
+                                                <a href="#" class="main-nav__submenu-item-link">Flyout 2</a>
+                                            </li>
+                                            <li class="main-nav__submenu-item">
+                                                <a href="#" class="main-nav__submenu-item-link">Flyout 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="main-nav__submenu-item">
+                                        <a href="#" class="main-nav__submenu-item-link">Project 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- Hero -->
+            <section class="hero">
+                <!-- Slide: With Video -->
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('http://placehold.it/1920x1080')">
+                    <div class="hero__slide-content-container container--small">
+                        <h5 class="hero__slide-subtitle">Subtitle</h5>
+                        <h1 class="hero__slide-title">Slide Title</h1>
+                        <p class="hero__slide-content">Lorem ipsum dolor sit amet consectetuer.</p>
+                        <a href="" class="hero__slide-cta button--basic">Learn More</a>
+                    </div>
+                    <!--
+                    <div class="hero__video-container">
+                        <video autoplay loop id="bg-video">
+                            <source src="assets/vid/bg-vid.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src="assets/vid/bg-vid.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
+                        <div class="hero__video-poster">
+                            <img src="assets/vid/bg-vid.jpg" alt="">
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <!-- Slide: With Image -->
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('http://placehold.it/1920x1080')">
+                    <div class="hero__slide-content-container container--small">
+                        <h5 class="hero__slide-subtitle">Subtitle</h5>
+                        <h1 class="hero__slide-title">Slide Title</h1>
+                        <p class="hero__slide-content">Tempor consectetur fugiat laborum sint sit dolor dolor excepteur cupidatat ad occaecat ut cillum quis ad. Et laboris irure culpa anim cupidatat cupidatat cupidatat culpa consequat id laborum fugiat proident officia aliqua mollit. Sint culpa deserunt excepteur aliquip adipisicing ut Lorem ipsum est Lorem ipsum adipisicing ad. Ipsum non laborum reprehenderit quis veniam ipsum reprehenderit elit ea duis irure tempor eiusmod irure fugiat ad. Reprehenderit laboris eiusmod tempor ut ut aute esse officia tempor exercitation elit incididunt eiusmod. Qui quis id elit cillum nostrud Lorem culpa pariatur ullamco do pariatur ex velit consequat. Eiusmod fugiat duis ullamco fugiat magna aliquip anim reprehenderit eiusmod irure aliquip.</p>
+                        <a href="" class="hero__slide-cta button--basic">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content -->
+            <section class="page-section">
+                <div class="container--small">
+                    <!-- Section Title -->
+                    <div class="page-section__title-wrapper text-center">
+                        <h5 class="page-section__subtitle with-divider">Section Subtitle</h5>
+                        <h1 class="page-section__title">Section Title</h1>
+                        <p class="page-section__title-content">Cillum commodo do enim aliqua nostrud amet quis dolore proident. Ut Lorem reprehenderit commodo quis pariatur quis.</p>
+                    </div>
+                    <!-- Button Group -->
+                    <ul class="button-group text-center">
+                        <li class="button-group__item">
+                            <a href="#" class="button-group__button button--basic">Button</a>
+                        </li>
+                        <li class="button-group__item">
+                            <a href="#" class="button-group__button button--basic">Button</a>
+                        </li>
+                        <li class="button-group__item">
+                            <a href="#" class="button-group__button button--basic">Button</a>
+                        </li>
+                    </ul>
+                    <br><br><br>
+                    <div class="content-area">
+                        <h3>Overview</h3>
+                        <!-- Wordpress Images (Basic) -->
+                        <div>
+                            <img src="http://unsplash.it/250" alt="Wordpress Image" class="wp-image filter--gray alignleft">
+                        </div>
+                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
+                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
+                        <ul>
+                            <li>The face of the moon was in shadow.</li>
+                            <li>I watched the storm, so beautiful yet terrific.</li>
+                            <li>Almost before we knew it, we had left the ground.</li>
+                        </ul>
+                        <ol>
+                            <li>The face of the moon was in shadow.</li>
+                            <li>I watched the storm, so beautiful yet terrific.</li>
+                            <li>Almost before we knew it, we had left the ground.</li>
+                        </ol>
+                        <hr>
+                        <!-- Wordpress Images (Captioned) -->
+                        <div class="wp-caption wp-image alignright">
+                            <img src="http://unsplash.it/250" alt="Wordpress Image" class="filter--gray">
+                            <p class="wp-caption-text">Some sample caption text.</p>
+                        </div>
+                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
+                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
+                        <blockquote>
+                            Elit quis labore dolor consectetur cillum do deserunt. Elit quis labore dolor consectetur cillum do deserunt. Elit quis labore dolor consectetur cillum do deserunt.
+                        </blockquote>
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                        <br>
+                        <!-- Broken Images -->
+                        <img src="assets/img/rafting.jpg" alt="A Group of People White Water Rafting">
+                        <br><br>
+                        <!-- Responsive Embed -->
+                        <div class="embed__container">
+                            <iframe src="http://www.youtube.com/embed/QILiHiTD3uc" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <br><br><br>
+                        <!-- Responsive Tables -->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Heading 1</td>
+                                    <td>Heading 2</td>
+                                    <td>Heading 3</td>
+                                    <td>Heading 4</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 3</td>
+                                    <td>Cell 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Alt Row Cell 1</td>
+                                    <td>Alt Row Cell 2</td>
+                                    <td>Alt Row Cell 3</td>
+                                    <td>Alt Row Cell 4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Sharing -->
+            <section class="page-section text-center flush-top">
+                <div class="container--medium">
+                    <a href="#" class="social-sharing__trigger button--basic">Share This Page</a>
+                    <ul class="social-sharing__list">
+                        <li class="social-sharing__list-item">
+                            <a href="http://facebook.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--facebook">
+                                    <use xlink:href="#core-icon--facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://twitter.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--twitter">
+                                    <use xlink:href="#core-icon--twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://linkedin.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--linkedin">
+                                    <use xlink:href="#core-icon--linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://plus.google.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--google-plus">
+                                    <use xlink:href="#core-icon--google-plus"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://youtube.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--youtube">
+                                    <use xlink:href="#core-icon--youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://pinterest.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--pinterest">
+                                    <use xlink:href="#core-icon--pinterest"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://instagram.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--instagram">
+                                    <use xlink:href="#core-icon--instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-sharing__list-item">
+                            <a href="http://dribbble.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--dribbble">
+                                    <use xlink:href="#core-icon--dribbble"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Google Map Embed -->
+            <section class="map__wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.347869262907!2d-63.58461768417729!3d44.65124389533759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a23d47824d011%3A0x65efda1894b1f1d3!2s2050+Gottingen+St%2C+Halifax%2C+NS+B3K+3A9!5e0!3m2!1sen!2sca!4v1503510091838" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map__embed"></iframe>
+            </section>
+
+            <!-- Alerts -->
+            <section class="page-section">
+                <div class="container--small">
+                    <ul class="alert__list">
+                        <!-- Alert: Danger -->
+                        <li class="alert__list-item--danger">
+                            <p class="alert__list-item-content">This is a danger alert. <a href="#">Learn More</a></p>
+                            <a href="#" class="alert__list-item-close"></a>
+                        </li>
+                        <!-- Alert: Warning -->
+                        <li class="alert__list-item--warning">
+                            <p class="alert__list-item-content">This is a warning alert. <a href="#">Learn More</a></p>
+                            <a href="#" class="alert__list-item-close"></a>
+                        </li>
+                        <!-- Alert: Success -->
+                        <li class="alert__list-item--success">
+                            <p class="alert__list-item-content">This is a success alert. <a href="#">Learn More</a></p>
+                            <a href="#" class="alert__list-item-close"></a>
+                        </li>
+                        <!-- Alert: Neutral -->
+                        <li class="alert__list-item--neutral">
+                            <p class="alert__list-item-content">This is a neutral alert. <a href="#">Learn More</a></p>
+                            <a href="#" class="alert__list-item-close"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="page-section flush-top text-center">
+                <div class="container--small">
+                    <!-- Pagination: Basic -->
+                    <div class="pagination--basic">
+                        <ul class="pagination__list">
+                            <li class="pagination__list-item--nav">
+                                <a href="#" class="pagination__nav--first">First</a>
+                            </li>
+                            <li class="pagination__list-item--nav">
+                                <a href="#" class="pagination__nav--prev">Prev</a>
+                            </li>
+                            <li class="pagination__list-item--number">
+                                <a href="#" class="pagination__number">1</a>
+                            </li>
+                            <li class="pagination__list-item--number current">
+                                <a href="#" class="pagination__number">2</a>
+                            </li>
+                            <li class="pagination__list-item--number">
+                                <a href="#" class="pagination__number">3</a>
+                            </li>
+                            <li class="pagination__list-item--nav">
+                                <a href="#" class="pagination__nav--next disabled">Next</a>
+                            </li>
+                            <li class="pagination__list-item--nav">
+                                <a href="#" class="pagination__nav--last">Last</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Pagination: Lazy -->
+                    <div class="pagination--lazy">
+                        <a href="#" class="pagination__button button--basic">Load More</a>
+                        <a href="#" class="pagination__button loading button--basic">Loading</a>
+                        <a href="#" class="pagination__button all-loaded button--basic">All Posts Loaded</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blocks -->
+            <section class="page-section flush-top">
+                <div class="container--xl">
+                    <div class="blocks__group three-up stretch">
+                        <article class="block">
+                            <a href="#" class="block__image-link">
+                                <img src="http://placehold.it/650x400" alt="" class="block__image">
+                            </a>
+                            <div class="block__content-wrapper">
+                                <h5 class="block__subtitle">Block Label</h5>
+                                <h4 class="block__title">
+                                    <a href="#" class="block__title-link">Block Title</a>
+                                </h4>
+                                <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
+                                <a href="#" class="button--link block__cta--link">Read More</a>
+                                <ul class="tags">
+                                    <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
+                                    <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
+                                    <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="block">
+                            <a href="#" class="block__image-link">
+                                <img src="http://placehold.it/650x400" alt="" class="block__image">
+                            </a>
+                            <div class="block__content-wrapper">
+                                <h5 class="block__subtitle">Block Label</h5>
+                                <h4 class="block__title">
+                                    <a href="#" class="block__title-link">Block Title</a>
+                                </h4>
+                                <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
+                                <a href="#" class="button--link block__cta--link">Read More</a>
+                                <ul class="tags">
+                                    <li class="tags__item">Tag Title</li>
+                                    <li class="tags__item">Tag Title</li>
+                                    <li class="tags__item">Tag Title</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="block">
+                            <a href="#" class="block__image-link">
+                                <img src="http://placehold.it/650x400" alt="" class="block__image">
+                            </a>
+                            <div class="block__content-wrapper">
+                                <h5 class="block__subtitle">Block Label</h5>
+                                <h4 class="block__title">
+                                    <a href="#" class="block__title-link">Block Title</a>
+                                </h4>
+                                <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
+                                <a href="#" class="button--link block__cta--link">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accordions -->
+            <section class="page-section flush-top">
+                <div class="container--small">
+                    <ul class="accordions">
+                        <li class="accordions__item">
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <div class="accordions__item-content">
+                                <div class="content-area">
+                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordions__item">
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <div class="accordions__item-content">
+                                <div class="content-area">
+                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordions__item">
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <div class="accordions__item-content">
+                                <div class="content-area">
+                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Tabs -->
+            <section class="page-section flush-top">
+                <div class="container--small">
+                    <ul class="tabs--overlap">
+                        <li class="tabs__tab-item">
+                            <a href="#" class="tabs__tab-item-link current" data-tab="overview">Overview</a>
+                        </li>
+                        <li class="tabs__tab-item">
+                            <a href="#" class="tabs__tab-item-link" data-tab="contact">Contact</a>
+                        </li>
+                        <li class="tabs__tab-item">
+                            <a href="#" class="tabs__tab-item-link" data-tab="other">Other</a>
+                        </li>
+                    </ul>
+                    <div class="tabs__tab-content current" data-tab="overview">
+                        <div class="content-area">
+                            <p>OVERVIEW TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                        </div>
+                    </div>
+                    <div class="tabs__tab-content" data-tab="contact">
+                        <div class="content-area">
+                            <p>CONTACT TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                        </div>
+                    </div>
+                    <div class="tabs__tab-content" data-tab="other">
+                        <div class="content-area">
+                            <p>OTHER TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners List -->
+            <section class="page-section flush-top">
+                <div class="container--medium">
+                    <div class="partners__group">
+                        <h4 class="partners__group-title">Partner Group 1</h4>
+                        <ul class="partners__group-list">
+                            <li class="partners__group-list-item">
+                                <a href="#" class="partners__group-list-item-link">Linked Partner 1</a>
+                            </li>
+                            <li class="partners__group-list-item">
+                                Unlinked Partner 2
+                            </li>
+                            <li class="partners__group-list-item">
+                                <a href="#" class="partners__group-list-item-link">Linked Partner 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="partners__group">
+                        <h4 class="partners__group-title">Partner Group 2</h4>
+                        <ul class="partners__group-list">
+                            <li class="partners__group-list-item">
+                                <a href="#" class="partners__group-list-item-link">Partner 1</a>
+                            </li>
+                            <li class="partners__group-list-item">
+                                <a href="#" class="partners__group-list-item-link">Partner 2</a>
+                            </li>
+                            <li class="partners__group-list-item">
+                                <a href="#" class="partners__group-list-item-link">Partner 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breadcrumbs -->
+            <section class="page-section flush-top text-center">
+                <div class="container--medium">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Home</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">About</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Services</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Contacts</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Projects</a></li>
+                        <li class="breadcrumbs__item">Vision &amp; Mission</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Dialog Trigger -->
+            <section class="page-section flush-top text-center">
+                <div class="container--medium">
+                    <a href="#" class="dialog__trigger button--basic" data-dialog="dialog-1">Open Dialog</a>
+                </div>
+            </section>
+
+            <!-- Page Title (Subpage Banner) -->
+            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('http://unsplash.it/1920');">
+                <div class="page-title__container container--medium">
+                    <h6 class="page-title__subtitle">Subtitle</h6>
+                    <h1 class="page-title__title">Page Title</h1>
+                    <p class="page-title__content">Reprehenderit ea eiusmod magna aliqua sint deserunt veniam enim amet et elit commodo nisi.</p>
+                    <ul class="page-title__meta">
+                        <li class="page-title__meta-item">August 28, 2018</li>
+                        <li class="page-title__meta-item">Published by <a href="#" class="page-title__meta-item-link">Joe Brown</a></li>
+                        <li class="page-title__meta-item">Category Name</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Forms -->
+            <section class="page-section">
+                <div class="container--medium">
+                    <form method="post" enctype="multipart/form-data" id="gform_596" action="/advanced-contact-form/#gf_596">
+                        <div class="gform_heading">
+                            <h3 class="gform_title">Submit Your Story</h3>
+                        </div>
+                        <div class="gform_body">
+                            <ul id="gform_fields_596" class="gform_fields top_label form_sublabel_below description_below">
+                                <li id="field_596_7" class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <h2 class="gsection_title">About You</h2>
+                                    <div class="gsection_description">Tell us a little about yourself.</div>
+                                </li>
+                                <li id="field_596_1" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label gfield_label_before_complex" for="input_596_1_3">Your Name<span class="gfield_required">*</span></label>
+                                    <div class="ginput_complex ginput_container no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gfield_trigger_change" id="input_596_1">
+                                        <span id="input_596_1_3_container" class="name_first">
+                                            <input type="text" name="input_1.3" id="input_596_1_3" value="" aria-label="First name" tabindex="2" aria-required="true" aria-invalid="false" placeholder="First Name">
+                                            <label for="input_596_1_3">First</label>
+                                        </span>
+                                        <span id="input_596_1_6_container" class="name_last">
+                                            <input type="text" name="input_1.6" id="input_596_1_6" value="" aria-label="Last name" tabindex="4" aria-required="true" aria-invalid="false" placeholder="Last Name">
+                                            <label for="input_596_1_6">Last</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li id="field_596_4" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label gfield_label_before_complex" for="input_596_4_1">Your Address</label>
+                                    <div class="ginput_complex ginput_container has_street has_street2 has_city has_zip has_country ginput_container_address gfield_trigger_change" id="input_596_4">
+                                        <span class="ginput_full address_line_1" id="input_596_4_1_container">
+                                            <input type="text" name="input_4.1" id="input_596_4_1" value="" tabindex="6" placeholder="Street Address">
+                                            <label for="input_596_4_1" id="input_596_4_1_label">Street Address</label>
+                                        </span>
+                                        <span class="ginput_full address_line_2" id="input_596_4_2_container">
+                                            <input type="text" name="input_4.2" id="input_596_4_2" value="" tabindex="7" placeholder="Address 2">
+                                            <label for="input_596_4_2" id="input_596_4_2_label">Address Line 2</label>
+                                        </span>
+                                        <span class="ginput_left address_city" id="input_596_4_3_container">
+                                            <input type="text" name="input_4.3" id="input_596_4_3" value="" tabindex="8" placeholder="City">
+                                            <label for="input_596_4_3" id="input_596_4_3_label">City</label>
+                                        </span>
+                                        <span class="ginput_right address_zip" id="input_596_4_5_container">
+                                            <input type="text" name="input_4.5" id="input_596_4_5" value="" tabindex="9" placeholder="Zip/Postal Code">
+                                            <label for="input_596_4_5" id="input_596_4_5_label">ZIP Code</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li id="field_595_4" class="gfield gf_list_2col gfield_price gfield_price_595_1 gfield_option_595_1 gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label">Choose Your Toppings<span class="gfield_required">*</span></label>
+                                    <div class="ginput_container ginput_container_checkbox"><ul class="gfield_checkbox" id="input_595_4">
+                                        <li class="gchoice_595_4_1">
+            								<input name="input_4.1" type="checkbox" value="Pepperoni|0.5" id="choice_595_4_1" tabindex="18">
+            								<label for="choice_595_4_1" id="label_595_4_1" price=" +$0.50">Pepperoni<span class="ginput_price"> +$0.50</span></label>
+	                                     </li>
+                                         <li class="gchoice_595_4_2">
+            								<input name="input_4.2" type="checkbox" value="Italian Sausage|0.5" id="choice_595_4_2" tabindex="19">
+            								<label for="choice_595_4_2" id="label_595_4_2" price=" +$0.50">Italian Sausage<span class="ginput_price"> +$0.50</span></label>
+		                                 </li>
+                                         <li class="gchoice_595_4_3">
+            								<input name="input_4.3" type="checkbox" value="Ham|0.5" id="choice_595_4_3" tabindex="20">
+            								<label for="choice_595_4_3" id="label_595_4_3" price=" +$0.50">Ham<span class="ginput_price"> +$0.50</span></label>
+		                                 </li>
+                                         <li class="gchoice_595_4_4">
+                    						<input name="input_4.4" type="checkbox" value="Bacon|0.5" id="choice_595_4_4" tabindex="21">
+                    						<label for="choice_595_4_4" id="label_595_4_4" price=" +$0.50">Bacon<span class="ginput_price"> +$0.50</span></label>
+	                                     </li>
+                                         <li class="gchoice_595_4_5">
+            								<input name="input_4.5" type="checkbox" value="Hamburger|0.5" id="choice_595_4_5" tabindex="22">
+            								<label for="choice_595_4_5" id="label_595_4_5" price=" +$0.50">Hamburger<span class="ginput_price"> +$0.50</span></label>
+	                                     </li>
+                                    </ul>
+                                </li>
+                                <li id="field_591_8" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label">Choose Something - But Just One Please</label>
+                                    <div class="ginput_container ginput_container_radio">
+                                        <ul class="gfield_radio" id="input_591_8">
+                                            <li class="gchoice_591_8_0">
+                                                <input name="input_8" type="radio" value="First Choice" id="choice_591_8_0" tabindex="15">
+                                                <label for="choice_591_8_0" id="label_591_8_0">First Choice</label>
+                                            </li>
+                                            <li class="gchoice_591_8_1">
+                                                <input name="input_8" type="radio" value="Second Choice" id="choice_591_8_1" tabindex="16">
+                                                <label for="choice_591_8_1" id="label_591_8_1">Second Choice</label>
+                                            </li>
+                                            <li class="gchoice_591_8_2">
+                                                <input name="input_8" type="radio" value="Third Choice" id="choice_591_8_2" tabindex="17">
+                                                <label for="choice_591_8_2" id="label_591_8_2">Third Choice</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="field_596_10" class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <h2 class="gsection_title">How Can We Reach You?</h2>
+                                    <div class="gsection_description">We would love to chat with you.</div>
+                                </li>
+                                <li id="field_596_11" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label" for="input_596_11">Preferred Method of Contact</label>
+                                    <div class="ginput_container ginput_container_select">
+                                        <select name="input_11" id="input_596_11" onchange="gf_apply_rules(596,[5,12]);" class="medium gfield_select" tabindex="10" aria-invalid="false">
+                                            <option value="Email">Email</option>
+                                            <option value="Phone">Phone</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li id="field_596_11" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label" for="input_596_11">Preferred Date</label>
+                                    <div class="ginput_container ginput_container_select">
+                                        <input type="text" placeholder="Pick a Date" id="datepicker">
+                                    </div>
+                                </li>
+                                <li id="field_596_11" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label" for="input_596_11">File Upload</label>
+                                    <div class="ginput_container ginput_container_fileupload"><input type="hidden" name="MAX_FILE_SIZE" value="134217728">
+                                        <input name="input_10" id="input_1_10" type="file" class="medium" aria-describedby="extensions_message" onchange="javascript:gformValidateFileSize( this, 134217728 );" tabindex="15">
+                                        <span id="extensions_message" class="file-input__types screen-reader-text">Accepted file types: jpg, png, jpeg, gif.</span>
+                                        <div class="validation-message"></div>
+                                    </div>
+                                </li>
+                                <li id="field_596_2" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label gfield_label_before_complex" for="input_596_2">Your Email Address<span class="gfield_required">*</span>
+                                    </label>
+                                    <div class="ginput_complex ginput_container ginput_container_email" id="input_596_2_container">
+                                        <span id="input_596_2_1_container" class="ginput_left">
+                                            <input class="" type="text" name="input_2" id="input_596_2" value="" tabindex="11" placeholder="Email Address" aria-required="true" aria-invalid="false">
+                                            <label for="input_596_2">Email Address</label>
+                                        </span>
+                                        <span id="input_596_2_2_container" class="ginput_right">
+                                            <input class="" type="text" name="input_2_2" id="input_596_2_2" value="" tabindex="12" placeholder="Confirm Your Email Address" aria-required="true" aria-invalid="false">
+                                            <label for="input_596_2_2">Confirm Email Address</label>
+                                        </span>
+                                        <div class="gf_clear gf_clear_complex"></div>
+                                    </div>
+                                </li>
+                                <li id="field_596_5" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" style="display: none;">
+                                    <label class="gfield_label" for="input_596_5">Your Phone<span class="gfield_required">*</span></label>
+                                    <div class="ginput_container ginput_container_phone">
+                                        <input name="input_5" id="input_596_5" type="text" value="" class="medium" tabindex="13" placeholder="Your Phone Numer" aria-required="true" aria-invalid="false">
+                                    </div>
+                                </li>
+                                <li id="field_596_8" class="gfield gsection field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <h2 class="gsection_title">What's on Your Mind?</h2>
+                                    <div class="gsection_description">Have a question for us? Ask away.</div>
+                                </li>
+                                <li id="field_596_3" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label" for="input_596_3">Your Comments<span class="gfield_required">*</span></label>
+                                    <div class="ginput_container ginput_container_textarea">
+                                        <textarea name="input_3" id="input_596_3" class="textarea medium" tabindex="15" placeholder="Please share any comments or questions you may have for us." aria-required="true" aria-invalid="false" rows="10" cols="50"></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gform_footer top_label">
+                            <input type="submit" id="gform_submit_button_596" class="gform_button button" value="Submit" tabindex="17">
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Search Results -->
+            <section class="search-results column-section">
+                <div class="search-results__results column--left">
+                    <div class="container--xl">
+                        <h2>Search Results</h2>
+                        <p>Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
+                        <a href="#search-results__filters" class="search-results__filter-trigger button--basic">Filter Results</a>
+
+                        <!-- Search Results: Single Group -->
+                        <div class="search-results__result-group">
+                            <h3 class="search-results__result-group-title" id="result-category--news">News</h3>
+                            <!-- Search Results: Single Result -->
+                            <div class="search-results__result is-card">
+                                <h6 class="search-results__result-label">News</h6>
+                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">News Title</a></h4>
+                                <h5 class="search-results__result-meta">August 17, 2018</h5>
+                                <p class="search-results__result-excerpt">Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
+                            </div>
+                        </div>
+
+                        <!-- Search Results: Single Group -->
+                        <div class="search-results__result-group">
+                            <h3 class="search-results__result-group-title" id="result-category--events">Events</h3>
+                            <!-- Search Results: Single Result -->
+                            <div class="search-results__result">
+                                <h6 class="search-results__result-label">Event</h6>
+                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">Event Title</a></h4>
+                                <h5 class="search-results__result-meta">August 16, 2018</h5>
+                                <p class="search-results__result-excerpt">Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <aside class="search-results__categories column--right" id="search-results__filters">
+                    <div class="container--xl">
+                        <h5 class="search-results__categories-title">Filter Results</h5>
+                        <ul class="search-results__categories-list">
+                            <li class="search-results__categories-list-item">
+                                <a href="#result-category--news" class="search-results__categories-list-item-link">
+                                    News
+                                    <span class="search-results__categories-list-item-count">3</span>
+                                </a>
+                            </li>
+                            <li class="search-results__categories-list-item">
+                                <a href="#result-category--events" class="search-results__categories-list-item-link">
+                                    Events
+                                    <span class="search-results__categories-list-item-count">10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="main-footer__container">
+                    <div class="main-footer__group flex--justify-between flex--align-middle">
+                        <!-- Quick Links -->
+                        <nav class="main-footer__quick-links-wrapper">
+                            <ul class="main-footer__quick-links">
+                                <li class="main-footer__quick-links-item">
+                                    <a href="#" class="main-footer__quick-links-item-link">Home</a>
+                                </li>
+                                <li class="main-footer__quick-links-item">
+                                    <a href="#" class="main-footer__quick-links-item-link">About</a>
+                                </li>
+                                <li class="main-footer__quick-links-item">
+                                    <a href="#" class="main-footer__quick-links-item-link">Projects</a>
+                                </li>
+                                <li class="main-footer__quick-links-item">
+                                    <a href="#" class="main-footer__quick-links-item-link">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Social Icons -->
+                        <ul class="social-icons">
+                            <li class="social-icons__item">
+                                <a href="http://facebook.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--facebook">
+                                        <use xlink:href="#core-icon--facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://twitter.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--twitter">
+                                        <use xlink:href="#core-icon--twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://linkedin.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--linkedin">
+                                        <use xlink:href="#core-icon--linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://plus.google.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--google-plus">
+                                        <use xlink:href="#core-icon--google-plus"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://youtube.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--youtube">
+                                        <use xlink:href="#core-icon--youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://pinterest.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--pinterest">
+                                        <use xlink:href="#core-icon--pinterest"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://instagram.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--instagram">
+                                        <use xlink:href="#core-icon--instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-icons__item">
+                                <a href="http://dribbble.com" class="social-icons__item-link">
+                                    <svg viewBox="0 0 24 24" class="core-icon--dribbble">
+                                        <use xlink:href="#core-icon--dribbble"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Subfooter -->
+                    <div class="main-footer__subfooter flex--justify-between flex--align-middle">
+                        <p class="main-footer__subfooter-copyright">&copy; YYYY - Company Name.</p>
+                        <p class="main-footer__subfooter-credit">Site by <a href="http://codeandmortar.com/" target="_blank" class="main-footer__subfooter-credit-link">Code + Mortar</a></p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end .page-wrapper -->
+
+        <!-- Dialog -->
+        <div class="dialog__overlay dialog__close"></div>
+        <div class="dialog" data-dialog="dialog-1">
+            <!-- Close Icon -->
+            <a href="#" class="dialog__close-button dialog__close">
+                <svg viewBox="0 0 24 24" class="core-icon--close">
+                    <use xlink:href="#core-icon--close"></use>
+                </svg>
+            </a>
+            <!-- Content -->
+            <h3>Dialog</h3>
+            <p>Laboris Lorem duis eiusmod velit tempor enim adipisicing veniam amet. Est voluptate laboris in cillum nisi voluptate anim dolor mollit culpa esse. Dolor consequat incididunt occaecat ad reprehenderit mollit ullamco. Fugiat fugiat cupidatat nisi exercitation fugiat commodo est reprehenderit ad ea. Quis ex non eu anim voluptate deserunt et culpa aute reprehenderit eu officia esse. Magna cillum do qui excepteur tempor cillum laborum quis quis deserunt in excepteur sit.</p>
+            <p>Dolore do veniam reprehenderit reprehenderit non officia nisi. Pariatur sint Lorem non sint nostrud sunt ut duis deserunt proident nisi qui laborum in anim exercitation. Eu et minim veniam pariatur occaecat qui laboris laborum veniam non consequat consequat. Amet adipisicing quis fugiat magna reprehenderit officia adipisicing cillum non. Enim velit velit deserunt aliquip enim sunt adipisicing commodo esse fugiat pariatur adipisicing ut non.</p>
+            <p>Et dolore proident dolor adipisicing adipisicing consequat tempor velit occaecat. Reprehenderit qui commodo ad esse commodo laborum adipisicing. Veniam sit ad nulla minim voluptate elit voluptate cupidatat magna labore id anim magna labore. Mollit adipisicing deserunt voluptate adipisicing adipisicing tempor quis non aliquip pariatur ex duis nulla.</p>
+            <p>Ad nulla culpa duis voluptate nostrud reprehenderit labore Lorem enim. Non sint enim ut ex pariatur adipisicing consectetur anim enim cillum aliquip fugiat. Ea sit laboris qui irure irure minim exercitation laboris nostrud amet laboris excepteur veniam. Excepteur et cupidatat minim ad incididunt magna sunt irure in amet proident commodo ea do. Deserunt cillum proident qui culpa cupidatat consequat exercitation anim laborum nisi adipisicing sint. Quis sunt mollit aute et occaecat labore nisi deserunt dolor.</p>
+        </div>
+
+        <!-- DEV-NOTE: Analytics Reminder -->
+
+        <!-- Vendor Script: MatchMedia -->
+        <script type="text/javascript" src="assets/vendor/matchMedia.js"></script>
+
+        <!-- Vendor Script: Slick -->
+        <script type="text/javascript" src="assets/vendor/slick.js"></script>
+
+        <!-- Vendor Script: Pikaday -->
+        <script type="text/javascript" src="assets/vendor/pikaday.js"></script>
+
+        <!-- Vendor Script: Photoswipe Core -->
+        <script type="text/javascript" src="assets/vendor/photoswipe/photoswipe.min.js"></script>
+
+        <!-- Vendor Script: Photoswipe Core -->
+        <script type="text/javascript" src="assets/vendor/photoswipe/photoswipe-ui-default.min.js"></script>
+
+        <!-- Core Script: Base -->
+        <script type="text/javascript" src="assets/js/core.js"></script>
+
+        <!-- Component Script: Icons -->
+        <script type="text/javascript" src="assets/js/components/icons/icons.js"></script>
+
+        <!-- Component Script: Header -->
+        <script type="text/javascript" src="assets/js/components/header/header.js"></script>
+
+        <!-- Component Script: Alerts -->
+        <script type="text/javascript" src="assets/js/components/alerts/alerts.js"></script>
+
+        <!-- Component Script: Hero -->
+        <script type="text/javascript" src="assets/js/components/hero/hero.js"></script>
+
+        <!-- Component Script: Content -->
+        <script type="text/javascript" src="assets/js/components/content/content.js"></script>
+
+        <!-- Component Script: Navigation (Basic) -->
+        <script type="text/javascript" src="assets/js/components/navigation/navigation-basic.js"></script>
+
+        <!-- Component Script: Navigation (Sidebar) -->
+        <script type="text/javascript" src="assets/js/components/navigation/navigation-sidebar.js"></script>
+
+        <!-- Component Script: Pagination -->
+        <script type="text/javascript" src="assets/js/components/pagination/pagination.js"></script>
+
+        <!-- Component Script: Accordions -->
+        <script type="text/javascript" src="assets/js/components/accordions/accordions.js"></script>
+
+        <!-- Component Script: Tabs -->
+        <script type="text/javascript" src="assets/js/components/tabs/tabs.js"></script>
+
+        <!-- Component Script: Social Sharing -->
+        <script type="text/javascript" src="assets/js/components/social/social-sharing.js"></script>
+
+        <!-- Component Script: Language -->
+        <script type="text/javascript" src="assets/js/components/language/language-toggle.js"></script>
+
+        <!-- Component Script: Forms -->
+        <script type="text/javascript" src="assets/js/components/forms/forms.js"></script>
+
+        <!-- Component Script: Modals -->
+        <script type="text/javascript" src="assets/js/components/dialog/dialog.js"></script>
+
+        <!-- Component Script: Datepicker (Pikaday) -->
+        <script type="text/javascript" src="assets/js/components/datepicker/datepicker.js"></script>
+
+    </body>
+
+</html>

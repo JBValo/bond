@@ -1,0 +1,101 @@
+/* =============================================================================
+
+    BREADCRUMBS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $breadcrumbs-padding: 1rem 0 0;
+
+    /* Items */
+    $breadcrumbs-item-font-family: $global-font-family;
+    $breadcrumbs-item-font-weight: normal;
+    $breadcrumbs-item-font-size: 1rem;
+    $breadcrumbs-item-font-style: normal;
+    $breadcrumbs-item-text-transform: none;
+    $breadcrumbs-item-color: $gray-50;
+    $breadcrumbs-item-margin: 0.75rem;
+
+    /* Divider */
+    $breadcrumbs-divider-size: 5px;
+    $breadcrumbs-divider-color: gray;
+
+    /* Links */
+    $breadcrumbs-item-link-padding: 0;
+    $breadcrumbs-item-link-radius: 0;
+    $breadcrumbs-item-link-color: $link-color;
+    $breadcrumbs-item-link-background: transparent;
+    $breadcrumbs-item-link-text-decoration: underline;
+
+        /* Links: Hover */
+        $breadcrumbs-item-link-background--hover: transparent;
+        $breadcrumbs-item-link-color--hover: $link-color--hover;
+
+/* Container ================================================================ */
+.breadcrumbs {
+    list-style: none;
+    padding: $breadcrumbs-padding;
+    font-size: 0;
+}
+
+/* Items ==================================================================== */
+.breadcrumbs__item {
+    display: inline-block;
+    font-family: $breadcrumbs-item-font-family;
+    font-weight: $breadcrumbs-item-font-weight;
+    font-size: $breadcrumbs-item-font-size;
+    font-style: $breadcrumbs-item-font-style;
+    text-transform: $breadcrumbs-item-text-transform;
+    color: $breadcrumbs-item-color;
+    margin: calc($breadcrumbs-item-margin / 2) $breadcrumbs-item-margin;
+    position: relative;
+
+    /* Divider */
+    &:after {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate($breadcrumbs-item-margin,-50%);
+        content: "";
+        width: 0;
+        height: 0;
+        border: $breadcrumbs-divider-size solid transparent;
+        border-left-color: $breadcrumbs-divider-color;
+    }
+
+    &:last-child {
+
+        &:after {
+            display: none;
+        }
+
+    }
+
+}
+
+/* Links ==================================================================== */
+.breadcrumbs__item-link {
+    display: block;
+    text-decoration: none;
+    color: $breadcrumbs-item-link-color;
+    background: $breadcrumbs-item-link-background;
+    padding: $breadcrumbs-item-link-padding;
+    text-decoration: $breadcrumbs-item-link-text-decoration;
+}
+
+    /* Links: Hover */
+    .no-touchevents {
+
+        .breadcrumbs__item-link:hover {
+            background: $breadcrumbs-item-link-background--hover;
+            color: $breadcrumbs-item-link-color--hover;
+        }
+
+    }

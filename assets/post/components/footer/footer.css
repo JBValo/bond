@@ -1,0 +1,27 @@
+/* =============================================================================
+
+    FOOTER CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $main-footer-background: black;
+    $main-footer-padding: 2rem;
+    $main-footer-border: none;
+
+/* Container ================================================================ */
+.main-footer {
+    background: $main-footer-background;
+    padding: $main-footer-padding;
+    border-top: $main-footer-border;
+}
+
+/* Element Group ============================================================ */
+.main-footer__group {
+    flex-flow: row wrap;
+}

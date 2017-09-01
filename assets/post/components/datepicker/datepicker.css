@@ -1,0 +1,104 @@
+/* =============================================================================
+
+    DATEPICKER (PIKADAY) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $datepicker-border: 1px solid #ccc;
+    $datepicker-background: white;
+    $datepicker-color: #333;
+    $datepicker-font-family: $global-font-family;
+    $datepicker-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+
+    /* Weekdays */
+
+        /* Weekdays: Headings */
+        $datepicker-day-heading-color: #999;
+        $datepicker-day-heading-font-size: 0.6rem;
+        $datepicker-day-heading-line-height: 1.8;
+        $datepicker-day-heading-font-weight: bold;
+
+        /* Weekdays: Days */
+        $datepicker-day-color: #999;
+        $datepicker-day-font-size: 2rem;
+
+            /* Weekdays: Days: Selected Day */
+            $datepicker-day-background--selected: black;
+            $datepicker-day-color--selected: white;
+            $datepicker-day-font-weight--selected: bold;
+
+            /* Weekdays: Days: Today */
+            $datepicker-day-background--today: teal;
+            $datepicker-day-color--today: white;
+            $datepicker-day-font-weight--today: bold;
+
+            /* Weekdays: Days: Hover */
+            $datepicker-day-background--hover: $gray-40;
+            $datepicker-day-color--hover: white;
+
+/* Containers =============================================================== */
+
+    /* Datepicker Wrapper */
+    .pika-single {
+        font-family: $datepicker-font-family;
+        color: $datepicker-color;
+        background: $datepicker-background;
+        border: $datepicker-border;
+        border-bottom-color: #bbb;
+
+        &.is-bound {
+            box-shadow: $datepicker-shadow;
+        }
+
+    }
+
+/* Weekdays: Headings ======================================================= */
+.pika-table th {
+    color: $datepicker-day-heading-color;
+    font-size: $datepicker-day-heading-font-size;
+    line-height: $datepicker-day-heading-line-height;
+    font-weight: $datepicker-day-heading-font-weight;
+}
+
+/* Weekdays: Days =========================================================== */
+.pika-week {
+    color: $datepicker-day-color;
+    font-size: $datepicker-day-font-size;
+}
+
+/* Weekdays: Days: Selected ================================================= */
+.is-selected .pika-button,
+.has-event .pika-button {
+    color: $datepicker-day-color--selected;
+    font-weight: $datepicker-day-font-weight--selected;
+    background: $datepicker-day-background--selected;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Weekdays: Days: Today ==================================================== */
+.is-today .pika-button {
+    color: $datepicker-day-color--today;
+    font-weight: $datepicker-day-font-weight--today;
+    background: $datepicker-day-background--today;
+}
+
+/* Weekdays: Days: Hover ==================================================== */
+.no-touchevents {
+
+    .pika-button:hover,
+    .pika-row.pick-whole-week:hover .pika-button {
+        color: $datepicker-day-color--hover;
+        background: $datepicker-day-background--hover;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+}

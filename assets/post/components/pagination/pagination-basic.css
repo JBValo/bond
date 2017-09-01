@@ -1,0 +1,162 @@
+/* =============================================================================
+
+    PAGINATION (BASIC) CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $pagination-spacing--basic: 2rem 0 0;
+
+    /* List Item */
+    $pagination-number-spacing: 0 0.1rem;
+
+    /* Number */
+    $pagination-number-font-family: $global-font-family;
+    $pagination-number-padding: 0.25rem 0.5rem;
+    $pagination-number-font-size: 1rem;
+    $pagination-number-color: black;
+    $pagination-number-font-weight: bold;
+    $pagination-number-font-style: normal;
+    $pagination-number-border: 2px solid black;
+    $pagination-number-background: transparent;
+
+        /* Number: Hover */
+        $pagination-number-background--hover: black;
+        $pagination-number-color--hover: white;
+        $pagination-number-border--hover: 2px solid black;
+
+        /* Number: Current */
+        $pagination-number-background--current: black;
+        $pagination-number-color--current: white;
+        $pagination-number-border--current: 2px solid black;
+
+    /* Nav */
+    $pagination-nav-font-family: $global-font-family;
+    $pagination-nav-padding: 0.25rem 0.5rem;
+    $pagination-nav-font-size: 1rem;
+    $pagination-nav-color: black;
+    $pagination-nav-font-weight: bold;
+    $pagination-nav-font-style: normal;
+    $pagination-nav-border: 2px solid black;
+    $pagination-nav-background: transparent;
+
+        /* Nav: Hover */
+        $pagination-nav-background--hover: black;
+        $pagination-nav-color--hover: white;
+        $pagination-nav-border--hover: 2px solid black;
+
+/* Containers =============================================================== */
+.pagination--basic {
+
+}
+
+.pagination__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* List Items =============================================================== */
+[class*="pagination__list-item--"] {
+    margin: $pagination-number-spacing;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+    /* Current */
+    &.current {
+
+        .pagination__number {
+            background: $pagination-number-background--current;
+            color: $pagination-number-color--current;
+            border: $pagination-number-border--current;
+            pointer-events: none;
+        }
+
+    }
+
+}
+
+/* Numbers ================================================================== */
+.pagination__number {
+    font-family: $pagination-number-font-family;
+    padding: $pagination-number-padding;
+    font-size: $pagination-number-font-size;
+    color: $pagination-number-color;
+    font-weight: $pagination-number-font-weight;
+    font-style: $pagination-number-font-style;
+    border: $pagination-number-border;
+    background: $pagination-number-background;
+    text-decoration: none;
+    display: block;
+}
+
+.pagination__list-item--number:not(.current) {
+    display: none;
+
+    @media $(p-tablet) {
+        display: inline-block;
+    }
+
+}
+
+/* Number: Hovers =========================================================== */
+.no-touchevents {
+
+    .pagination__number:hover {
+        background: $pagination-number-background--hover;
+        color: $pagination-number-color--hover;
+        border: $pagination-number-border--hover;
+    }
+
+}
+
+/* Page Count =============================================================== */
+.pagination__page-count {
+    display: inline;
+
+    @media $(p-tablet) {
+        display: none;
+    }
+
+}
+
+/* Nav ====================================================================== */
+[class*="pagination__nav--"] {
+    font-family: $pagination-nav-font-family;
+    padding: $pagination-nav-padding;
+    font-size: $pagination-nav-font-size;
+    color: $pagination-nav-color;
+    font-weight: $pagination-nav-font-weight;
+    font-style: $pagination-nav-font-style;
+    border: $pagination-nav-border;
+    background: $pagination-nav-background;
+    text-decoration: none;
+    display: block;
+
+    &.disabled {
+        opacity: 0.35;
+        pointer-events: none;
+    }
+
+}
+
+/* Nav: Hovers ============================================================== */
+.no-touchevents {
+
+    [class*="pagination__nav--"]:hover {
+        background: $pagination-nav-background--hover;
+        color: $pagination-nav-color--hover;
+        border: $pagination-nav-border--hover;
+    }
+
+}

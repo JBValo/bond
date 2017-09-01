@@ -1,0 +1,139 @@
+/* =============================================================================
+
+    PAGE TITLE CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $page-title-alignment: center;
+    $page-title-padding: $padding-unit 0;
+
+    /* Subtitle */
+    $page-title-subtitle-margin: 0 0 1rem;
+    $page-title-subtitle-padding: 0.5rem 1rem;
+    $page-title-subtitle-font-weight: normal;
+    $page-title-subtitle-font-style: normal;
+    $page-title-subtitle-color: white;
+    $page-title-subtitle-text-transform: uppercase;
+    $page-title-subtitle-background: gray;
+
+    /* Title */
+    $page-title-title-margin: 0;
+    $page-title-title-padding: 0;
+    $page-title-title-font-weight: bold;
+    $page-title-title-font-style: normal;
+    $page-title-title-color: white;
+    $page-title-title-text-transform: none;
+
+    /* Content */
+    $page-title-content-color: white;
+
+    /* Meta: Items */
+    $page-title-meta-item-padding: 0.5rem;
+    $page-title-meta-item-color: white;
+    $page-title-meta-item-font-family: $global-font-family;
+    $page-title-meta-item-font-weight: normal;
+    $page-title-meta-item-font-style: normal;
+    $page-title-meta-item-font-size: 0.8rem;
+    $page-title-meta-item-text-transform: none;
+
+    /* Meta: Links */
+    $page-title-meta-link-color: inherit;
+
+        /* Meta: Links: Hover */
+        $page-title-meta-link-color--hover: gray;
+
+    /* Overlay */
+    $page-title-overlay: rgba(0,0,0,0.7);
+
+/* Containers =============================================================== */
+.page-title {
+    text-align: $page-title-alignment;
+    padding: $page-title-padding;
+}
+
+.page-title__container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Content ================================================================== */
+
+    /* Subtitle */
+    .page-title__subtitle {
+        margin: $page-title-subtitle-margin;
+        font-weight: $page-title-subtitle-font-weight;
+        font-style: $page-title-subtitle-font-style;
+        color: $page-title-subtitle-color;
+        text-transform: $page-title-subtitle-text-transform;
+        padding: $page-title-subtitle-padding;
+        background: $page-title-subtitle-background;
+        display: inline-block;
+    }
+
+    /* Title */
+    .page-title__title {
+        margin: $page-title-title-margin;
+        font-weight: $page-title-title-font-weight;
+        font-style: $page-title-title-font-style;
+        color: $page-title-title-color;
+        text-transform: $page-title-title-text-transform;
+        padding: $page-title-title-padding;
+    }
+
+    /* Content */
+    .page-title__content {
+        color: $page-title-content-color;
+    }
+
+    /* Meta: Container */
+    .page-title__meta {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Meta: Items */
+    .page-title__meta-item {
+        padding: $page-title-meta-item-padding;
+        color: $page-title-meta-item-color;
+        font-family: $page-title-meta-item-font-family;
+        font-weight: $page-title-meta-item-font-weight;
+        font-style: $page-title-meta-item-font-style;
+        font-size: $page-title-meta-item-font-size;
+        text-transform: $page-title-meta-item-text-transform;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* Meta: Links */
+    .page-title__meta-item-link {
+        color: $page-title-meta-link-color;
+    }
+
+        /* Meta: Links: Hover */
+        .no-touchevents {
+
+            .page-title__meta-item-link:hover {
+                color: $page-title-meta-link-color--hover;
+            }
+
+        }
+
+/* Overlay ================================================================== */
+.page-title:before {
+    background: $page-title-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 5;
+}

@@ -1,0 +1,85 @@
+/* =============================================================================
+
+    SECTION TITLES CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Wrapper */
+    $section-title-wrapper-margin: 0 0 4rem;
+
+    /* Subtitle */
+    $section-subtitle-margin: 0 0 1rem;
+    $section-subtitle-padding: 0.5rem 1rem;
+    $section-subtitle-font-weight: normal;
+    $section-subtitle-font-style: normal;
+    $section-subtitle-color: white;
+    $section-subtitle-text-transform: uppercase;
+    $section-subtitle-background: black;
+
+        /* Divider */
+        $section-subtitle-divider-width: 1rem;
+        $section-subtitle-divider-background: black;
+        $section-subtitle-divider-thickness: 5px;
+        $section-subtitle-divider-margin: 0.5rem 0 0;
+
+    /* Title */
+    $section-title-margin: 0;
+    $section-title-padding: 0;
+
+/* Containers =============================================================== */
+.page-section__title-wrapper {
+    margin: calc($section-title-wrapper-margin / 2);
+
+    @media $(l-tablet) {
+        margin: $section-title-wrapper-margin;
+    }
+
+}
+
+/* Subtitle ================================================================= */
+.page-section__subtitle {
+    margin: $section-subtitle-margin;
+    font-weight: $section-subtitle-font-weight;
+    font-style: $section-subtitle-font-style;
+    color: $section-subtitle-color;
+    text-transform: $section-subtitle-text-transform;
+    padding: $section-subtitle-padding;
+    background: $section-subtitle-background;
+    display: inline-block;
+
+    &.with-divider {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,0);
+            content: "";
+            display: inline-block;
+            width: $section-subtitle-divider-width;
+            height: $section-subtitle-divider-thickness;
+            background: $section-subtitle-divider-background;
+            margin: $section-subtitle-divider-margin;
+        }
+
+    }
+
+}
+
+/* Title ==================================================================== */
+.page-section__title {
+    margin: $section-title-margin;
+    padding: $section-title-padding;
+}
+
+/* Title Content ============================================================ */
+.page-section__title-content {
+
+}

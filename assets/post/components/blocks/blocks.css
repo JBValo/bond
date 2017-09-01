@@ -1,0 +1,206 @@
+/* =============================================================================
+
+    BLOCKS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Grid */
+    $block-grid-gap: 2rem;
+
+    /* Blocks */
+    $block-background: white;
+    $block-border: none;
+    $block-padding: 0;
+
+    /* Blocks: Content */
+    $block-content-padding: 2rem;
+    $block-content-border: 1px solid #ccc;
+
+        /* Title */
+        $block-title-font-weight: bold;
+        $block-title-color: black;
+        $block-title-margin: 0;
+
+            /* Title: Title Link */
+            $block-title-link-color: $link-color;
+            $block-title-link-text-decoration: underline;
+
+            /* Title Link: Hover */
+            $block-title-link-color--hover: $link-color--hover;
+
+        /* Label / Subtitle */
+        $block-subtitle-font-weight: bold;
+        $block-subtitle-font-style: normal;
+        $block-subtitle-text-transform: none;
+        $block-subtitle-color: black;
+        $block-subtitle-background: transparent;
+        $block-subtitle-padding: 0;
+        $block-subtitle-margin: initial;
+
+        /* Content */
+        $block-content-font-family: $global-font-family;
+        $block-content-font-size: initial;
+        $block-content-font-weight: bold;
+        $block-content-font-style: normal;
+        $block-content-text-transform: none;
+        $block-content-color: black;
+        $block-content-margin: initial;
+
+        /* CTA */
+        $block-cta-color: $link-color;
+        $block-cta-margin: 1rem 0 0;
+
+            /* CTA: Hover */
+            $block-cta-color--hover: $link-color--hover;
+
+
+/* Containers =============================================================== */
+.blocks__group {
+
+}
+
+/* Blocks =================================================================== */
+.block {
+    background: $block-background;
+    border: $block-border;
+    padding: calc($block-padding / 2);
+    margin: $block-grid-gap 0 0;
+
+    @media $(p-tablet) {
+        padding: $block-padding;
+    }
+
+    @media $(l-tablet) {
+        margin: 0;
+    }
+
+    &:first-of-type {
+        margin: 0;
+    }
+
+}
+
+/* Layouts ================================================================== */
+
+    /* All Layouts */
+    .blocks__group[class*="-up"] {
+
+        @media $(l-tablet) {
+            display: grid;
+            grid-column-gap: $block-grid-gap;
+        }
+
+    }
+
+    /* 2-Up */
+    .blocks__group.two-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 3-Up */
+    .blocks__group.three-up {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* 4-Up */
+    .blocks__group.four-up {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Stretched */
+    .stretch {
+
+        .block {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .block__content-wrapper {
+            flex: 1;
+        }
+
+    }
+
+/* Content ================================================================== */
+
+    /* Container */
+    .block__content-wrapper {
+        padding: calc($block-content-padding / 2);
+        border: $block-content-border;
+        flex: 1;
+
+        @media $(p-tablet) {
+            padding: $block-content-padding;
+        }
+
+    }
+
+    /* Image */
+    .block__image {
+        display: block;
+        width: 100%;
+    }
+
+    /* Title */
+    .block__title {
+        font-weight: $block-title-font-weight;
+        color: $block-title-color;
+        margin: $block-title-margin;
+    }
+
+    /* Title Link */
+    .block__title-link {
+        color: $block-title-link-color;
+        text-decoration: $block-title-link-text-decoration;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        text-transform: inherit;
+    }
+
+        /* Title Link: Hover */
+        .no-touchevents {
+
+            .block__title-link:hover {
+                color: $block-title-link-color--hover;
+            }
+
+        }
+
+    /* Subitle / Label */
+    .block__subtitle {
+        font-weight: $block-subtitle-font-weight;
+        font-style: $block-subtitle-font-style;
+        text-transform: $block-subtitle-text-transform;
+        color: $block-subtitle-color;
+        margin: $block-subtitle-margin;
+        padding: $block-subtitle-padding;
+        background: $block-subtitle-background;
+    }
+
+    /* CTA */
+    .block__cta--button {
+        margin: $block-cta-margin;
+    }
+
+    .block__cta--link {
+        color: $block-cta-color;
+        margin: $block-cta-margin;
+        display: inline-block;
+    }
+
+        /* CTA: Hover */
+        .no-touchevents {
+
+            .block__cta--link:hover {
+                color: $block-cta-color--hover;
+            }
+
+        }

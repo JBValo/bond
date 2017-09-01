@@ -1,0 +1,74 @@
+/* =============================================================================
+
+    TAGS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $tags-padding: 1rem 0 0;
+
+    /* Items */
+    $tags-item-font-family: $global-font-family;
+    $tags-item-font-weight: normal;
+    $tags-item-font-size: 0.75rem;
+    $tags-item-font-style: normal;
+    $tags-item-text-transform: none;
+    $tags-item-color: $gray-50;
+    $tags-item-margin: 0.1rem;
+
+    /* Links */
+    $tags-item-link-padding: 0.25rem;
+    $tags-item-link-radius: 2px;
+    $tags-item-link-color: white;
+    $tags-item-link-background: $gray-50;
+    $tags-item-link-text-decoration: none;
+
+        /* Links: Hover */
+        $tags-item-link-background--hover: black;
+        $tags-item-link-color--hover: white;
+
+/* Container ================================================================ */
+.tags {
+    list-style: none;
+    margin-left: -$tags-item-margin;
+    padding: $tags-padding;
+    font-size: 0;
+}
+
+/* Items ==================================================================== */
+.tags__item {
+    display: inline-block;
+    font-family: $tags-item-font-family;
+    font-weight: $tags-item-font-weight;
+    font-size: $tags-item-font-size;
+    font-style: $tags-item-font-style;
+    text-transform: $tags-item-text-transform;
+    color: $tags-item-color;
+    margin: $tags-item-margin;
+}
+
+/* Links ==================================================================== */
+.tags__item-link {
+    display: block;
+    text-decoration: none;
+    color: $tags-item-link-color;
+    background: $tags-item-link-background;
+    padding: $tags-item-link-padding;
+    text-decoration: $tags-item-link-text-decoration;
+}
+
+    /* Links: Hover */
+    .no-touchevents {
+
+        .tags__item-link:hover {
+            background: $tags-item-link-background--hover;
+            color: $tags-item-link-color--hover;
+        }
+
+    }

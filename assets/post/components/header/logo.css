@@ -1,0 +1,41 @@
+/* =============================================================================
+
+    LOGO CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $main-logo-desktop-width: 250px;
+    $main-logo-mobile-width: 40%;
+
+/* Logo Container =========================================================== */
+.main-header__logo-link {
+    width: $main-logo-mobile-width;
+    display: block;
+
+    @media $(p-tablet) {
+        width: $main-logo-desktop-width;
+    }
+
+    /* Centered Logo (Mobile) */
+    &.center {
+        display: inline-block;
+        margin: 0 auto;
+
+        @media $menu-media-query {
+            margin: 0;
+        }
+        
+    }
+
+}
+
+/* Logo Image =============================================================== */
+.main-header__logo {
+    display: block;
+}

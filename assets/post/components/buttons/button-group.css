@@ -1,0 +1,38 @@
+/* =============================================================================
+
+    BUTTON GROUP CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    $button-group-item-spacing: 0.5rem;
+
+/* Containers =============================================================== */
+.button-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Items ==================================================================== */
+.button-group__item {
+    padding: $button-group-item-spacing 0;
+    display: block;
+
+    @media $(p-tablet) {
+        padding: 0 $button-group-item-spacing;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
+
+/* Buttons ================================================================== */
+.button-group__item-button {
+
+}

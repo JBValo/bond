@@ -1,0 +1,92 @@
+/* =============================================================================
+
+    PARTNERS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Groups */
+    $partners-group-alignment: center; /* uses text align */
+    $partners-group-margin: 2rem 0;
+
+    /* Group Titles */
+    $partners-item-title-margin: 0 0 1rem;
+    $partners-item-title-color: black;
+    $partners-item-title-font-weight: bold;
+    $partners-item-title-font-style: normal;
+    $partners-item-title-text-transform: none;
+
+    /* Items */
+    $partners-item-font-family: $list-font-family;
+    $partners-item-font-size: $font-scale-baseline;
+    $partners-item-color: black;
+    $partners-item-font-weight: normal;
+    $partners-item-font-style: normal;
+    $partners-item-text-transform: none;
+
+    /* Links */
+    $partners-item-link-padding: 1rem;
+    $partners-item-link-color: $link-color;
+    $partners-item-link-text-decoration: underline;
+
+        /* Links: Hover */
+        $partners-item-link-color--hover: $link-color--hover;
+
+/* Groups =================================================================== */
+.partners__group {
+    text-align: $partners-group-alignment;
+    margin: $partners-group-margin;
+}
+
+/* Group Titles ============================================================= */
+.partners__group-title {
+    margin: $partners-item-title-margin;
+    color: $partners-item-title-color;
+    font-weight: $partners-item-title-font-weight;
+    font-style: $partners-item-title-font-style;
+    text-transform: $partners-item-title-text-transform;
+}
+
+/* List ===================================================================== */
+.partners__group-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* List Items =============================================================== */
+.partners__group-list-item {
+    font-family: $partners-item-font-family;
+    font-size: $partners-item-font-size;
+    font-weight: $partners-item-font-weight;
+    font-style: $partners-item-font-style;
+    text-transform: $partners-item-text-transform;
+    display: block;
+
+    @media $(p-tablet) {
+        display: inline-block;
+    }
+
+}
+
+/* List Item Links ========================================================== */
+.partners__group-list-item-link {
+    color: $partners-item-link-color;
+    text-decoration: $partners-item-link-text-decoration;
+    padding: $partners-item-link-padding;
+    display: block;
+}
+
+    /* List Item Links: Hover */
+    .no-touchevents {
+
+        .partners__group-list-item-link:hover {
+            color: $partners-item-link-color--hover;
+        }
+
+    }
