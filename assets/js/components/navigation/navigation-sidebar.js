@@ -21,6 +21,7 @@
 
             if($(this).hasClass('current')) {
                 $('a[data-sidebar-pane]').removeClass('current');
+                $('a[data-sidebar-level]').removeClass('current');
                 $(this).removeClass('current');
                 $('.sidebar-nav__overlay').removeClass('show');
                 $('[class*="sidebar-nav__pane--"][data-sidebar-pane="' + pane_id + '"]').removeClass('current');

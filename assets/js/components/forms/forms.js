@@ -12,7 +12,8 @@
 
     $(document).ready(function() {
 
-        // File Inputs */
+        // File Inputs
+        // TODO: Multiple file inputs (e.g. 2 files selected)
         function inputChange() {
             $(this).siblings('.file-input__label').text($(this).val().split('\\').pop());
         }

@@ -69,24 +69,44 @@ $global-easing: ease;
 
     /* Gr(e/a)yscale */
     $black: rgba(0, 0, 0, 1);
+    $grey-05: hsla(0, 0%, 5%, 1);
     $grey-10: hsla(0, 0%, 10%, 1);
+    $grey-15: hsla(0, 0%, 15%, 1);
     $grey-20: hsla(0, 0%, 20%, 1);
+    $grey-25: hsla(0, 0%, 25%, 1);
     $grey-30: hsla(0, 0%, 30%, 1);
+    $grey-35: hsla(0, 0%, 35%, 1);
     $grey-40: hsla(0, 0%, 40%, 1);
+    $grey-45: hsla(0, 0%, 45%, 1);
     $grey-50: hsla(0, 0%, 50%, 1);
+    $grey-55: hsla(0, 0%, 55%, 1);
     $grey-60: hsla(0, 0%, 60%, 1);
+    $grey-65: hsla(0, 0%, 65%, 1);
     $grey-70: hsla(0, 0%, 70%, 1);
+    $grey-75: hsla(0, 0%, 75%, 1);
     $grey-80: hsla(0, 0%, 80%, 1);
+    $grey-85: hsla(0, 0%, 85%, 1);
     $grey-90: hsla(0, 0%, 90%, 1);
+    $grey-95: hsla(0, 0%, 95%, 1);
+    $gray-05: hsla(0, 0%, 5%, 1);
     $gray-10: hsla(0, 0%, 10%, 1);
+    $gray-15: hsla(0, 0%, 15%, 1);
     $gray-20: hsla(0, 0%, 20%, 1);
+    $gray-25: hsla(0, 0%, 25%, 1);
     $gray-30: hsla(0, 0%, 30%, 1);
+    $gray-35: hsla(0, 0%, 35%, 1);
     $gray-40: hsla(0, 0%, 40%, 1);
+    $gray-45: hsla(0, 0%, 45%, 1);
     $gray-50: hsla(0, 0%, 50%, 1);
+    $gray-55: hsla(0, 0%, 55%, 1);
     $gray-60: hsla(0, 0%, 60%, 1);
+    $gray-65: hsla(0, 0%, 65%, 1);
     $gray-70: hsla(0, 0%, 70%, 1);
+    $gray-75: hsla(0, 0%, 75%, 1);
     $gray-80: hsla(0, 0%, 80%, 1);
+    $gray-85: hsla(0, 0%, 85%, 1);
     $gray-90: hsla(0, 0%, 90%, 1);
+    $gray-95: hsla(0, 0%, 95%, 1);
     $white: rgba(255, 255, 255, 1);
 
     /* Utility Colors */

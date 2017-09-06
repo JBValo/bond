@@ -59,6 +59,10 @@
     z-index: 30;
 }
 
+.sticky {
+    z-index: 20;
+}
+
 .main-header {
     z-index: 20;
 }
