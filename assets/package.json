@@ -36,7 +36,8 @@
         "normalize": "cp node_modules/normalize.css/normalize.css vendor/",
         "slick": "cp node_modules/slick-carousel/slick/slick.css vendor/ && cp node_modules/slick-carousel/slick/slick.js vendor/ && cp node_modules/slick-carousel/slick/slick-theme.css vendor/",
         "datepicker": "cp node_modules/pikaday/pikaday.js vendor/ && cp node_modules/pikaday/css/pikaday.css vendor/",
-        "bond": "yarn install && rm -rf vendor && mkdir vendor && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick && npm run datepicker && npm run photoswipe",
+        "select2": "cp node_modules/select2/dist/js/select2.min.js vendor/ && cp node_modules/select2/dist/css/select2.min.css vendor/",
+        "bond": "yarn install && rm -rf vendor && mkdir vendor && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick && npm run datepicker && npm run select2",
         "notify": "node notify.js",
         "post": "postcss post/*.css -c postcss.config.js -d css && node notify.js",
         "watch": "npm-watch"
@@ -47,6 +48,7 @@
         "modernizr": "^3.5.0",
         "normalize.css": "^7.0.0",
         "pikaday": "^1.6.1",
+        "select2": "^4.0.3",
         "slick-carousel": "^1.6.0"
     }
 }

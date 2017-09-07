@@ -103,7 +103,6 @@
 
     /* Overlay */
     $sidebar-nav-overlay-background: rgba(0,0,0,0.9);
-    $sidebar-nav-overlay-transition: background 300ms $global-easing 0ms;
 
 /* Body ===================================================================== */
 body.has-sidebar-nav {
@@ -307,7 +306,7 @@ body.has-sidebar-nav {
         background: white;
 
         @media $menu-media-query {
-            width: 30vw;
+            width: 25vw;
             padding: $sidebar-nav-pane-padding--nav;
             border-right: $sidebar-nav-pane-border--nav;
         }
@@ -524,12 +523,13 @@ body.has-sidebar-nav {
         height: 100%;
         background: rgba(0,0,0,0);
         transform: translate3d(0,-100%,0);
-        transition: $sidebar-nav-overlay-transition;
+        transition: background 300ms $global-easing 0ms,
+                    transform 0ms linear 300ms;
 
         &.show {
             background: $sidebar-nav-overlay-background;
             transform: translate3d(0,0,0);
-            transition: $sidebar-nav-overlay-transition;
+            transition: background 300ms $global-easing 0ms;
         }
 
     }

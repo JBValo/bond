@@ -24,6 +24,18 @@
             $(this).change(inputChange);
         });
 
+        // Select2
+        $('select[multiple]').each(function(e) {
+            $(this).select2({
+                placeholder: $(this).attr('placeholder')
+            });
+        });
+
+            // Reset
+            $('.filters__reset-button').on('click', function(e) {
+                $(this).closest('form').find('select[multiple]:not([disabled])').val(null).trigger('change');
+            });
+
     });
 
 })(jQuery);

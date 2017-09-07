@@ -8,102 +8,7 @@
 
 ============================================================================= */
 
-/* Variables ================================================================ */
-
-    /* Sections */
-    $form-section-padding: 1rem 0;
-
-        /* Sections: Titles */
-        $form-section-title-font-family: $global-font-family;
-        $form-section-title-font-weight: bold;
-        $form-section-title-font-style: normal;
-        $form-section-title-font-size: $font-scale-h4;
-        $form-section-title-color: black;
-        $form-section-title-text-transform: none;
-        $form-section-title-border: 2px solid black;
-        $form-section-title-padding: 0 0 0.5rem;
-        $form-section-title-margin: 0 0 0.5rem;
-
-        /* Sections: Description */
-        $form-section-desc-font-family: $global-font-family;
-        $form-section-desc-font-weight: normal;
-        $form-section-desc-font-style: normal;
-        $form-section-desc-font-size: $font-scale-baseline;
-        $form-section-desc-color: black;
-        $form-section-desc-text-transform: none;
-        $form-section-desc-padding: 0;
-        $form-section-desc-margin: 0;
-
-    /* Labels */
-
-        /* Labels: Primary */
-        $form-label-font-family: $global-font-family;
-        $form-label-font-size: 0.85rem;
-        $form-label-color: black;
-        $form-label-font-weight: 600;
-        $form-label-font-style: normal;
-        $form-label-margin: 0 0 0.5rem;
-        $form-label-text-transform: none;
-
-        /* Labels: Sublabels */
-        $form-sublabel-font-family: $global-font-family;
-        $form-sublabel-font-size: 0.75rem;
-        $form-sublabel-color: $gray-50;
-        $form-sublabel-font-weight: normal;
-        $form-sublabel-font-style: normal;
-        $form-sublabel-margin: 0.25rem 0 0;
-        $form-sublabel-text-transform: none;
-
-    /* Fields */
-    $form-field-margin: 0.75rem;
-    $form-field-border: 2px solid $gray-80;
-    $form-field-border-radius: 0;
-    $form-field-font-family: $global-font-family;
-    $form-field-font-size: $font-scale-baseline;
-    $form-field-font-weight: normal;
-    $form-field-padding: 0.5rem;
-    $form-field-background: white;
-
-        /* Fields: Hover */
-        $form-field-border-color--hover: $gray-60;
-
-        /* Fields: Focus */
-        $form-field-border-color--focus: teal;
-
-        /* Fields: Textarea */
-        $form-field-textarea-height: 250px;
-
-        /* Fields: Select */
-        $form-field-select-background--hover: color($form-field-border-color--focus tint(95%));
-
-        /* Fields: File */
-        $form-field-file-background: black;
-        $form-field-border-radius: $form-field-border-radius;
-        $form-field-file-padding: $form-field-padding;
-        $form-field-file-color: white;
-        $form-field-file-font-family: $form-field-font-family;
-        $form-field-file-font-weight: bold;
-        $form-field-file-font-style: normal;
-        $form-field-file-text-transform: none;
-        $form-field-file-font-size: $form-field-font-size;
-
-    /* Errors */
-    $form-field-color-error: $color-utility--danger;
-    $form-field-font-error: $global-font-family;
-
-    /* Submit Button */
-    $form-submit-button-padding: $button-padding;
-    $form-submit-button-radius: $button-radius;
-    $form-submit-button-font-family: $button-font-family;
-    $form-submit-button-font-size: $button-font-size;
-    $form-submit-button-font-weight: $button-font-weight;
-    $form-submit-button-font-style: $button-font-style;
-    $form-submit-button-text-transform: $button-text-transform;
-    $form-submit-button-background: $button-background;
-
-        /* Submit Button: Hover */
-        $form-submit-button-color--hover: $button-color--hover;
-        $form-submit-button-background--hover: $button-background--hover;
+@import "forms-variables.css";
 
 /* Gravity Forms ============================================================ */
 
@@ -153,7 +58,8 @@
     }
 
     /* Field Labels */
-    .gform_fields > li > label {
+    .gform_fields > li > label,
+    label {
         font-family: $form-label-font-family;
         font-size: $form-label-font-size;
         color: $form-label-color;
@@ -287,6 +193,7 @@ form {
         padding: $form-field-padding;
         border-radius: $form-field-border-radius;
         background: $form-field-background;
+        color: $form-field-color;
         outline: none;
         box-shadow: none;
         width: 100%;
@@ -297,7 +204,7 @@ form {
 
     }
 
-    select {
+    select:not([multiple]) {
         padding-right: 2rem;
         box-shadow: none;
         width: 100%;

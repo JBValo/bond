@@ -100,17 +100,17 @@
 
     /* 2-Up */
     .blocks__group.two-up {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50%);
     }
 
     /* 3-Up */
     .blocks__group.three-up {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 33.33%);
     }
 
     /* 4-Up */
     .blocks__group.four-up {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 25%);
     }
 
     /* Stretched */
@@ -118,7 +118,7 @@
 
         .block {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column;
         }
 
         .block__content-wrapper {

@@ -34,6 +34,9 @@
         <!-- Vendor CSS: Pikaday -->
         <link rel="stylesheet" href="assets/vendor/pikaday.css" type="text/css" media="all" />
 
+        <!-- Vendor CSS: Select2 -->
+        <link rel="stylesheet" href="assets/vendor/select2.min.css" type="text/css" media="all" />
+
         <!-- Primary Stylesheet -->
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
 
@@ -703,6 +706,7 @@
                 </div>
             </section>
 
+            <!-- Sticky Helper -->
             <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;">
                 This is a sticky bar.
             </div>
@@ -860,6 +864,50 @@
                             <input type="submit" id="gform_submit_button_596" class="gform_button button" value="Submit" tabindex="17">
                         </div>
                     </form>
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <section class="page-section flush-top">
+                <div class="container--medium">
+                    <h4 class="filters__title text-center">Filter Results</h4>
+                    <form>
+                        <ul class="filters--3-up">
+                            <li class="filters__item">
+                                <label class="filters__item-label">Filter 1</label>
+                                <select class="filters__select" placeholder="Filter 1" disabled multiple>
+                                    <option>Filter Option</option>
+                                    <option>Filter Option</option>
+                                    <option>Filter Option</option>
+                                </select>
+                            </li>
+                            <li class="filters__item">
+                                <label class="filters__item-label">Filter 2</label>
+                                <select class="filters__select" placeholder="Filter 2">
+                                    <option>Filter Option</option>
+                                    <option disabled="disabled">Filter Option</option>
+                                    <option>Filter Option</option>
+                                </select>
+                            </li>
+                            <li class="filters__item">
+                                <label class="filters__item-label">Filter 3</label>
+                                <select class="filters__select" placeholder="Filter 3">
+                                    <option>Filter Option</option>
+                                    <option>Filter Option</option>
+                                    <option>Filter Option</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul class="filters__buttons button-group text-center">
+                            <li class="button-group__item">
+                                <a href="#" class="filters__apply-button button-group__button button--basic">Filter Results</a>
+                            </li>
+                            <li class="button-group__item">
+                                <a href="#" class="filters__reset-button button-group__button button--basic">Reset Filters</a>
+                            </li>
+                        </ul>
+                    </form>
+
                 </div>
             </section>
 
@@ -1037,6 +1085,9 @@
 
         <!-- Vendor Script: Pikaday -->
         <script type="text/javascript" src="assets/vendor/pikaday.js"></script>
+
+        <!-- Vendor Script: Select2 -->
+        <script type="text/javascript" src="assets/vendor/select2.min.js"></script>
 
         <!-- Core Script: Base -->
         <script type="text/javascript" src="assets/js/core.js"></script>

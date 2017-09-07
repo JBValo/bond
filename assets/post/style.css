@@ -110,6 +110,9 @@
     /* Forms: Validation */
     @import "components/forms/forms-validation.css";
 
+    /* Forms: Select2 */
+    @import "components/forms/forms-select2.css";
+
 /* COMPONENTS: ALERTS ======================================================= */
 
     /* Alerts: Base */
@@ -202,9 +205,7 @@
     /* Datepicker: Base */
     @import "components/datepicker/datepicker.css";
 
-/* PLUGINS ================================================================== */
+/* COMPONENTS: FILTERS ====================================================== */
 
-    /* These files are specific to plugins used to make certain UI elements faster to style. */
-
-    /* UI Datepicker */
-    /*@import "plugins/uidatepicker.css";*/
+    /* Filters: Base */
+    @import "components/filters/filters.css";

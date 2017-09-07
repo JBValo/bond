@@ -1,0 +1,84 @@
+/* =============================================================================
+
+    FILTERS CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+
+    /* Items */
+    $filters-item-grid-gap: 1rem;
+
+    /* Buttons */
+    $filters-buttons-margin: 2rem 0 0;
+
+
+/* Containers =============================================================== */
+.filters,
+[class^="filters--"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @supports(display: grid) {
+        display: grid;
+        grid-gap: $filters-item-grid-gap;
+
+        &[class*="2-up"] {
+
+            @media $(p-tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        &[class*="3-up"] {
+
+            @media $(l-tablet) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        &[class*="4-up"] {
+
+            @media $(cinema) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+        }
+
+    }
+
+}
+
+/* Items ==================================================================== */
+.filters__item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.filters__item-label {
+    display: block;
+}
+
+/* Selects ================================================================== */
+.filters__select {
+    width: 100%;
+}
+
+/* Title ==================================================================== */
+.filters__title {
+
+}
+
+/* Buttons ================================================================== */
+.filters__buttons {
+    margin: $filters-buttons-margin;
+}
