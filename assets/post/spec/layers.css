@@ -59,6 +59,10 @@
     z-index: 30;
 }
 
+.gallery--full {
+    z-index: 22;
+}
+
 .sticky {
     z-index: 20;
 }

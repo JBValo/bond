@@ -62,6 +62,12 @@ $page-width-medium: 71.25em; /* 1140px */
 $page-width-large: 90em;     /* 1440px */
 $page-width-xl: 100em;       /* 1600px */
 
+/* Sidebar Navigation Widths ================================================ */
+/* Sets width for sidebar and equivalent <body> padding. */
+$sidebar-nav-width--tablet: 10vw;
+$sidebar-nav-width--cinema: 7vw;
+$sidebar-nav-width--cinema-xl: 6vw;
+
 /* Animations =============================================================== */
 $global-easing: ease;
 

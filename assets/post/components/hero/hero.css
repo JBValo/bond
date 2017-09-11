@@ -70,16 +70,20 @@
         $hero-dot-color--current: black;
 
 /* Layering (Z-Index) ======================================================= */
-.slick-list {
-    z-index: 10;
-}
+.hero {
 
-.slick-arrow {
-    z-index: 20;
-}
+    .slick-list {
+        z-index: 10;
+    }
 
-.slick-dots {
-    z-index: 20;
+    .slick-arrow {
+        z-index: 20;
+    }
+
+    .slick-dots {
+        z-index: 20;
+    }
+
 }
 
 .hero__slide-content-container {
@@ -92,18 +96,25 @@
 }
 
 /* Slick Specific =========================================================== */
-.slick-list {
-    min-height: $hero-height;
-    position: relative;
-}
+.hero {
 
-.slick-track {
-    min-height: $hero-height;
+    .slick-list {
+        min-height: $hero-height;
+        position: relative;
+    }
+
+    .slick-track {
+        min-height: $hero-height;
+    }
+
+    .slick-slide {
+        min-height: $hero-height;
+    }
+
 }
 
 .slick-slide {
     outline: none;
-    min-height: $hero-height;
 }
 
 /* Hero: Slides ============================================================= */
@@ -154,7 +165,7 @@
 }
 
 /* Hero: Navigation Arrows ================================================== */
-.slick-arrow {
+.hero .slick-arrow {
     font-size: $hero-arrow-icon-size;
     border-radius: $hero-arrow-radius;
     background: $hero-arrow-background;
@@ -186,7 +197,7 @@
     /* Hero: Arrows (Hover) */
     .no-touchevents {
 
-        .slick-arrow:hover {
+        .hero .slick-arrow:hover {
             background: $hero-arrow-background--hover;
         }
 
@@ -202,7 +213,7 @@
     }
 
 /* Hero: Dots =============================================================== */
-.slick-dots {
+.hero .slick-dots {
     text-align: $hero-dot-position;
     position: absolute;
     bottom: 1rem;

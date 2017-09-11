@@ -692,6 +692,29 @@
                 </div>
             </section>
 
+            <!-- Photo Gallery -->
+            <section class="page-section flush-top">
+                <div class="container--xl">
+                    <ul class="gallery">
+                        <li class="gallery__item">
+                            <a href="#" class="gallery__item-link"><img src="http://placehold.it/200x150" alt="Thumbnail" class="gallery__item-image--thumbnail"></a>
+                        </li>
+                        <li class="gallery__item">
+                            <a href="#" class="gallery__item-link"><img src="http://placehold.it/200x150" alt="Thumbnail" class="gallery__item-image--thumbnail"></a>
+                        </li>
+                        <li class="gallery__item">
+                            <a href="#" class="gallery__item-link"><img src="http://placehold.it/200x150" alt="Thumbnail" class="gallery__item-image--thumbnail"></a>
+                        </li>
+                        <li class="gallery__item">
+                            <a href="#" class="gallery__item-link"><img src="http://placehold.it/200x150" alt="Thumbnail" class="gallery__item-image--thumbnail"></a>
+                        </li>
+                        <li class="gallery__item">
+                            <a href="#" class="gallery__item-link"><img src="http://placehold.it/200x150" alt="Thumbnail" class="gallery__item-image--thumbnail"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
             <!-- Page Title (Subpage Banner) -->
             <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('http://unsplash.it/1920');">
                 <div class="page-title__container container--medium">
@@ -883,7 +906,7 @@
                             </li>
                             <li class="filters__item">
                                 <label class="filters__item-label">Filter 2</label>
-                                <select class="filters__select" placeholder="Filter 2">
+                                <select class="filters__select" placeholder="Filter 2" multiple>
                                     <option>Filter Option</option>
                                     <option disabled="disabled">Filter Option</option>
                                     <option>Filter Option</option>
@@ -891,7 +914,7 @@
                             </li>
                             <li class="filters__item">
                                 <label class="filters__item-label">Filter 3</label>
-                                <select class="filters__select" placeholder="Filter 3">
+                                <select class="filters__select" placeholder="Filter 3" multiple>
                                     <option>Filter Option</option>
                                     <option>Filter Option</option>
                                     <option>Filter Option</option>
@@ -1075,6 +1098,30 @@
             <p>Ad nulla culpa duis voluptate nostrud reprehenderit labore Lorem enim. Non sint enim ut ex pariatur adipisicing consectetur anim enim cillum aliquip fugiat. Ea sit laboris qui irure irure minim exercitation laboris nostrud amet laboris excepteur veniam. Excepteur et cupidatat minim ad incididunt magna sunt irure in amet proident commodo ea do. Deserunt cillum proident qui culpa cupidatat consequat exercitation anim laborum nisi adipisicing sint. Quis sunt mollit aute et occaecat labore nisi deserunt dolor.</p>
         </div>
 
+        <!-- Gallery (Full) -->
+        <div class="gallery--full">
+            <!-- Close Icon -->
+            <a href="#" class="gallery__close-button">
+                <svg viewBox="0 0 24 24" class="core-icon--close">
+                    <use xlink:href="#core-icon--close"></use>
+                </svg>
+            </a>
+            <div class="gallery__slides">
+                <div class="gallery__slide">
+                    <img src="http://unsplash.it/768/250" alt="" class="gallery__item-image--full">
+                </div>
+                <div class="gallery__slide">
+                    <img src="http://unsplash.it/480" alt="" class="gallery__item-image--full">
+                </div>
+                <div class="gallery__slide">
+                    <img src="http://unsplash.it/1440" alt="" class="gallery__item-image--full">
+                </div>
+                <div class="gallery__slide">
+                    <img src="http://unsplash.it/800/1440" alt="" class="gallery__item-image--full">
+                </div>
+            </div>
+        </div>
+
         <!-- DEV-NOTE: Analytics Reminder -->
 
         <!-- Vendor Script: MatchMedia -->
@@ -1133,6 +1180,9 @@
 
         <!-- Component Script: Datepicker (Pikaday) -->
         <script type="text/javascript" src="assets/js/components/datepicker/datepicker.js"></script>
+
+        <!-- Component Script: Gallery -->
+        <script type="text/javascript" src="assets/js/components/gallery/gallery.js"></script>
 
     </body>
 

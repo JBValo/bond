@@ -10,12 +10,6 @@
 
 /* Variables ================================================================ */
 
-    /* Dimensions */
-    /* Sets width for sidebar and equivalent <body> padding. */
-    $sidebar-nav-width--tablet: 10vw;
-    $sidebar-nav-width--cinema: 7vw;
-    $sidebar-nav-width--cinema-xl: 6vw;
-
     /* Top Level: Container (The Sidebar) */
     $sidebar-nav-background: white;
     $sidebar-nav-border: 1px solid #ccc;

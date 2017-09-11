@@ -209,3 +209,8 @@
 
     /* Filters: Base */
     @import "components/filters/filters.css";
+
+/* COMPONENTS: GALLERY ====================================================== */
+
+    /* Gallery: Base */
+    @import "components/gallery/gallery.css";

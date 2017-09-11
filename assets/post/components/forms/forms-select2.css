@@ -18,7 +18,7 @@
         $select2-input-border: $form-field-border;
         $select2-input-font-family: $form-field-font-family;
         $select2-input-font-weight: $form-field-font-weight;
-        $select2-input-font-size: $form-field-font-size;
+        $select2-input-font-size: 0.9rem;
         $select2-input-padding: $form-field-padding;
         $select2-input-border-radius: $form-field-border-radius;
         $select2-input-background: $form-field-background;
@@ -31,15 +31,19 @@
             $select2-input-background--disabled: #ebebeb;
 
         /* Input: Chosen Item(s) */
-        $select2-input-item-border: 1px solid #ccc;
+        $select2-input-item-border: none;
         $select2-input-item-font-family: $form-field-font-family;
         $select2-input-item-font-weight: $form-field-font-weight;
         $select2-input-item-font-size: 0.75rem;
-        $select2-input-item-padding: 0.25rem 0.5rem;
+        $select2-input-item-padding: 0.15rem 0.25rem;
         $select2-input-item-border-radius: 0;
-        $select2-input-item-background: #ebebeb;
+        $select2-input-item-background: none;
         $select2-input-item-color: $form-field-color;
-        $select2-input-item-margin: 5px 5px 0 0;
+        $select2-input-item-margin: 2px 2px 0 0;
+
+            /* Input: Chosen Item(s) Remove Icon */
+            $select2-input-item-remove-color: rgba(0,0,0,0.5);
+            $select2-input-item-remove-margin: 0 7px 0 0;
 
     /* Dropdown */
     $select2-dropdown-max-height: 200px;
@@ -102,6 +106,11 @@
         }
 
     /* Input: Chosen Item(s) */
+    .select2-selection__rendered {
+        white-space: normal !important;
+        padding: 0 !important;
+    }
+
     .select2-selection__choice {
         border: $select2-input-item-border !important;
         font-family: $select2-input-item-font-family !important;
@@ -115,12 +124,22 @@
 
     /* Input: Chosen Item: Remove Icon */
     .select2-selection__choice__remove {
-
+        color: $select2-input-item-remove-color !important;
+        margin: $select2-input-item-remove-margin !important;
     }
 
     /* Input: Search Box */
+    .select2-search--inline {
+        float: none;
+        width: 100%;
+    }
+
+    .select2-container:not(.select2-container--focus) .select2-selection__choice + .select2-search--inline {
+        display: none;
+    }
+
     .select2-search__field {
-        width: auto !important;
+        width: 100% !important;
     }
 
 /* Dropdown ================================================================= */
