@@ -4,3 +4,5 @@ wp-config.local.php
 wp-local.php
 npm-debug.log
 assets/node_modules
+splash
+splash/*

@@ -76,11 +76,17 @@
         position: fixed;
         top: 0;
         right: 0;
-        display: none;
+        display: flex;
+        align-items: center;
+        transform: translate3d(0,-100%,0);
+        opacity: 0;
+        transition: opacity 250ms $global-easing 0ms,
+                    transform 0ms ease 250ms;
 
         &.open {
-            display: flex;
-            align-items: center;
+            transform: translate3d(0,0,0);
+            opacity: 1;
+            transition: opacity 250ms $global-easing 0ms;
         }
 
     }

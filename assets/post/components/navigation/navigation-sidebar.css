@@ -42,7 +42,7 @@
     $sidebar-nav-link-icon-spacing: 0 0 0.5rem;
 
         /* Icons: Hover */
-        $sidebar-nav-link-icon-color--hover: blue;
+        $sidebar-nav-link-icon-color--hover: teal;
 
         /* Icons: Current */
         $sidebar-nav-link-icon-color--current: $sidebar-nav-link-color--current;
@@ -291,6 +291,11 @@ body.has-sidebar-nav {
             width: 50vw;
         }
 
+    }
+
+    /* Title */
+    .sidebar-nav__pane-title {
+        margin-top: 0;
     }
 
 /* Panes: Nav =============================================================== */

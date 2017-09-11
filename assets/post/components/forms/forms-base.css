@@ -243,7 +243,6 @@ form {
             font-style: $form-field-file-font-style;
             text-transform: $form-field-file-text-transform;
             font-size: $form-field-file-font-size;
-            margin: 0.5rem 0 0;
             display: inline-block;
             cursor: pointer;
         }
