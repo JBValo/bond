@@ -13,9 +13,13 @@
     $(document).ready(function() {
 
         // File Inputs
-        // TODO: Multiple file inputs (e.g. 2 files selected)
         function inputChange() {
-            $(this).siblings('.file-input__label').text($(this).val().split('\\').pop());
+            if($(this)[0].files.length === 1) {
+                $(this).siblings('.file-input__label').text($(this).val().split('\\').pop());
+            } else {
+                // TRANSLATION-ITEM
+                $(this).siblings('.file-input__label').text($(this)[0].files.length + ' files selected');
+            }
         }
 
         $('input[type="file"]').each(function() {

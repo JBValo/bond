@@ -28,8 +28,11 @@
 
         // Open Gallery
         $('.gallery__item-link').on('click', function(e) {
+            var current_slide = $(this).parent().index();
             $('html').addClass('hide-overflow');
             $('.gallery--full').addClass('open');
+            $('.gallery__slides').slick('slickGoTo', current_slide);
+            $('.gallery__slide:nth-child(' + current_slide + ')').focus();
         });
 
         // Close Gallery
