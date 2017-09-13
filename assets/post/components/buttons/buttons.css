@@ -14,11 +14,11 @@
     $button-padding: 0.75rem 1.25rem;
     $button-radius: 3px;
     $button-font-family: $global-font-family;
-    $button-font-size: 1rem;
+    $button-font-size: 0.7rem;
     $button-font-weight: bold;
     $button-font-style: normal;
     $button-text-transform: none;
-    $button-background: gray;
+    $button-background: black;
     $button-color: black;
 
         /* Basic: Hover */
@@ -51,9 +51,9 @@ input[type="submit"] {
     font-weight: $button-font-weight;
     font-style: $button-font-style;
     text-transform: $button-text-transform;
+    background: $button-background;
+    color: $button-color;
     text-decoration: none;
-    background: black;
-    color: white;
     display: inline-block;
 }
 
@@ -61,7 +61,7 @@ input[type="submit"] {
     .no-touchevents {
 
         .button--basic:hover {
-            background: gray;
+            background: $button-background--hover;
         }
 
     }
