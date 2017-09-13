@@ -43,10 +43,16 @@
         span {
             display: block;
             flex: 0 0 100%;
-            padding: 0 0 0.5rem;
+            margin: 0 0 $form-field-margin;
 
             @media $(l-tablet) {
                 flex: 0 0 49%;
+
+                &:nth-last-child(2),
+                &:last-of-type {
+                    margin: 0;
+                }
+
             }
 
         }

@@ -78,6 +78,13 @@
             }
         });
 
+        // Search Only: Click to Focus (Desktop Only)
+        if (matchMedia('only screen and (min-width: 64em)').matches) {
+            $('a[data-sidebar-pane="pane-search"]').on('click', function(e) {
+                $('.search-pane .sidebar-nav__search-input').focus();
+            });
+        }
+
         // Body Offset (Mobile)
         /*
             These media queries should be set to the same value as

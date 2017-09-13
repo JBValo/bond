@@ -29,7 +29,7 @@
 .main-footer__subfooter {
     padding: $main-footer-subfooter-spacing;
     margin: $main-footer-subfooter-spacing;
-    border-top: $main-footer-subfooter-border;
+    border-top: 1px solid $main-footer-subfooter-border;
     flex-flow: row wrap;
 }
 
