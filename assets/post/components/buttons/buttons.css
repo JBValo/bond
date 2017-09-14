@@ -11,19 +11,27 @@
 /* Variables ================================================================ */
 
     /* Basic */
-    $button-padding: 0.75rem 1.25rem;
-    $button-radius: 3px;
+    $button-padding: 1.2rem;
+    $button-radius: 0;
     $button-font-family: $global-font-family;
-    $button-font-size: 0.7rem;
-    $button-font-weight: bold;
+    $button-font-size: 0.85rem;
+    $button-font-weight: normal;
     $button-font-style: normal;
-    $button-text-transform: none;
+    $button-text-transform: uppercase;
     $button-background: black;
-    $button-color: black;
+    $button-color: white;
 
         /* Basic: Hover */
-        $button-background--hover: black;
+        $button-background--hover: $color-utility--success;
         $button-color--hover: white;
+
+    /* Neutral */
+    $button-background--neutral: gray;
+    $button-color--neutral: white;
+
+        /* Neutral: Hover */
+        $button-background--neutral--hover: $color-utility--danger;
+        $button-color--neutral--hover: white;
 
     /* Link */
     $button-padding--link: 0;
@@ -43,8 +51,7 @@ input[type="submit"] {
     outline: none;
 }
 
-/* Basic ==================================================================== */
-.button--basic {
+[class*="button--"] {
     padding: $button-padding;
     border-radius: $button-radius;
     font-family: $button-font-family;
@@ -52,10 +59,14 @@ input[type="submit"] {
     font-weight: $button-font-weight;
     font-style: $button-font-style;
     text-transform: $button-text-transform;
-    background: $button-background;
-    color: $button-color;
     text-decoration: none;
     display: inline-block;
+}
+
+/* Basic ==================================================================== */
+.button--basic {
+    background: $button-background;
+    color: $button-color;
 }
 
     /* Basic: Hover */
@@ -67,14 +78,23 @@ input[type="submit"] {
 
     }
 
+/* Neutral ================================================================== */
+.button--neutral {
+    background: $button-background--neutral;
+    color: $button-color--neutral;
+}
+
+    /* Neutral: Hover */
+    .no-touchevents {
+
+        .button--neutral:hover {
+            background: $button-background--neutral--hover;
+        }
+
+    }
+
 /* Link ===================================================================== */
 .button--link {
-    padding: $button-padding--link;
-    font-family: $button-font-family--link;
-    font-size: $button-font-size--link;
-    font-weight: $button-font-weight--link;
-    font-style: $button-font-style--link;
-    text-transform: $button-text-transform--link;
     color: gray;
     display: inline-block;
 }
