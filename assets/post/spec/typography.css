@@ -42,6 +42,12 @@
     $blockquote-border-width: $blockquote-border-size 0;
     $blockquote-border-color: black;
 
+/* Selection Color ========================================================== */
+::selection {
+    background: $black;
+    color: $white;
+}
+
 /* Font Standard ============================================================ */
 html {
     font-size: responsive;
@@ -183,6 +189,7 @@ blockquote {
 
     a[href^="tel:"] {
         pointer-events: none;
+        text-decoration: none;
     }
 
 }

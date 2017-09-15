@@ -109,6 +109,8 @@
         font-weight: $form-submit-button-font-weight;
         font-style: $form-submit-button-font-style;
         text-transform: $form-submit-button-text-transform;
+        background: $form-submit-button-background;
+        color: $form-submit-button-color;
     }
 
         /* Buttons: Hover */

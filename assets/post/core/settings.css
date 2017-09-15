@@ -137,12 +137,6 @@ $global-easing: ease;
     $twitter-brand: #55acee;
     $youtube-brand: #cd201f;
 
-/* Selection Color ========================================================== */
-::selection {
-    background: $black;
-    color: $white;
-}
-
 /* Standards ================================================================ */
 * {
     box-sizing: border-box;

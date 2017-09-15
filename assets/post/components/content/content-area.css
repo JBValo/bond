@@ -40,6 +40,8 @@
     /* Images */
     /* TRANSLATION-ITEM */
     $broken-image-content: "Sorry, this image seems to be missing.";
+    $broken-image-background: #ebebeb;
+    $broken-image-font-color: black;
 
     /* Horizonal Rules */
     $hr-border: 2px solid #ccc;
@@ -124,7 +126,7 @@
                 @media $(l-tablet) {
                     line-height: $paragraph-leading--desktop;
                 }
-                
+
             }
 
         }
@@ -218,14 +220,15 @@
         position: relative;
         font-weight: bold;
         font-family: $global-font-family;
-        background: #ebebeb;
+        color: $broken-image-font-color;
+        background: $broken-image-background;
 
         /* Broken Images: Custom Text */
         &:before {
             content: $broken-image-content;
             display: block;
             font-weight: normal;
-            background: #ebebeb;
+            background: $broken-image-background;
             border-bottom: 0;
             padding: 1rem 0 0;
         }
@@ -235,7 +238,7 @@
             content: "(url: " attr(src) ")";
             display: block;
             font-weight: normal;
-            background: #ebebeb;
+            background: $broken-image-background;
             border-top: 0;
             padding: 0 0 1rem;
             word-break: break-all;

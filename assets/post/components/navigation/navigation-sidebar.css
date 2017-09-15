@@ -23,7 +23,7 @@
     $sidebar-nav-link-text-transform: none;
     $sidebar-nav-link-color: gray;
     $sidebar-nav-link-padding: 1rem;
-    $sidebar-nav-link-border: 1px solid #ccc;
+    $sidebar-nav-link-border: $sidebar-nav-border;
     $sidebar-nav-link-text-decoration: none;
     $sidebar-nav-link-background: white;
 
@@ -55,6 +55,7 @@
     $sidebar-nav-pane-transition: transform 300ms $global-easing 0ms;
 
         /* Panes: Indicators */
+        $sidebar-nav-indicator-color: #ccc;
         $sidebar-nav-indicator-offset: 0.5rem;
         $sidebar-nav-indicator-size: 5px;
 
@@ -130,7 +131,7 @@ body.has-sidebar-nav {
     bottom: 0;
     width: 100%;
 
-    @media $(l-tablet) {
+    @media $menu-media-query {
         height: 100%;
         border-top: none;
         border-right: $sidebar-nav-border;
@@ -197,7 +198,6 @@ body.has-sidebar-nav {
 
 /* Links ==================================================================== */
 .sidebar-nav__item-link {
-    text-align: $sidebar-nav-link-text-align;
     font-weight: $sidebar-nav-link-font-weight;
     font-size: $sidebar-nav-link-font-size;
     font-style: $sidebar-nav-link-font-style;
@@ -207,10 +207,12 @@ body.has-sidebar-nav {
     padding: $sidebar-nav-link-padding;
     border-right: $sidebar-nav-link-border;
     text-decoration: $sidebar-nav-link-text-decoration;
+    text-align: center;
     display: block;
 
     @media $menu-media-query {
         border-right: none;
+        text-align: $sidebar-nav-link-text-align;
         border-bottom: $sidebar-nav-link-border;
     }
 
@@ -547,21 +549,25 @@ a[data-sidebar-pane],
 a[data-sidebar-level] {
     position: relative;
 
-    &:after {
-        position: absolute;
-        right: $sidebar-nav-indicator-offset;
-        top: 50%;
-        transform: translate(0,-50%);
-        content: "";
-        display: block;
-        border: $sidebar-nav-indicator-size solid $sidebar-nav-pane-nav-link-color;
-        border-color: transparent transparent transparent $sidebar-nav-pane-nav-link-color;
-    }
-
-    &.current {
+    @media $menu-media-query {
 
         &:after {
-            border-color: transparent transparent transparent $sidebar-nav-pane-nav-link-color--hover;
+            position: absolute;
+            right: $sidebar-nav-indicator-offset;
+            top: 50%;
+            transform: translate(0,-50%);
+            content: "";
+            display: block;
+            border: $sidebar-nav-indicator-size solid $sidebar-nav-indicator-color;
+            border-color: transparent transparent transparent $sidebar-nav-indicator-color;
+        }
+
+        &.current {
+
+            &:after {
+                border-color: transparent transparent transparent $sidebar-nav-pane-nav-link-color--hover;
+            }
+
         }
 
     }

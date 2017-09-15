@@ -99,6 +99,7 @@ $form-submit-button-font-weight: $button-font-weight;
 $form-submit-button-font-style: $button-font-style;
 $form-submit-button-text-transform: $button-text-transform;
 $form-submit-button-background: $button-background;
+$form-submit-button-color: $button-color;
 
     /* Submit Button: Hover */
     $form-submit-button-color--hover: $button-color--hover;
