@@ -115,8 +115,9 @@ input[type="submit"],
 
     &.disabled,
     &[disabled] {
-        pointer-events: none;
+        pointer-events: fill;
         opacity: 0.35;
+        cursor: not-allowed;
     }
 
 }

@@ -34,7 +34,7 @@
 
 /* Containers =============================================================== */
 .page-section__title-wrapper {
-    margin: calc($section-title-wrapper-margin / 2);
+    margin: 0 0 1rem;
 
     @media $(l-tablet) {
         margin: $section-title-wrapper-margin;

@@ -70,6 +70,7 @@ $sidebar-nav-width--cinema-xl: 6vw;
 
 /* Animations =============================================================== */
 $global-easing: ease;
+$global-timing: 300ms;
 
 /* Core Colors ============================================================== */
 

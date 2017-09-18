@@ -23,6 +23,7 @@
     $sidebar-nav-link-text-transform: none;
     $sidebar-nav-link-color: gray;
     $sidebar-nav-link-padding: 1rem;
+    $sidebar-nav-link-padding--tab-bar: 1rem 0.25rem;
     $sidebar-nav-link-border: $sidebar-nav-border;
     $sidebar-nav-link-text-decoration: none;
     $sidebar-nav-link-background: white;
@@ -52,7 +53,7 @@
         $sidebar-nav-link-close-icon-color: $sidebar-nav-link-icon-color--current;
 
     /* Panes */
-    $sidebar-nav-pane-transition: transform 300ms $global-easing 0ms;
+    $sidebar-nav-pane-transition: transform $global-timing $global-easing 0ms;
 
         /* Panes: Indicators */
         $sidebar-nav-indicator-color: #ccc;
@@ -204,13 +205,14 @@ body.has-sidebar-nav {
     text-transform: $sidebar-nav-link-text-transform;
     font-family: $sidebar-nav-link-font-family;
     color: $sidebar-nav-link-color;
-    padding: $sidebar-nav-link-padding;
+    padding: $sidebar-nav-link-padding--tab-bar;
     border-right: $sidebar-nav-link-border;
     text-decoration: $sidebar-nav-link-text-decoration;
     text-align: center;
     display: block;
 
     @media $menu-media-query {
+        padding: $sidebar-nav-link-padding;
         border-right: none;
         text-align: $sidebar-nav-link-text-align;
         border-bottom: $sidebar-nav-link-border;
@@ -521,6 +523,7 @@ body.has-sidebar-nav {
 /* Overlay ================================================================== */
 .sidebar-nav__overlay {
     display: none;
+    cursor: url('../icons/core-icon--close.svg'), auto;
 
     @media $menu-media-query {
         display: block;
@@ -531,13 +534,13 @@ body.has-sidebar-nav {
         height: 100%;
         background: rgba(0,0,0,0);
         transform: translate3d(0,-100%,0);
-        transition: background 300ms $global-easing 0ms,
-                    transform 0ms linear 300ms;
+        transition: background $global-timing $global-easing 0ms,
+                    transform 0ms linear $global-timing;
 
         &.show {
             background: $sidebar-nav-overlay-background;
             transform: translate3d(0,0,0);
-            transition: background 300ms $global-easing 0ms;
+            transition: background $global-timing $global-easing 0ms;
         }
 
     }
