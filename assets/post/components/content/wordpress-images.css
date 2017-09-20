@@ -38,6 +38,7 @@
 
 .wp-image__wrapper {
     margin: $wp-image-margin 0;
+    max-width: 100% !important;
 }
 
 /* Images =================================================================== */
