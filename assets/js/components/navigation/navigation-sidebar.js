@@ -43,10 +43,18 @@
         // Panes: Navigation Submenus
         $('a[data-sidebar-level]').on('click', function(e) {
             var level_id = $(this).attr('data-sidebar-level');
-
+            $(this).parent().siblings().each(function(){
+                $('a', this).removeClass('current');
+            });
             $(this).addClass('current');
-            $('[class*="sidebar-nav__pane-nav--"][data-sidebar-level="' + level_id + '"]').addClass('current');
 
+            if($(this).parent().parent().hasClass('sidebar-nav__pane-nav--level-1')){
+                $('.sidebar-nav__pane-nav--level-3').removeClass('current');
+            }
+
+            var open_pane_class = $('[class*="sidebar-nav__pane-nav--"][data-sidebar-level="' + level_id + '"]').attr('class');
+            $('.' + open_pane_class).removeClass('current');
+            $('[class*="sidebar-nav__pane-nav--"][data-sidebar-level="' + level_id + '"]').addClass('current');
         });
 
         // Panes: Back
