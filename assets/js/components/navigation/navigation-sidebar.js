@@ -42,6 +42,7 @@
 
         // Panes: Navigation Submenus
         $('a[data-sidebar-level]').on('click', function(e) {
+            $('.sidebar-nav__pane-nav--level-2 .sidebar-nav__pane-nav-item-link').removeClass('current');
             var level_id = $(this).attr('data-sidebar-level');
             $(this).parent().siblings().each(function(){
                 $('a', this).removeClass('current');

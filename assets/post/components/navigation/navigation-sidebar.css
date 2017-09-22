@@ -346,6 +346,37 @@ body.has-sidebar-nav {
 
         &.current {
             transition: $sidebar-nav-pane-transition;
+
+            /* Level 1 */
+            &[class*="level-1"] {
+                transition-duration: $global-timing;
+            }
+
+            /* Level 2 */
+            &[class*="level-2"] {
+                transition-duration: calc($global-timing * 1.25);
+            }
+
+            /* Level 3 */
+            &[class*="level-3"] {
+                transition-duration: calc($global-timing * 1.5);
+            }
+
+        }
+
+        /* Level 1 */
+        &[class*="level-1"] {
+            transition-duration: $global-timing;
+        }
+
+        /* Level 2 */
+        &[class*="level-2"] {
+            transition-duration: calc($global-timing * 1.25);
+        }
+
+        /* Level 3 */
+        &[class*="level-3"] {
+            transition-duration: calc($global-timing * 1.5);
         }
 
     }
