@@ -213,23 +213,27 @@
 
     }
 
-    /* Hovers: Sublevels */
-    .no-touchevents {
+    @media $menu-media-query {
 
-        .main-nav__submenu-item-link:hover {
-            background: $basic-nav-submenu-link-background--hover;
-            color: $basic-nav-submenu-link-color--hover;
+        /* Hovers: Sublevels */
+        .no-touchevents {
+
+            .main-nav__submenu-item-link:hover {
+                background: $basic-nav-submenu-link-background--hover;
+                color: $basic-nav-submenu-link-color--hover;
+            }
+
         }
 
-    }
+        /* Hovers: Hide/Show Submenus */
+        .no-touchevents {
 
-    /* Hovers: Hide/Show Submenus */
-    .no-touchevents {
+            .has-submenu:hover {
 
-        .has-submenu:hover {
+                > [class*="main-nav__submenu--"] {
+                    display: block;
+                }
 
-            > [class*="main-nav__submenu--"] {
-                display: block;
             }
 
         }
