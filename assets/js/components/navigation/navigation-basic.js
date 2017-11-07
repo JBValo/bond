@@ -24,14 +24,13 @@
             }
         });
 
-        // Basic Nav: Submenu Expanders
-        // $('.sub-menu').prev().append('<span class="expand"></span>');
-        //
-        // $('.expand').on('click',function(e){
-        //     $(this).parent().siblings('.sub-menu').toggleClass('active');
-        //     $(this).toggleClass('active');
-        //     e.preventDefault();
-        // });
+        $('.has-submenu > [class$="item-link"]').append('<span class="main-nav__submenu-expand"></span>');
+
+        $('.main-nav__submenu-expand').on('click', function(e) {
+            $(this).parent().toggleClass('active');
+            $(this).parent().siblings('[class*="main-nav__submenu--"]').toggleClass('open');
+            e.preventDefault();
+        });
 
     });
 
