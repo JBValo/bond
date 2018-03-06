@@ -13,8 +13,12 @@
     $(document).ready(function() {
 
         $('.accordions__item-title-link').on('click', function(e) {
-            $('.accordions__item').removeClass('show');
-            $(this).parent().parent().toggleClass('show');
+            if($(this).parent().parent().hasClass('show')) {
+                $(this).parent().parent().removeClass('show');
+            } else {
+                $('.accordions__item').removeClass('show');
+                $(this).parent().parent().toggleClass('show');
+            }
         });
 
     });

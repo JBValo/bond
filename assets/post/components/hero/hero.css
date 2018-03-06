@@ -109,6 +109,11 @@
 
     .slick-slide {
         min-height: $hero-height;
+
+        > div {
+            min-height: $hero-height;
+        }
+
     }
 
 }
@@ -125,6 +130,7 @@
     justify-content: center;
     cursor: grab;
     position: relative;
+    min-height: $hero-height;
 
     &:active {
         cursor: grabbing;

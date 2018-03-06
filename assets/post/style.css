@@ -12,6 +12,10 @@
 
     /* These files are for Bond's foundation - the grid, settings, etc. */
 
+    /* Site Palette */
+    /* In some cases, core files require color variables. */
+    @import "spec/palette.css";
+
     /* Core: Mixins */
     @import "core/mixins.css";
 
@@ -29,15 +33,9 @@
         /* Core: Flexbox Fallback (IE11) */
         @import "core/grid/grid-flex-fallback.css";
 
-        /* Core: Grid: CSS */
-        @import "core/grid/grid-css.css";
-
 /* SPEC ===================================================================== */
 
-    /* These files include sitewide styles such as palette, general typography, etc. */
-
-    /* Site Palette */
-    @import "spec/palette.css";
+    /* These files include sitewide styles such as general typography, etc. */
 
     /* Site Typography */
     @import "spec/typography.css";

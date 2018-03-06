@@ -8,17 +8,17 @@
     },
     "license": "CC-BY-4.0",
     "devDependencies": {
-        "autoprefixer": "latest",
+        "autoprefixer": "^8.1.0",
         "cssnano": "latest",
-        "node-notifier": "latest",
-        "npm-watch": "latest",
-        "postcss-cli": "latest",
-        "postcss-color-function": "latest",
-        "postcss-import": "latest",
-        "postcss-mixins": "latest",
-        "postcss-nested": "latest",
+        "node-notifier": "^5.2.1",
+        "npm-watch": "^0.3.0",
+        "postcss-cli": "^5.0.0",
+        "postcss-color-function": "^4.0.1",
+        "postcss-import": "^11.1.0",
+        "postcss-mixins": "^6.2.0",
+        "postcss-nested": "^3.0.0",
         "postcss-responsive-type": "latest",
-        "postcss-simple-vars": "latest"
+        "postcss-simple-vars": "^4.1.0"
     },
     "watch": {
         "post": {
