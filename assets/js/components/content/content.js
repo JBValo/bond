@@ -17,6 +17,11 @@
             $('[class*="wp-image"]').parent().addClass("wp-image__wrapper");
         }
 
+        // Borken Images
+        $('img').on('error', function() {
+            $(this).addClass('broken');
+        });
+
         // Responsive Tables
         if($('.content-area table').length) {
             $('.content-area table').each(function(e) {

@@ -30,7 +30,7 @@
     $tags-item-link-text-decoration: none;
 
         /* Links: Hover */
-        $tags-item-link-background--hover: black;
+        $tags-item-link-background--hover: $black;
         $tags-item-link-color--hover: white;
 
 /* Container ================================================================ */

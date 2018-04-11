@@ -11,7 +11,7 @@
 /* Variables ================================================================ */
 
     /* Grid */
-    $block-grid-gap: 2rem;
+    $block-grid-gap: 2%;
 
     /* Blocks */
     $block-background: white;
@@ -24,7 +24,7 @@
 
         /* Title */
         $block-title-font-weight: bold;
-        $block-title-color: black;
+        $block-title-color: $black;
         $block-title-margin: 0;
 
             /* Title: Title Link */
@@ -38,7 +38,7 @@
         $block-subtitle-font-weight: bold;
         $block-subtitle-font-style: normal;
         $block-subtitle-text-transform: none;
-        $block-subtitle-color: black;
+        $block-subtitle-color: $black;
         $block-subtitle-background: transparent;
         $block-subtitle-padding: 0;
         $block-subtitle-margin: initial;
@@ -49,7 +49,7 @@
         $block-content-font-weight: bold;
         $block-content-font-style: normal;
         $block-content-text-transform: none;
-        $block-content-color: black;
+        $block-content-color: $black;
         $block-content-margin: initial;
 
         /* CTA */
@@ -100,17 +100,44 @@
 
     /* 2-Up */
     .blocks__group.two-up {
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, calc(calc(100% - $block-grid-gap) / 2));
+
+        .block {
+
+            @media $(l-tablet) {
+                margin: calc($block-grid-gap * 2) 0;
+            }
+
+        }
+
     }
 
     /* 3-Up */
     .blocks__group.three-up {
-        grid-template-columns: repeat(3, 33.33%);
+        grid-template-columns: repeat(3, calc(calc(100% - calc($block-grid-gap * 2)) / 3));
+
+        .block {
+
+            @media $(l-tablet) {
+                margin: calc($block-grid-gap * 2) 0;
+            }
+
+        }
+
     }
 
     /* 4-Up */
     .blocks__group.four-up {
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, calc(calc(100% - calc($block-grid-gap * 3)) / 4));
+
+        .block {
+
+            @media $(l-tablet) {
+                margin: calc($block-grid-gap * 2) 0;
+            }
+
+        }
+
     }
 
     /* Stretched */

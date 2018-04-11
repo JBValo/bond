@@ -24,7 +24,7 @@
     /* Close Icon */
     $alert-close-icon-stroke-width: 2px;
     $alert-close-icon-size: 1.5rem;
-    $alert-close-icon-color: black;
+    $alert-close-icon-color: $black;
 
 /* Containers =============================================================== */
 .alert__list {

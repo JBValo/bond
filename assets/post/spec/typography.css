@@ -11,14 +11,15 @@
 /* Variables ================================================================ */
 
     /* Global */
-    $global-font-family: Arial, Helvetica, sans-serif;
+    $global-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    $paragraph-font-family: 'Roboto', Arial, Helvetica, sans-serif;
 
     /* Headings */
     $heading-font-family: $global-font-family;
 
     /* Paragraphs */
-    $paragraph-font-family: $global-font-family;
     $paragraph-leading--desktop: 1.5;
+    $paragraph-font-size: 0.85rem;
 
     /* Lists */
     $list-font-family: $global-font-family;
@@ -33,14 +34,14 @@
     /* Blockquotes */
     $blockquote-padding: 2rem;
     $blockquote-margin: 2rem 0;
-    $blockquote-font-family: $paragraph-font-family;
+    $blockquote-font-family: $heading-font-family;
     $blockquote-font-size: 1.5rem;
-    $blockquote-font-style: italic;
-    $blockquote-font-weight: normal;
-    $blockquote-color: black;
-    $blockquote-border-size: 5px;
-    $blockquote-border-width: $blockquote-border-size 0;
-    $blockquote-border-color: black;
+    $blockquote-font-style: normal;
+    $blockquote-font-weight: bold;
+    $blockquote-color: $black;
+    $blockquote-border-size: 10px;
+    $blockquote-border-width: 0 0 0 $blockquote-border-size;
+    $blockquote-border-color: $black;
 
 /* Selection Color ========================================================== */
 ::selection {
@@ -99,7 +100,7 @@ h6 {
 
 /* Paragraphs =============================================================== */
 p {
-    font-size: $font-scale-baseline;
+    font-size: $paragraph-font-size;
     font-family: $paragraph-font-family;
     line-height: normal;
 
@@ -115,6 +116,12 @@ p {
     ul, ol {
 
         li {
+            font-size: $paragraph-font-size;
+            font-family: $paragraph-font-family;
+
+            @media $(l-tablet) {
+                line-height: $paragraph-leading--desktop;
+            }
 
         }
 

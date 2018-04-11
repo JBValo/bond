@@ -11,15 +11,15 @@
 /* Variables ================================================================ */
 
     /* Tables: Global */
-    $table-alt-row-background: #ebebeb;
+    $table-alt-row-background: $grey-95;
 
         /* Tables: Headings */
-        $table-heading-background: black;
-        $table-heading-border: 1px solid #222;
+        $table-heading-background: $black;
+        $table-heading-border: 1px solid color($table-heading-background tint(20%));
         $table-heading-padding: 1rem;
         $table-heading-font-family: $global-font-family;
         $table-heading-font-size: 1rem;
-        $table-heading-font-weight: normal;
+        $table-heading-font-weight: bold;
         $table-heading-font-style: normal;
         $table-heading-text-transform: none;
         $table-heading-color: white;
@@ -29,36 +29,37 @@
         $table-cell-background: transparent;
         $table-cell-border: 1px solid #ccc;
         $table-cell-padding: $table-heading-padding;
-        $table-cell-font-family: $global-font-family;
-        $table-cell-font-size: 1rem;
+        $table-cell-font-family: $paragraph-font-family;
+        $table-cell-font-size: $paragraph-font-size;
         $table-cell-font-weight: normal;
         $table-cell-font-style: normal;
         $table-cell-text-transform: none;
-        $table-cell-color: black;
+        $table-cell-color: $black;
         $table-cell-alignment: left;
 
     /* Images */
     /* TRANSLATION-ITEM */
-    $broken-image-content: "Sorry, this image seems to be missing.";
-    $broken-image-background: #ebebeb;
-    $broken-image-font-color: black;
+    $broken-image-content: "Sorry, this image is missing.";
+    $broken-image-background: $black;
+    $broken-image-font-color: white;
+    /* $broken-image-padding: 2rem; */
 
     /* Horizonal Rules */
     $hr-border: 2px solid #ccc;
     $hr-margin: 2rem 0;
 
     /* Links */
-    $link-color: teal;
+    $link-color: $pink;
     $link-text-decoration: underline;
 
         /* Links: Active */
-        $link-color--active: blue;
+        $link-color--active: color($link-color shade(90%));
 
         /* Links: Visited */
-        $link-color--visited: gray;
+        $link-color--visited: color($link-color s(-15));
 
         /* Links: Hover */
-        $link-color--hover: green;
+        $link-color--hover: color($link-color s(+50));
 
 /* All Styles =============================================================== */
 .content-area {
@@ -98,7 +99,7 @@
     }
 
     /* Links */
-    a:not([class]) {
+    a {
         color: $link-color;
         text-decoration: $link-text-decoration;
 
@@ -108,7 +109,8 @@
         }
 
         /* Links: Active */
-        &:active {
+        &:active,
+        &:focus {
             color: $link-color--active !important;
         }
 
@@ -120,12 +122,6 @@
         ul, ol {
 
             li {
-                font-size: $font-scale-baseline;
-                font-family: $list-font-family;
-
-                @media $(l-tablet) {
-                    line-height: $paragraph-leading--desktop;
-                }
 
             }
 
@@ -222,6 +218,7 @@
         font-family: $global-font-family;
         color: $broken-image-font-color;
         background: $broken-image-background;
+        /* padding: $broken-image-padding; */
 
         /* Broken Images: Custom Text */
         &:before {

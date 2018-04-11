@@ -22,7 +22,7 @@
         $column-background--left: transparent;
 
         /* Right */
-        $column-background--right: #ebebeb;
+        $column-background--right: $grey-95;
 
 /* Containers =============================================================== */
 .column-section {

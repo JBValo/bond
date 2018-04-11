@@ -11,18 +11,18 @@
 /* Variables ================================================================ */
 
     /* Basic */
-    $button-padding: 1.2rem;
-    $button-radius: 0;
+    $button-padding: 1rem 1.5rem;
+    $button-radius: 60px;
     $button-font-family: $global-font-family;
-    $button-font-size: 0.85rem;
-    $button-font-weight: normal;
+    $button-font-size: 0.75rem;
+    $button-font-weight: 600;
     $button-font-style: normal;
     $button-text-transform: uppercase;
-    $button-background: black;
+    $button-background: $black;
     $button-color: white;
 
         /* Basic: Hover */
-        $button-background--hover: $color-utility--success;
+        $button-background--hover: $link-color;
         $button-color--hover: white;
 
     /* Neutral */
@@ -103,7 +103,7 @@ input[type="submit"] {
     .no-touchevents {
 
         .button--link:hover {
-            color: black;
+            color: $black;
         }
 
     }

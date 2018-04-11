@@ -10,7 +10,7 @@
 
 /* Variables ================================================================ */
 
-    $main-footer-background: black;
+    $main-footer-background: $black;
     $main-footer-padding: 2rem;
     $main-footer-border: none;
 

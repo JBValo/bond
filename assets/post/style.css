@@ -43,6 +43,28 @@
     /* Layers (Z-Index) */
     @import "spec/layers.css";
 
+/* COMPONENTS: CONTENT ====================================================== */
+
+    /* Content: WYSIWYG */
+    @import "components/content/content-area.css";
+
+    /* Content: Columns */
+    @import "components/content/columns.css";
+
+    /* Content: Section Titles */
+    @import "components/content/section-titles.css";
+
+    /* Content: Wordpress Images */
+    @import "components/content/wordpress-images.css";
+
+/* COMPONENTS: BUTTONS ====================================================== */
+
+    /* Buttons: Base */
+    @import "components/buttons/buttons.css";
+
+    /* Buttons: Button Group */
+    @import "components/buttons/button-group.css";
+
 /* COMPONENTS: NAVIGATION =================================================== */
 
     /* Navigation: Basic */
@@ -74,28 +96,6 @@
 
     /* Hero: Base */
     @import "components/hero/hero.css";
-
-/* COMPONENTS: CONTENT ====================================================== */
-
-    /* Content: WYSIWYG */
-    @import "components/content/content-area.css";
-
-    /* Content: Columns */
-    @import "components/content/columns.css";
-
-    /* Content: Section Titles */
-    @import "components/content/section-titles.css";
-
-    /* Content: Wordpress Images */
-    @import "components/content/wordpress-images.css";
-
-/* COMPONENTS: BUTTONS ====================================================== */
-
-    /* Buttons: Base */
-    @import "components/buttons/buttons.css";
-
-    /* Buttons: Button Group */
-    @import "components/buttons/button-group.css";
 
 /* COMPONENTS: FORMS ======================================================== */
 

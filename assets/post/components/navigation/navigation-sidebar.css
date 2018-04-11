@@ -17,11 +17,11 @@
     /* Top Level: Links */
     $sidebar-nav-link-text-align: center;
     $sidebar-nav-link-font-family: $global-font-family;
-    $sidebar-nav-link-font-weight: bold;
-    $sidebar-nav-link-font-size: 0.8rem;
+    $sidebar-nav-link-font-weight: 600;
+    $sidebar-nav-link-font-size: 0.6rem;
     $sidebar-nav-link-font-style: normal;
-    $sidebar-nav-link-text-transform: none;
-    $sidebar-nav-link-color: gray;
+    $sidebar-nav-link-text-transform: uppercase;
+    $sidebar-nav-link-color: $black;
     $sidebar-nav-link-padding: 1rem;
     $sidebar-nav-link-padding--tab-bar: 1rem 0.25rem;
     $sidebar-nav-link-border: $sidebar-nav-border;
@@ -29,20 +29,20 @@
     $sidebar-nav-link-background: white;
 
         /* Top Level: Links: Hover */
-        $sidebar-nav-link-background--hover: #ebebeb;
-        $sidebar-nav-link-color--hover: black;
+        $sidebar-nav-link-background--hover: $grey-95;
+        $sidebar-nav-link-color--hover: $black;
 
         /* Top Level: Links: Current */
-        $sidebar-nav-link-background--current: black;
+        $sidebar-nav-link-background--current: $black;
         $sidebar-nav-link-color--current: white;
 
     /* Icons */
     $sidebar-nav-link-icon-width: 1rem;
-    $sidebar-nav-link-icon-color: inherit;
-    $sidebar-nav-link-icon-spacing: 0 0 0.5rem;
+    $sidebar-nav-link-icon-color: $sidebar-nav-link-color;
+    $sidebar-nav-link-icon-spacing: 0 0 0.25rem;
 
         /* Icons: Hover */
-        $sidebar-nav-link-icon-color--hover: teal;
+        $sidebar-nav-link-icon-color--hover: $pink;
 
         /* Icons: Current */
         $sidebar-nav-link-icon-color--current: $sidebar-nav-link-color--current;
@@ -54,6 +54,15 @@
 
     /* Panes */
     $sidebar-nav-pane-transition: transform $global-timing $global-easing 0ms;
+
+        /* Panes: Titles */
+        $sidebar-nav-pane-title-color: $black;
+        /* $sidebar-nav-pane-title-font-size: initial; */
+        $sidebar-nav-pane-title-font-weight: bold;
+        $sidebar-nav-pane-title-font-style: normal;
+        $sidebar-nav-pane-title-font-family: $global-font-family;
+        $sidebar-nav-pane-title-padding: 0;
+        $sidebar-nav-pane-title-margin: 0;
 
         /* Panes: Indicators */
         $sidebar-nav-indicator-color: #ccc;
@@ -93,11 +102,11 @@
         $sidebar-nav-pane-nav-link-color: gray;
 
             /* Pane Nav: Links: Hover */
-            $sidebar-nav-pane-nav-link-background--hover: #ebebeb;
-            $sidebar-nav-pane-nav-link-color--hover: black;
+            $sidebar-nav-pane-nav-link-background--hover: $grey-95;
+            $sidebar-nav-pane-nav-link-color--hover: $black;
 
             /* Pane Nav: Links: Current */
-            $sidebar-nav-pane-nav-link-background--current: black;
+            $sidebar-nav-pane-nav-link-background--current: $black;
             $sidebar-nav-pane-nav-link-color--current: white;
 
     /* Overlay */
@@ -306,7 +315,13 @@ body.has-sidebar-nav {
 
     /* Title */
     .sidebar-nav__pane-title {
-        margin-top: 0;
+        color: $sidebar-nav-pane-title-color;
+        /* font-size: $sidebar-nav-pane-title-font-size; */
+        font-weight: $sidebar-nav-pane-title-font-weight;
+        font-style: $sidebar-nav-pane-title-font-style;
+        font-family: $sidebar-nav-pane-title-font-family;
+        padding: $sidebar-nav-pane-title-padding;
+        margin: $sidebar-nav-pane-title-margin;
     }
 
 /* Panes: Nav =============================================================== */
@@ -530,6 +545,7 @@ body.has-sidebar-nav {
     .sidebar-nav__item-icon {
         width: $sidebar-nav-link-icon-width;
         fill: $sidebar-nav-link-icon-color;
+        stroke: $sidebar-nav-link-icon-color;
         transform: scale(1);
     }
 
@@ -538,6 +554,7 @@ body.has-sidebar-nav {
 
             .sidebar-nav__item-link:not(.current):hover .sidebar-nav__item-icon {
                 fill: $sidebar-nav-link-icon-color--hover;
+                stroke: $sidebar-nav-link-icon-color--hover;
             }
 
         }

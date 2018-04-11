@@ -53,10 +53,10 @@
         $search-results-categories-link-font-size: 1rem;
         $search-results-categories-link-padding: 1rem 0;
         $search-results-categories-link-border: 1px solid #ccc;
-        $search-result-categories-link-color: teal;
+        $search-result-categories-link-color: $pink;
 
         /* Categories: Links: Hover */
-        $search-result-categories-link-color--hover: black;
+        $search-result-categories-link-color--hover: $black;
 
 /* Groups =================================================================== */
 

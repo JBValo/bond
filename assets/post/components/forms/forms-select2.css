@@ -28,7 +28,7 @@
             $select2-input-border-color--focus: $form-field-border-color--focus;
 
             /* Input: Select Box (Disabled) */
-            $select2-input-background--disabled: #ebebeb;
+            $select2-input-background--disabled: $grey-95;
 
         /* Input: Chosen Item(s) */
         $select2-input-item-border: none;
@@ -63,8 +63,8 @@
             $select2-dropdown-item-color--hover: white;
 
             /* Dropdown: Options (Selected) */
-            $select2-dropdown-item-background--selected: #ebebeb;
-            $select2-dropdown-item-color--selected: black;
+            $select2-dropdown-item-background--selected: $grey-95;
+            $select2-dropdown-item-color--selected: $black;
 
             /* Dropdown: Options (Selected > Hover) */
             $select2-dropdown-item-background--selected--hover: $color-utility--danger;

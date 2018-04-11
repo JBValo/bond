@@ -30,12 +30,12 @@
         $datepicker-day-font-size: 2rem;
 
             /* Weekdays: Days: Selected Day */
-            $datepicker-day-background--selected: black;
+            $datepicker-day-background--selected: $black;
             $datepicker-day-color--selected: white;
             $datepicker-day-font-weight--selected: bold;
 
             /* Weekdays: Days: Today */
-            $datepicker-day-background--today: teal;
+            $datepicker-day-background--today: $pink;
             $datepicker-day-color--today: white;
             $datepicker-day-font-weight--today: bold;
 

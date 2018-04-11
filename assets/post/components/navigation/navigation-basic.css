@@ -21,20 +21,20 @@
     $basic-nav-item-padding: 1rem; /* The space between each top level item */
 
     /* Links */
-    $basic-nav-link-color: black;
+    $basic-nav-link-color: $black;
     $basic-nav-link-font-family: $global-font-family;
-    $basic-nav-link-font-size: 1rem;
+    $basic-nav-link-font-size: 0.75rem;
     $basic-nav-link-text-transform: none;
-    $basic-nav-link-font-weight: normal;
+    $basic-nav-link-font-weight: 600;
     $basic-nav-link-text-decoration: none;
     $basic-nav-link-font-style: normal;
 
         /* Links: Hover */
-        $basic-nav-link-color--hover: gray;
+        $basic-nav-link-color--hover: $link-color--hover;
 
     /* Dropdown Indicator */
     $basic-nav-dropdown-indicator-size: 5px;
-    $basic-nav-dropdown-indicator-color: gray;
+    $basic-nav-dropdown-indicator-color: $pink;
     $basic-nav-dropdown-indicator-spacing: 0.5rem;
 
     /* Expander */
@@ -48,35 +48,35 @@
     /* Containers */
     $basic-nav-submenu-padding: 0;
     $basic-nav-submenu-background: white;
-    $basic-nav-submenu-border-width: 1px;
-    $basic-nav-submenu-border: $basic-nav-submenu-border-width solid gray;
+    $basic-nav-submenu-border-width: 2px;
+    $basic-nav-submenu-border: $basic-nav-submenu-border-width solid $black;
 
     /* Items */
     $basic-nav-submenu-item-padding: 0.5rem;
     $basic-nav-submenu-item-border: $basic-nav-submenu-border;
 
     /* Links */
-    $basic-nav-submenu-link-color: black;
+    $basic-nav-submenu-link-color: $black;
     $basic-nav-submenu-link-font-family: $global-font-family;
-    $basic-nav-submenu-link-font-size: 0.8rem;
+    $basic-nav-submenu-link-font-size: 0.65rem;
     $basic-nav-submenu-link-text-transform: none;
-    $basic-nav-submenu-link-font-weight: normal;
+    $basic-nav-submenu-link-font-weight: bold;
     $basic-nav-submenu-link-text-decoration: none;
     $basic-nav-submenu-link-font-style: normal;
 
         /* Links: Hover */
-        $basic-nav-submenu-link-background--hover: #ebebeb;
-        $basic-nav-submenu-link-color--hover: black;
+        $basic-nav-submenu-link-background--hover: $button-background--hover;
+        $basic-nav-submenu-link-color--hover: white;
 
 /* Variables: Mobile Trigger ================================================ */
 
-    $basic-nav-mobile-trigger-background: black;
+    $basic-nav-mobile-trigger-background: $black;
     $basic-nav-mobile-trigger-color: white;
     $basic-nav-mobile-trigger-padding: 1rem;
-    $basic-nav-mobile-trigger-font-family: $global-font-family;
-    $basic-nav-mobile-trigger-font-size: 1rem;
+    $basic-nav-mobile-trigger-font-family: $heading-font-family;
+    $basic-nav-mobile-trigger-font-size: $paragraph-font-size;
     $basic-nav-mobile-trigger-text-transform: none;
-    $basic-nav-mobile-trigger-font-weight: normal;
+    $basic-nav-mobile-trigger-font-weight: bold;
     $basic-nav-mobile-trigger-text-decoration: none;
     $basic-nav-mobile-trigger-font-style: normal;
 

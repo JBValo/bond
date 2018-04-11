@@ -14,7 +14,7 @@
     $hero-height: 85vh; /* Sets the minimum height of the hero */
 
     /* Overlay */
-    $hero-overlay-background: rgba(255,255,255,0.1);
+    $hero-overlay-background: rgba(255,255,255,0.8);
 
     /* Slide Content */
     $hero-slide-alignment: center;
@@ -23,15 +23,15 @@
         $hero-subtitle-font-weight: normal;
         $hero-subtitle-font-style: normal;
         $hero-subtitle-text-transform: none;
-        $hero-subtitle-color: black;
+        $hero-subtitle-color: $black;
         $hero-subtitle-spacing: 0;
         $hero-subtitle-padding: 0;
 
         /* Title */
-        $hero-title-font-weight: normal;
+        $hero-title-font-weight: bold;
         $hero-title-font-style: normal;
         $hero-title-text-transform: none;
-        $hero-title-color: black;
+        $hero-title-color: $black;
         $hero-title-spacing: 1rem 0;
         $hero-title-padding: 0;
 
@@ -39,7 +39,7 @@
         $hero-content-font-weight: normal;
         $hero-content-font-style: normal;
         $hero-content-text-transform: none;
-        $hero-content-color: black;
+        $hero-content-color: $black;
         $hero-content-spacing: 0;
         $hero-content-padding: 0;
 
@@ -48,7 +48,7 @@
 
     /* Arrows */
     $hero-arrow-size: 3rem; /* Sets both width and height */
-    $hero-arrow-background: gray;
+    $hero-arrow-background: $black;
     $hero-arrow-radius: 100%;
     $hero-arrow-buffer: 2rem; /* Controls the space on the left and right */
 
@@ -56,18 +56,20 @@
         $hero-arrow-icon-size: 50%;
 
         /* Arrows: Hover */
-        $hero-arrow-background--hover: black;
+        $hero-arrow-background--hover: $button-background--hover;
 
     /* Dots */
-    $hero-dot-size: 1rem; /* Sets both width and height */
-    $hero-dot-position: right; /* Uses text-align */
+    $hero-dot-size: 0.75rem; /* Sets both width and height */
+    $hero-dot-position: center;
     $hero-dot-spacing: 0.25rem; /* The space between each dot */
     $hero-dot-radius: 100%;
-    $hero-dot-border: 2px solid black;
+    $hero-dot-border: none;
     $hero-dot-color: white;
+    $hero-dot-container-padding: 1rem;
 
         /* Dots: Current */
-        $hero-dot-color--current: black;
+        $hero-dot-color--current: $black;
+        $hero-dot-inner-size: $hero-dot-size;
 
 /* Layering (Z-Index) ======================================================= */
 .hero {
@@ -158,11 +160,11 @@
 }
 
 .hero__slide-content {
-    font-weight: $hero-title-font-weight;
-    font-style: $hero-title-font-style;
-    text-transform: $hero-title-text-transform;
-    color: $hero-title-color;
-    margin: $hero-title-spacing;
+    font-weight: $hero-content-font-weight;
+    font-style: $hero-content-font-style;
+    text-transform: $hero-content-text-transform;
+    color: $hero-content-color;
+    margin: $hero-content-spacing;
     padding: $hero-content-padding;
 }
 
@@ -221,11 +223,13 @@
 /* Hero: Dots =============================================================== */
 .hero .slick-dots {
     text-align: $hero-dot-position;
+    padding: $hero-dot-container-padding;
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0;
+    left: 0;
     margin: 0;
     display: none;
+    width: 100%;
 
     @media $(p-tablet) {
       display: block;
@@ -258,8 +262,8 @@
         text-indent: -9999px;
 
         &:after {
-            width: calc($hero-dot-size / 2);
-            height: calc($hero-dot-size / 2);
+            width: $hero-dot-inner-size;
+            height: $hero-dot-inner-size;
             background: $hero-dot-color--current;
             border-radius: $hero-dot-radius;
             position: absolute;

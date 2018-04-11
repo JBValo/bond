@@ -21,7 +21,7 @@
         /* Close Button */
         $gallery-close-top-offset: 0;
         $gallery-close-right-offset: 0;
-        $gallery-close-background: black;
+        $gallery-close-background: $black;
         $gallery-close-color: white;
         $gallery-close-padding: 0.25rem;
         $gallery-close-size: 2.5rem;
@@ -40,7 +40,7 @@
             $gallery-arrow-icon-size: 50%;
 
             /* Arrows: Hover */
-            $gallery-arrow-background--hover: black;
+            $gallery-arrow-background--hover: $black;
 
 /* Containers =============================================================== */
 .gallery {

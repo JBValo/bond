@@ -14,12 +14,13 @@
     $wp-image-margin: 2rem;
 
     /* Captions */
-    $wp-image-caption-font-size: 0.8rem;
-    $wp-image-caption-color: black;
-    $wp-image-caption-font-weight: normal;
+    $wp-image-caption-font-family: $heading-font-family;
+    $wp-image-caption-font-size: $font-scale-small;
+    $wp-image-caption-color: white;
+    $wp-image-caption-font-weight: bold;
     $wp-image-caption-font-style: normal;
-    $wp-image-caption-background: #ebebeb;
-    $wp-image-caption-padding: 0.5rem;
+    $wp-image-caption-background: $black;
+    $wp-image-caption-padding: 0.5rem 1rem;
     $wp-image-caption-margin: 0;
     $wp-image-caption-alignment: left;
 
@@ -73,6 +74,7 @@
 
 /* Captions ================================================================= */
 .wp-caption-text {
+    font-family: $wp-image-caption-font-family;
     font-size: $wp-image-caption-font-size;
     color: $wp-image-caption-color;
     font-weight: $wp-image-caption-font-weight;
@@ -81,4 +83,5 @@
     padding: $wp-image-caption-padding;
     margin: $wp-image-caption-margin;
     text-align: $wp-image-caption-alignment;
+    display: inline-block;
 }

@@ -32,7 +32,6 @@
          // Empty Anchor Handling ==============================================
          $('a[href="#"]').on('click', function(e) {
              e.preventDefault();
-             e.stopPropagation();
          });
 
          // Disabled Button Handling ===========================================

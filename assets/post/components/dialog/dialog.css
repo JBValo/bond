@@ -27,7 +27,7 @@
     /* Close Button */
     $dialog-close-top-offset: 0;
     $dialog-close-right-offset: 0;
-    $dialog-close-background: black;
+    $dialog-close-background: $black;
     $dialog-close-color: white;
     $dialog-close-padding: 0 0.25rem;
     $dialog-close-size: 2rem;
@@ -46,7 +46,7 @@
     left: 50%;
     max-height: 80%;
     overflow: auto;
-    transform: translate3d(-50%,100%,0);
+    transform: translate3d(-50%,100vh,0);
     transition: transform 250ms $global-easing 0ms;
 
     &.open {

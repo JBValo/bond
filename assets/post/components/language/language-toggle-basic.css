@@ -11,7 +11,7 @@
 /* Variables: Basic ========================================================= */
 
     /* Containers */
-    $language-toggle-background--basic: black;
+    $language-toggle-background--basic: $black;
 
     /* Items */
     $language-toggle-item-font-family--basic: $global-font-family;

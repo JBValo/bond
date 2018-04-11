@@ -20,11 +20,11 @@
     $section-subtitle-font-style: normal;
     $section-subtitle-color: white;
     $section-subtitle-text-transform: uppercase;
-    $section-subtitle-background: black;
+    $section-subtitle-background: $black;
 
         /* Divider */
         $section-subtitle-divider-width: 1rem;
-        $section-subtitle-divider-background: black;
+        $section-subtitle-divider-background: $black;
         $section-subtitle-divider-thickness: 5px;
         $section-subtitle-divider-margin: 0.5rem 0 0;
 
