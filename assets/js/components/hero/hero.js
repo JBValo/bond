@@ -26,6 +26,12 @@
             });
         }
 
+        // Autoplay background video
+        if($('.hero video').length) {
+            var vid = $('.hero__video-container video')[0];
+            vid.play();
+        }
+
     });
 
 })(jQuery);

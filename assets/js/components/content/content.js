@@ -13,8 +13,8 @@
     $(document).ready(function() {
 
         // Wordpress Image Wrapper
-        if($('[class*="wp-image"]').length) {
-            $('[class*="wp-image"]').parent().addClass("wp-image__wrapper");
+        if($('.wp-image').length) {
+            $('.wp-image').parent().addClass('wp-image__wrapper');
         }
 
         // Borken Images

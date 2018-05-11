@@ -8,6 +8,17 @@
 
 ============================================================================= */
 
+/* Type Scale =============================================================== */
+
+    $font-scale: 1.333; /* Perfect Fourth */
+
+    $font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
+    $font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));
+    $font-scale-h3: calc(1rem*($font-scale*($font-scale)));
+    $font-scale-h4: calc(1rem*($font-scale));
+    $font-scale-baseline: 1rem;
+    $font-scale-small: calc(1rem*($font-scale/2));
+
 /* Variables ================================================================ */
 
     /* Global */
@@ -58,16 +69,6 @@ html {
     /*min-line-height: 1.2em;*/
     /*max-line-height: 1.5em;*/
 }
-
-/* Type Scale =============================================================== */
-$font-scale: 1.333; /* Perfect Fourth */
-
-$font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
-$font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));
-$font-scale-h3: calc(1rem*($font-scale*($font-scale)));
-$font-scale-h4: calc(1rem*($font-scale));
-$font-scale-baseline: 1rem;
-$font-scale-small: calc(1rem*($font-scale/2));
 
 /* Headings ================================================================= */
 h1, h2, h3, h4, h5, h6 {
@@ -190,6 +191,24 @@ blockquote {
 
 }
 
+/* Icons ==================================================================== */
+.core-icon {
+
+    use {
+        stroke-width: 2px;
+    }
+
+    &.inline {
+        width: 1em;
+        height: 1em;
+        margin: 0 0.25rem 0 0;
+        fill: black;
+        stroke: black;
+        transform: translate(0,15%);
+    }
+
+}
+
 /* Tel Links ================================================================ */
 /* Prevent clickable tel links on desktop / non-touch devices. */
 .no-touchevents {
@@ -201,7 +220,32 @@ blockquote {
 
 }
 
-/* Anchors ================================================================== */
-a {
+/* Links ==================================================================== */
+:any-link {
     outline: none;
+
+    /* Exclude any custom classes that you don't want these styles to apply to. */
+    &:not([class*="button"]):not([class*="alert"]):not([class*="nav"]):not([class*="breadcrumb"]) {
+        color: $blue;
+        font-weight: 600;
+        transition: color $global-timing $global-easing 0ms;
+    }
+
+}
+
+.no-touchevents {
+
+    :any-link {
+
+        &:not([class*="button"]):not([class*="alert"]):not([class*="nav"]):not([class*="breadcrumb"]) {
+
+            &:hover {
+                color: $blue;
+                transition: color $global-timing $global-easing 0ms;
+            }
+
+        }
+
+    }
+
 }

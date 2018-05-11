@@ -10,8 +10,7 @@
 
 $gray--mid: color(#8694b6 shade(5%));
 $gray--light: #f5f6fa;
-$blue--dark: #5983ff;
-$blue--light: #49bcff;
+$blue: #49bcff;
 $purple: #ac5bff;
 $green: #50d76e;
 $red: #ff5d5d;
@@ -23,4 +22,4 @@ $pink: #da2f6d;
 $color-utility--danger: $red;
 $color-utility--warning: $orange;
 $color-utility--success: $green;
-$color-utility--neutral: $blue--light;
+$color-utility--neutral: $blue;
