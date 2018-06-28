@@ -23,10 +23,10 @@
     $tags-item-margin: 0.1rem;
 
     /* Links */
-    $tags-item-link-padding: 0.25rem;
-    $tags-item-link-radius: 2px;
+    $tags-item-link-padding: 0.25rem 0.5rem;
+    $tags-item-link-radius: 3px;
     $tags-item-link-color: white;
-    $tags-item-link-background: $gray-50;
+    $tags-item-link-background: $gray-80;
     $tags-item-link-text-decoration: none;
 
         /* Links: Hover */
@@ -34,7 +34,8 @@
         $tags-item-link-color--hover: white;
 
 /* Container ================================================================ */
-.tags {
+.tags,
+.tags--linked {
     list-style: none;
     margin-left: -$tags-item-margin;
     padding: $tags-padding;
@@ -53,6 +54,29 @@
     margin: $tags-item-margin;
 }
 
+.tags {
+
+    .tags__item {
+
+        &:after {
+            content: ",";
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 0.25rem;
+        }
+
+        &:last-child {
+
+            &:after {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
 /* Links ==================================================================== */
 .tags__item-link {
     display: block;
@@ -60,6 +84,7 @@
     color: $tags-item-link-color;
     background: $tags-item-link-background;
     padding: $tags-item-link-padding;
+    border-radius: $tags-item-link-radius;
     text-decoration: $tags-item-link-text-decoration;
 }
 

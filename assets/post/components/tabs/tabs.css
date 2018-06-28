@@ -17,26 +17,26 @@
     $tab-item-spacing: 0.25rem;
 
     /* Tab Links */
-    $tab-link-background: $grey-95;
+    $tab-link-background: $black;
     $tab-link-border: 2px solid $black;
     $tab-link-padding: 0.5rem 1rem;
     $tab-link-font-size: 1rem;
     $tab-link-font-family: $global-font-family;
     $tab-link-font-weight: bold;
     $tab-link-font-style: normal;
-    $tab-link-color: gray;
+    $tab-link-color: white;
     $tab-link-text-decoration: none;
     $tab-link-radius: 5px 5px 0 0;
 
         /* Tab Links: Hover */
-        $tab-link-background--hover: #ccc;
+        $tab-link-background--hover: $highlight;
         $tab-link-border--hover: $black;
-        $tab-link-color--hover: $black;
+        $tab-link-color--hover: white;
 
         /* Tab Links: Current */
         $tab-link-border--current: $black;
         $tab-link-background--current: white;
-        $tab-link-color--current: $black;
+        $tab-link-color--current: $highlight;
 
 /* Tab Navigation (All) ===================================================== */
 

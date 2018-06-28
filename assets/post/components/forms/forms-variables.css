@@ -26,8 +26,8 @@ $form-section-padding: 1rem 0;
     $form-section-desc-font-family: $global-font-family;
     $form-section-desc-font-weight: normal;
     $form-section-desc-font-style: normal;
-    $form-section-desc-font-size: $font-scale-baseline;
-    $form-section-desc-color: $black;
+    $form-section-desc-font-size: $paragraph-font-size;
+    $form-section-desc-color: $paragraph-color;
     $form-section-desc-text-transform: none;
     $form-section-desc-padding: 0;
     $form-section-desc-margin: 0;
@@ -67,7 +67,7 @@ $form-field-color: $black;
     $form-field-border-color--hover: $gray-60;
 
     /* Fields: Focus */
-    $form-field-border-color--focus: $pink;
+    $form-field-border-color--focus: $highlight;
 
     /* Fields: Textarea */
     $form-field-textarea-height: 250px;

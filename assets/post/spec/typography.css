@@ -22,7 +22,7 @@
 /* Variables ================================================================ */
 
     /* Global */
-    $global-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    $global-font-family: 'Do Hyeon', Arial, Helvetica, sans-serif;
     $paragraph-font-family: 'Roboto', Arial, Helvetica, sans-serif;
 
     /* Headings */
@@ -31,6 +31,7 @@
     /* Paragraphs */
     $paragraph-leading--desktop: 1.5;
     $paragraph-font-size: 0.85rem;
+    $paragraph-color: $gray-30;
 
     /* Lists */
     $list-font-family: $global-font-family;
@@ -52,7 +53,7 @@
     $blockquote-color: $black;
     $blockquote-border-size: 10px;
     $blockquote-border-width: 0 0 0 $blockquote-border-size;
-    $blockquote-border-color: $black;
+    $blockquote-border-color: $highlight;
 
 /* Selection Color ========================================================== */
 ::selection {
@@ -221,13 +222,26 @@ blockquote {
 }
 
 /* Links ==================================================================== */
+
+$link-color: $highlight;
+$link-text-decoration: underline;
+
+    /* Links: Active */
+    $link-color--active: color($link-color shade(90%));
+
+    /* Links: Visited */
+    $link-color--visited: color($link-color s(-15));
+
+    /* Links: Hover */
+    $link-color--hover: color($link-color s(+50));
+
 :any-link {
     outline: none;
 
     /* Exclude any custom classes that you don't want these styles to apply to. */
-    &:not([class*="button"]):not([class*="alert"]):not([class*="nav"]):not([class*="breadcrumb"]) {
-        color: $blue;
-        font-weight: 600;
+    &:not([class*="button"]):not(.alert__list-item-link):not([class*="nav"]):not(.breadcrumbs__item-link):not(.tags__item-link):not(.tabs__tab-item-link):not(.pagination__number):not(.page-title__meta-item-link):not(.language-toggle__item-link) {
+        color: $link-color;
+        font-weight: normal;
         transition: color $global-timing $global-easing 0ms;
     }
 
@@ -237,10 +251,10 @@ blockquote {
 
     :any-link {
 
-        &:not([class*="button"]):not([class*="alert"]):not([class*="nav"]):not([class*="breadcrumb"]) {
+        &:not([class*="button"]):not(.alert__list-item-link):not([class*="nav"]):not(.breadcrumbs__item-link):not(.tags__item-link):not(.tabs__tab-item-link):not(.pagination__number):not(.page-title__meta-item-link):not(.language-toggle__item-link) {
 
             &:hover {
-                color: $blue;
+                color: $link-color--hover;
                 transition: color $global-timing $global-easing 0ms;
             }
 

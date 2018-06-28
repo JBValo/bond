@@ -32,11 +32,11 @@
     $form-checkbox-background: white;
 
         /* Checkboxes: Hover */
-        $form-checkbox-background--hover: color(black a(10%));
+        $form-checkbox-background--hover: color(black a(5%));
         $form-checkbox-border--hover: $form-checkbox-border;
 
         /* Checkboxes: Checked */
-        $form-checkbox-background--checked: $black;
+        $form-checkbox-background--checked: $highlight;
         $form-checkbox-border--checked: 2px solid $black;
         $form-checkbox-outline--checked: inset 0 0 0 4px $white;
 
@@ -48,11 +48,11 @@
     $form-radio-background: white;
 
         /* Radio: Hover */
-        $form-radio-background--hover: color(black a(10%));
+        $form-radio-background--hover: color(black a(5%));
         $form-radio-border--hover: $form-radio-border;
 
         /* Radio: Checked */
-        $form-radio-background--checked: $black;
+        $form-radio-background--checked: $highlight;
         $form-radio-border--checked: 2px solid $black;
         $form-radio-outline--checked: inset 0 0 0 4px $white;
 

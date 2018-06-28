@@ -1,0 +1,33 @@
+/* =============================================================================
+
+    DEMO NAVIGATION CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+.demo-nav__wrapper {
+
+    .sidebar-nav__pane-nav-item {
+        position: relative;
+    }
+
+}
+
+.demo-nav__item-link {
+    padding-right: 2.5rem;
+}
+
+.demo-nav__item-link--docs {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 20;
+    font-size: 0.75em;
+    padding: 1rem;
+    transform: translate(0,-50%,0);
+    text-decoration: none;
+    color: $gray-50;
+}

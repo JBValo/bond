@@ -14,16 +14,16 @@
     $hero-height: 85vh; /* Sets the minimum height of the hero */
 
     /* Overlay */
-    $hero-overlay-background: rgba(255,255,255,0.8);
+    $hero-overlay-background: rgba(0,0,0,0.8);
 
     /* Slide Content */
     $hero-slide-alignment: center;
 
         /* Subtitle */
-        $hero-subtitle-font-weight: normal;
+        $hero-subtitle-font-weight: bold;
         $hero-subtitle-font-style: normal;
-        $hero-subtitle-text-transform: none;
-        $hero-subtitle-color: $black;
+        $hero-subtitle-text-transform: uppercase;
+        $hero-subtitle-color: white;
         $hero-subtitle-spacing: 0;
         $hero-subtitle-padding: 0;
 
@@ -31,24 +31,24 @@
         $hero-title-font-weight: bold;
         $hero-title-font-style: normal;
         $hero-title-text-transform: none;
-        $hero-title-color: $black;
-        $hero-title-spacing: 1rem 0;
+        $hero-title-color: white;
+        $hero-title-spacing: 1rem 0 0.5rem;
         $hero-title-padding: 0;
 
         /* Content */
         $hero-content-font-weight: normal;
         $hero-content-font-style: normal;
         $hero-content-text-transform: none;
-        $hero-content-color: $black;
+        $hero-content-color: white;
         $hero-content-spacing: 0;
         $hero-content-padding: 0;
 
         /* Call to Action */
-        $hero-cta-spacing: $hero-title-spacing 0 0;
+        $hero-cta-spacing: 2rem 0 0;
 
     /* Arrows */
     $hero-arrow-size: 3rem; /* Sets both width and height */
-    $hero-arrow-background: $black;
+    $hero-arrow-background: transparent;
     $hero-arrow-radius: 100%;
     $hero-arrow-buffer: 2rem; /* Controls the space on the left and right */
 
@@ -68,7 +68,7 @@
     $hero-dot-container-padding: 1rem;
 
         /* Dots: Current */
-        $hero-dot-color--current: $black;
+        $hero-dot-color--current: $highlight;
         $hero-dot-inner-size: $hero-dot-size;
 
 /* Layering (Z-Index) ======================================================= */

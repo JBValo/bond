@@ -34,7 +34,7 @@
 
     /* Dropdown Indicator */
     $basic-nav-dropdown-indicator-size: 5px;
-    $basic-nav-dropdown-indicator-color: $pink;
+    $basic-nav-dropdown-indicator-color: $highlight;
     $basic-nav-dropdown-indicator-spacing: 0.5rem;
 
     /* Expander */

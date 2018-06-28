@@ -53,11 +53,7 @@
         $block-content-margin: initial;
 
         /* CTA */
-        $block-cta-color: $link-color;
         $block-cta-margin: 1rem 0 0;
-
-            /* CTA: Hover */
-            $block-cta-color--hover: $link-color--hover;
 
 
 /* Containers =============================================================== */
@@ -218,16 +214,6 @@
     }
 
     .block__cta--link {
-        color: $block-cta-color;
         margin: $block-cta-margin;
         display: inline-block;
     }
-
-        /* CTA: Hover */
-        .no-touchevents {
-
-            .block__cta--link:hover {
-                color: $block-cta-color--hover;
-            }
-
-        }

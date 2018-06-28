@@ -48,19 +48,6 @@
     $hr-border: 2px solid #ccc;
     $hr-margin: 2rem 0;
 
-    /* Links */
-    $link-color: $pink;
-    $link-text-decoration: underline;
-
-        /* Links: Active */
-        $link-color--active: color($link-color shade(90%));
-
-        /* Links: Visited */
-        $link-color--visited: color($link-color s(-15));
-
-        /* Links: Hover */
-        $link-color--hover: color($link-color s(+50));
-
 /* All Styles =============================================================== */
 .content-area {
 

@@ -11,8 +11,8 @@
 /* Variables ================================================================ */
 
     /* Basic */
-    $button-padding: 1rem 1.5rem;
-    $button-radius: 60px;
+    $button-padding: 0.85rem 1.25rem;
+    $button-radius: 3px;
     $button-font-family: $global-font-family;
     $button-font-size: 0.75rem;
     $button-font-weight: 600;
@@ -33,13 +33,13 @@
         $button-background--neutral--hover: $color-utility--danger;
         $button-color--neutral--hover: white;
 
-    /* Link */
-    $button-padding--link: 0;
-    $button-font-family--link: $global-font-family;
-    $button-font-size--link: 0.8rem;
-    $button-font-weight--link: bold;
-    $button-font-style--link: normal;
-    $button-text-transform--link: none;
+    /* Highlight */
+    $button-background--highlight: $highlight;
+    $button-color--highlight: $button-color;
+
+        /* Highlight: Hover */
+        $button-background--highlight--hover: color($button-background--highlight tint(20%));
+        $button-color--highlight--hover: white;
 
 /* Form Buttons ============================================================= */
 button,
@@ -78,6 +78,21 @@ input[type="submit"] {
 
     }
 
+/* Highlight ================================================================ */
+.button--highlight {
+    background: $button-background--highlight;
+    color: $button-color--highlight;
+}
+
+    /* Basic: Hover */
+    .no-touchevents {
+
+        .button--highlight:hover {
+            background: $button-background--highlight--hover;
+        }
+
+    }
+
 /* Neutral ================================================================== */
 .button--neutral {
     background: $button-background--neutral;
@@ -89,21 +104,6 @@ input[type="submit"] {
 
         .button--neutral:hover {
             background: $button-background--neutral--hover;
-        }
-
-    }
-
-/* Link ===================================================================== */
-.button--link {
-    color: gray;
-    display: inline-block;
-}
-
-    /* Basic: Hover */
-    .no-touchevents {
-
-        .button--link:hover {
-            color: $black;
         }
 
     }
