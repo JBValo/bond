@@ -26,7 +26,7 @@
     $tab-link-font-style: normal;
     $tab-link-color: white;
     $tab-link-text-decoration: none;
-    $tab-link-radius: 5px 5px 0 0;
+    $tab-link-radius: 5px;
 
         /* Tab Links: Hover */
         $tab-link-background--hover: $highlight;
@@ -118,6 +118,7 @@
         }
 
         .tabs__tab-item-link {
+            border-radius: $tab-link-radius $tab-link-radius 0 0;
 
             &.current {
                 border-bottom-color: transparent;

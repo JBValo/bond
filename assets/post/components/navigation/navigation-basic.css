@@ -103,6 +103,7 @@
         width: auto;
         height: auto;
         background: transparent;
+        margin-right: -$basic-nav-item-padding;
     }
 
 }

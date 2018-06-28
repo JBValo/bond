@@ -18,8 +18,11 @@
     /* Buttons */
     $filters-buttons-margin: 2rem 0 0;
 
-
 /* Containers =============================================================== */
+.filters__form {
+    margin-top: 2rem;
+}
+
 .filters,
 [class^="filters--"] {
     list-style: none;
@@ -51,7 +54,7 @@
             @media $(cinema) {
                 grid-template-columns: repeat(4, 1fr);
             }
-            
+
         }
 
     }
@@ -75,6 +78,11 @@
 
 /* Title ==================================================================== */
 .filters__title {
+
+}
+
+/* Content ================================================================== */
+.filters__content {
 
 }
 

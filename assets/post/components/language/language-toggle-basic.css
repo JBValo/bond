@@ -11,7 +11,7 @@
 /* Variables: Basic ========================================================= */
 
     /* Containers */
-    $language-toggle-background--basic: $black;
+    $language-toggle-background--basic: transparent;
 
     /* Items */
     $language-toggle-item-font-family--basic: $global-font-family;
@@ -19,14 +19,14 @@
     $language-toggle-item-padding--basic: 0.25rem;
 
     /* Links */
-    $language-toggle-item-link-color--basic: gray;
+    $language-toggle-item-link-color--basic: $gray-70;
     $language-toggle-item-text-decoration--basic: none;
 
         /* Links: Current */
-        $language-toggle-item-link-color--basic--current: white;
+        $language-toggle-item-link-color--basic--current: $black;
 
         /* Links: Hover */
-        $language-toggle-item-link-color--basic--hover: white;
+        $language-toggle-item-link-color--basic--hover: $highlight;
 
 /* Basic ==================================================================== */
 
@@ -37,13 +37,9 @@
         margin: 0;
         position: absolute;
         top: 0;
-        right: calc($main-header-padding / 2);
+        right: 0;
         padding: $language-toggle-item-padding--basic;
         background: $language-toggle-background--basic;
-
-        @media $menu-media-query {
-            right: $main-header-padding;
-        }
 
         /* Basic: Items */
         .language-toggle__item,

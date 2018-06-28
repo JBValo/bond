@@ -14,7 +14,7 @@
     $hero-height: 85vh; /* Sets the minimum height of the hero */
 
     /* Overlay */
-    $hero-overlay-background: rgba(0,0,0,0.8);
+    $hero-overlay-background: linear-gradient(-45deg, color($highlight a(85%)), color($black a(85%)));
 
     /* Slide Content */
     $hero-slide-alignment: center;

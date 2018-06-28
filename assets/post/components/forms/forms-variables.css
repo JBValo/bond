@@ -56,7 +56,7 @@ $form-section-padding: 1rem 0;
 $form-field-margin: 0.75rem;
 $form-field-border: 2px solid $gray-80;
 $form-field-border-radius: 0;
-$form-field-font-family: $global-font-family;
+$form-field-font-family: $paragraph-font-family;
 $form-field-font-size: $font-scale-baseline;
 $form-field-font-weight: normal;
 $form-field-padding: 0.5rem;

@@ -45,6 +45,35 @@
         <!-- Primary Stylesheet -->
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
 
+        <style>
+            .demo-nav__wrapper .sidebar-nav__pane-nav-item {
+                position: relative;
+            }
+            .demo-nav__item-link {
+                padding-right: 2.5rem;
+            }
+            .demo-nav__item-link--docs {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 20;
+                font-size: 0.75em;
+                padding: 1rem;
+                transform: translate(0,-50%);
+                text-decoration: none;
+                color: rgba(0,0,0,0.5);
+            }
+            .demo-nav__item-link.current + .demo-nav__item-link--docs {
+                color: white;
+            }
+            .demo-nav__item-link--docs:hover {
+                color: #da2f6d !important;
+            }
+            .demo-nav__item-link.current + .demo-nav__item-link--docs:hover {
+                color: #37ecba !important;
+            }
+        </style>
+
     </head>
 
     <body class="has-sidebar-nav">
@@ -307,12 +336,8 @@
                     <a href="http://bond.codeandmortar.com/docs/#alerts" class="demo-nav__item-link--docs" target="_blank">Docs</a>
                 </li>
                 <li class="sidebar-nav__pane-nav-item">
-                    <a href="#section--pagination-basic" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Pagination (Basic)</a>
-                    <a href="http://bond.codeandmortar.com/docs/#basic-pagination" class="demo-nav__item-link--docs" target="_blank">Docs</a>
-                </li>
-                <li class="sidebar-nav__pane-nav-item">
-                    <a href="#section--pagination-lazy" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Pagination (Lazy)</a>
-                    <a href="http://bond.codeandmortar.com/docs/#lazy-pagination" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                    <a href="#section--pagination-basic" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Pagination</a>
+                    <a href="http://bond.codeandmortar.com/docs/#pagination" class="demo-nav__item-link--docs" target="_blank">Docs</a>
                 </li>
                 <li class="sidebar-nav__pane-nav-item">
                     <a href="#section--blocks" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Blocks</a>
@@ -453,14 +478,13 @@
             <!-- Hero -->
             <section class="hero" id="section--hero">
                 <!-- Slide: With Video -->
-                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=435')">
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=430')">
                     <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Subtitle</h5>
-                        <h1 class="hero__slide-title">Slide Title</h1>
-                        <p class="hero__slide-content">Lorem ipsum dolor sit amet consectetuer.</p>
+                        <h5 class="hero__slide-subtitle">Slide One</h5>
+                        <h1 class="hero__slide-title">Slide with Video</h1>
+                        <p class="hero__slide-content">This slide contains a textural background video in multiple formats.</p>
                         <a href="" class="hero__slide-cta button--highlight">Learn More</a>
                     </div>
-                    <!--
                     <div class="hero__video-container">
                         <video autoplay loop id="bg-video" muted>
                             <source src="assets/vid/bg-vid.webm" type="video/webm" />Your browser does not support the video tag.
@@ -470,14 +494,13 @@
                             <img src="assets/vid/bg-vid.jpg" alt="">
                         </div>
                     </div>
-                    -->
                 </div>
                 <!-- Slide: With Image -->
-                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=435')">
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=432')">
                     <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Subtitle</h5>
-                        <h1 class="hero__slide-title">Slide Title</h1>
-                        <p class="hero__slide-content">Tempor consectetur fugiat laborum sint sit dolor dolor excepteur cupidatat ad occaecat ut cillum quis ad. Et laboris irure culpa anim cupidatat cupidatat cupidatat culpa consequat id laborum fugiat proident officia aliqua mollit. Sint culpa deserunt excepteur aliquip adipisicing ut Lorem ipsum est Lorem ipsum adipisicing ad. Ipsum non laborum reprehenderit quis veniam ipsum reprehenderit elit ea duis irure tempor eiusmod irure fugiat ad. Reprehenderit laboris eiusmod tempor ut ut aute esse officia tempor exercitation elit incididunt eiusmod. Qui quis id elit cillum nostrud Lorem culpa pariatur ullamco do pariatur ex velit consequat. Eiusmod fugiat duis ullamco fugiat magna aliquip anim reprehenderit eiusmod irure aliquip.</p>
+                        <h5 class="hero__slide-subtitle">Slide Two</h5>
+                        <h1 class="hero__slide-title">Slide with Image</h1>
+                        <p class="hero__slide-content">This slide contains a textural background image.</p>
                         <a href="" class="hero__slide-cta button--highlight">Learn More</a>
                     </div>
                 </div>
@@ -490,7 +513,7 @@
                     <div class="page-section__title-wrapper text-center" id="section--section-title">
                         <h5 class="page-section__subtitle with-divider">Section Subtitle</h5>
                         <h1 class="page-section__title">Section Title</h1>
-                        <p class="page-section__title-content">Cillum commodo do enim aliqua nostrud amet quis dolore proident. Ut Lorem reprehenderit commodo quis pariatur quis.</p>
+                        <p class="page-section__title-content">The section title component offers a quick and easy way to include modular identifiers for your site's sections. Includes support for an optional subtitle and multiple calls to action.</p>
                     </div>
                     <!-- Button Group -->
                     <ul class="button-group text-center" id="section--button-group">
@@ -506,13 +529,16 @@
                     </ul>
                     <br><br><br>
                     <div class="content-area" id="section--content">
-                        <h3>Overview</h3>
+                        <h3>Basic Content Area</h3>
                         <!-- Wordpress Images (Basic) -->
                         <div>
-                            <img src="https://unsplash.it/250" alt="Wordpress Image" class="wp-image filter--gray alignleft" id="section--wp-images">
+                            <img src="https://picsum.photos/255" alt="Wordpress Image" class="wp-image alignleft" id="section--wp-images">
                         </div>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
+                        <h5 class="reset--bottom">Overview</h5>
+                        <p>The basic content area includes default styling for all usable elements within a WYSIWYG section. This area is especially useful for WordPress sites or other sites that require a CMS feature.</p>
+                        <h5 class="reset--bottom">Images</h5>
+                        <p>To the left is a floated image specifically styled for WordPress' built-in image alignment classes (left, center and right).</p>
+                        <h4>Ordered &amp; Unordered Lists</h4>
                         <ul id="section--lists">
                             <li>The face of the moon was in shadow.</li>
                             <li>I watched the storm, so beautiful yet terrific.</li>
@@ -526,13 +552,13 @@
                         <hr>
                         <!-- Wordpress Images (Captioned) -->
                         <div class="wp-caption wp-image alignright">
-                            <img src="https://unsplash.it/250" alt="Wordpress Image" class="filter--gray">
+                            <img src="https://picsum.photos/255" alt="Wordpress Image" class="filter--gray">
                             <p class="wp-caption-text">Some sample caption text.</p>
                         </div>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
+                        <h5 class="reset--bottom">Other Image Features</h5>
+                        <p>There are also built-in styles for WordPress image captions as well (see right)! Additionally, you can apply a specific "filter--gray" class to convert your images to grayscale where necessary.</p>
                         <blockquote id="section--blockquotes">
-                            Eu aliquip adipisicing do dolore labore irure commodo eu in exercitation sit elit.
+                            Blockquotes are pre-styled with multiple options and variables for customization.
                         </blockquote>
                         <h1 id="section--headings">Heading 1</h1>
                         <h2>Heading 2</h2>
@@ -542,15 +568,21 @@
                         <h6>Heading 6</h6>
                         <br>
                         <!-- Broken Images -->
-                        <img src="assets/img/rafting.jpg" alt="A Group of People White Water Rafting" id="section--broken-images">
+                        <h5 class="reset--bottom" id="section--broken-images">Broken Images</h5>
+                        <p>If the path to any image is broken or missing, Bond gracefully handles the fallback by informing your user that the image was not found, along with the title and URL.</p>
+                        <img src="assets/img/rafting.jpg" alt="A Group of People White Water Rafting">
                         <br><br>
                         <!-- Responsive Embed -->
-                        <div class="embed__container" id="section--embeds">
-                            <iframe src="https://www.youtube.com/embed/QILiHiTD3uc" frameborder="0" allowfullscreen></iframe>
+                        <h5 class="reset--bottom" id="section--embeds">Responsive Embeds</h5>
+                        <p>All forms of embeds are supported and are responsive out of the box. Whether you're using Vimeo, YouTube, Daily Motion or any other type of embed, the frame will automatically scale and maintain aspect ratio on any device.</p>
+                        <div class="embed__container">
+                            <iframe src="https://www.youtube.com/embed/l6nfTkoAmn8" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <br><br><br>
                         <!-- Responsive Tables -->
-                        <table id="section--tables">
+                        <h5 class="reset--bottom" id="section--tables">Responsive Tables</h5>
+                        <p>All tables inserted into a WYSIWYG will automatically become responsive with Bond. At a certain device width the table becomes horizontally scrollable within a parent container to ensure mobile users are able to comfortably view it.</p>
+                        <table>
                             <thead>
                                 <tr>
                                     <td>Heading 1</td>
@@ -579,8 +611,10 @@
             </section>
 
             <!-- Social Sharing -->
-            <section class="page-section text-center flush-top" id="section--sharing">
-                <div class="container--medium">
+            <section class="page-section flush-top" id="section--sharing">
+                <div class="container--small">
+                    <h5 class="reset" id="section--tables">Page Sharing</h5>
+                    <p>Page sharing is made simple with Bond: click a button, get your sharing options! It's that easy. Social account icons are automatically color coded based on the target URL. All swatches are exact and on-brand.</p>
                     <a href="#" class="social-sharing__trigger button--basic">Share This Page</a>
                     <ul class="social-sharing__list">
                         <li class="social-sharing__list-item">
@@ -639,18 +673,32 @@
                                 </svg>
                             </a>
                         </li>
+                        <!-- TODO: Add email sharing feature. -->
+                        <li class="social-sharing__list-item">
+                            <a href="https://dribbble.com" class="social-sharing__list-item-link">
+                                <svg viewBox="0 0 24 24" class="core-icon--email">
+                                    <use xlink:href="#core-icon--email"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </section>
 
             <!-- Google Map Embed -->
             <section class="map__wrapper" id="section--maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.347869262907!2d-63.58461768417729!3d44.65124389533759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a23d47824d011%3A0x65efda1894b1f1d3!2s2050+Gottingen+St%2C+Halifax%2C+NS+B3K+3A9!5e0!3m2!1sen!2sca!4v1503510091838" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map__embed"></iframe>
+                <div class="container--small">
+                    <h5 class="reset" id="section--tables">Map Embeds</h5>
+                    <p>Embed Google Map iframes quickly with Bond. Preset heights and style resets ensure a consistent experience cross-platform.</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2692505416344!2d-79.3892454845026!3d43.642566179121665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN+Tower!5e0!3m2!1sen!2sca!4v1530206355182" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map__embed"></iframe>
             </section>
 
             <!-- Alerts -->
             <section class="page-section" id="section--alerts">
                 <div class="container--small">
+                    <h5 class="reset" id="section--tables">Alerts</h5>
+                    <p>Four different styles of alert are available out of the box (danger, warning, success and neutral).</p>
                     <ul class="alert__list">
                         <!-- Alert: Danger -->
                         <li class="alert__list-item--danger">
@@ -677,10 +725,13 @@
             </section>
 
             <!-- Pagination -->
-            <section class="page-section flush-top text-center">
+            <section class="page-section flush-top" id="section--pagination">
                 <div class="container--small">
+                    <h5 class="reset">Pagination</h5>
+                    <p>Need pagination? No problem. Would you prefer the classic numbered style or a lazy load style? With Bond, either is achieveable within minutes.</p>
+                    <br>
                     <!-- Pagination: Basic -->
-                    <div class="pagination--basic" id="section--pagination-basic">
+                    <div class="pagination--basic">
                         <ul class="pagination__list">
                             <li class="pagination__list-item--nav">
                                 <a href="#" class="pagination__nav--first">First</a>
@@ -706,7 +757,7 @@
                         </ul>
                     </div>
                     <!-- Pagination: Lazy -->
-                    <div class="pagination--lazy" id="section--pagination-lazy">
+                    <div class="pagination--lazy">
                         <a href="#" class="pagination__button button--basic">Load More</a>
                         <a href="#" class="pagination__button loading button--basic">Loading</a>
                         <a href="#" class="pagination__button all-loaded button--basic">All Posts Loaded</a>
@@ -717,6 +768,10 @@
             <!-- Blocks -->
             <section class="page-section flush-top" id="section--blocks">
                 <div class="container--xl">
+                    <div class="container--medium">
+                        <h5 class="reset">Blocks</h5>
+                        <p>Bond's block layouts utilize the latest features of the CSS grid syntax. Easily create block grids with simple classes like 'three-up' or 'four-up'. Additionally, each block contains a stack of elements that suit news and blog grids perfectly such as excerpts, CTA's, tags, and more.</p>
+                    </div>
                     <div class="blocks__group three-up stretch">
                         <article class="block">
                             <a href="#" class="block__image-link">
@@ -774,28 +829,30 @@
             <!-- Accordions -->
             <section class="page-section flush-top" id="section--accordions">
                 <div class="container--small">
+                    <h5 class="reset">Accordions</h5>
+                    <p>Rapidly create an FAQ section with Bond's built-in accordions!</p>
                     <ul class="accordions">
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">How long did it take to create Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>Starting in the summer of 2017, Bond's full development cycle took approximately 2 weeks to complete from start to finish.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">Who is best suited to use Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>Bond is best suited for front-end developers with an intermediate to expert understanding of HTML, CSS and Javascript along with fundamental principles surrounding good code structure.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">What's next for Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>A fully automated installation and update process is coming soon! Install and update, pick and choose components, and customize directly from the command line.</p>
                                 </div>
                             </div>
                         </li>
@@ -806,37 +863,35 @@
             <!-- Tabs -->
             <section class="page-section flush-top" id="section--tabs">
                 <div class="container--small">
+                    <h5 class="reset">Tabs</h5>
+                    <br>
                     <ul class="tabs--overlap">
                         <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link current" data-tab="overview">Overview</a>
+                            <a href="#" class="tabs__tab-item-link current" data-tab="overview">Tab 1</a>
                         </li>
                         <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link" data-tab="contact">Contact</a>
-                        </li>
-                        <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link" data-tab="other">Other</a>
+                            <a href="#" class="tabs__tab-item-link" data-tab="contact">Tab 2</a>
                         </li>
                     </ul>
                     <div class="tabs__tab-content current" data-tab="overview">
                         <div class="content-area">
-                            <p>OVERVIEW TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                            <p>Bond includes easy to use, already functional tabbed layout right out of the box.</p>
                         </div>
                     </div>
                     <div class="tabs__tab-content" data-tab="contact">
                         <div class="content-area">
-                            <p>CONTACT TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
-                        </div>
-                    </div>
-                    <div class="tabs__tab-content" data-tab="other">
-                        <div class="content-area">
-                            <p>OTHER TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                            <p>Choose between two styles: folder-like (overlap) or basic!</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Partners List -->
-            <section class="page-section flush-top" id="section--partners">
+            <section class="page-section flush-top text-center" id="section--partners">
+                <div class="container--small">
+                    <h5 class="reset">Partner Groups</h5>
+                    <p>Many websites require a method to display sponsors, partners or supporters. With Bond, it's as easy as including the Partners Group component.</p>
+                </div>
                 <div class="container--medium">
                     <div class="partners__group">
                         <h4 class="partners__group-title">Partner Group 1</h4>
@@ -871,13 +926,15 @@
 
             <!-- Breadcrumbs -->
             <section class="page-section flush-top text-center" id="section--breadcrumbs">
+                <div class="container--small">
+                    <h5 class="reset">Breadcrumbs</h5>
+                    <p>Show your users exactly where they are with breadcrumbs. With Bond, there's no need to add separate HTML elements for dividers; it's built right into the default styling.</p>
+                </div>
                 <div class="container--medium">
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Home</a></li>
                         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">About</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Services</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Contacts</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Projects</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">History</a></li>
                         <li class="breadcrumbs__item">Vision &amp; Mission</li>
                     </ul>
                 </div>
@@ -885,13 +942,21 @@
 
             <!-- Dialog Trigger -->
             <section class="page-section flush-top text-center" id="section--dialogs">
+                <div class="container--small">
+                    <h5 class="reset">Dialogs and Modals</h5>
+                    <p>Rapidly create confirmation modals, in-context forms, and more with Bond's dialog component.</p>
+                </div>
                 <div class="container--medium">
                     <a href="#" class="dialog__trigger button--basic" data-dialog="dialog-1">Open Dialog</a>
                 </div>
             </section>
 
             <!-- Photo Gallery -->
-            <section class="page-section flush-top" id="section--galleries">
+            <section class="page-section flush-top text-center" id="section--galleries">
+                <div class="container--small">
+                    <h5 class="reset">Photo Galleries</h5>
+                    <p>Custom photo galleries are easy to implement with Bond. Clicking a thumbnail opens a pre-styled, full-screen gallery that supports multiple photo sizes and orientations with Slick carousel.</p>
+                </div>
                 <div class="container--xl">
                     <ul class="gallery">
                         <li class="gallery__item">
@@ -914,14 +979,14 @@
             </section>
 
             <!-- Page Title (Subpage Banner) -->
-            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://unsplash.it/1920');" id="section--page-title">
+            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920');" id="section--page-title">
                 <div class="page-title__container container--medium">
                     <h6 class="page-title__subtitle">Subtitle</h6>
                     <h1 class="page-title__title">Page Title</h1>
-                    <p class="page-title__content">Reprehenderit ea eiusmod magna aliqua sint deserunt veniam enim amet et elit commodo nisi.</p>
+                    <p class="page-title__content">The page title component allows you to create a visually interesting and robust page heading area in seconds.</p>
                     <ul class="page-title__meta">
-                        <li class="page-title__meta-item">August 28, 2018</li>
-                        <li class="page-title__meta-item">Published by <a href="#" class="page-title__meta-item-link">Joe Brown</a></li>
+                        <li class="page-title__meta-item">August 28, 2020</li>
+                        <li class="page-title__meta-item">Published by <a href="#" class="page-title__meta-item-link">John Q. Public</a></li>
                         <li class="page-title__meta-item">Category Name</li>
                     </ul>
                 </div>
@@ -929,7 +994,7 @@
 
             <!-- Sticky Helper -->
             <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;" id="section--sticky">
-                <p>This is a sticky bar.</p>
+                <p>This is a sticky bar which uses the position: sticky spec from CSS3. Apply a 'sticky' class to any statically positioned element.</p>
             </div>
 
             <!-- Forms -->
@@ -937,7 +1002,8 @@
                 <div class="container--medium">
                     <form>
                         <div class="gform_heading">
-                            <h3 class="gform_title">Form Example</h3>
+                            <h3 class="gform_title">Forms</h3>
+                            <p>Bond includes styles specifically crafted for Gravity Forms. All of Gravity Forms common controls such as text inputs, file inputs, select boxes, checkboxes, radio buttons and more have been pre-styled for you. This allows your administrators to create robust forms without needing to worry about the potential for styling issues.</p>
                         </div>
                         <div class="gform_body">
                             <ul class="gform_fields top_label form_sublabel_below description_below">
@@ -1091,8 +1157,9 @@
             <!-- Filters -->
             <section class="page-section flush-top" id="section--filters">
                 <div class="container--medium">
-                    <h4 class="filters__title text-center">Filter Results</h4>
-                    <form>
+                    <h4 class="filters__title text-center reset--bottom">Filters</h4>
+                    <p class="filters__content text-center">The filters component utilizes Select2 for searchability and multi-select features.</p>
+                    <form class="filters__form">
                         <ul class="filters--3-up">
                             <li class="filters__item">
                                 <label class="filters__item-label">Disabled Filter</label>
@@ -1289,10 +1356,9 @@
                 </svg>
             </a>
             <!-- Content -->
-            <h3>Dialog</h3>
-            <p>Laboris Lorem duis eiusmod velit tempor enim adipisicing veniam amet. Est voluptate laboris in cillum nisi voluptate anim dolor mollit culpa esse. Dolor consequat incididunt occaecat ad reprehenderit mollit ullamco. Fugiat fugiat cupidatat nisi exercitation fugiat commodo est reprehenderit ad ea. Quis ex non eu anim voluptate deserunt et culpa aute reprehenderit eu officia esse. Magna cillum do qui excepteur tempor cillum laborum quis quis deserunt in excepteur sit.</p>
-            <p>Dolore do veniam reprehenderit reprehenderit non officia nisi. Pariatur sint Lorem non sint nostrud sunt ut duis deserunt proident nisi qui laborum in anim exercitation. Eu et minim veniam pariatur occaecat qui laboris laborum veniam non consequat consequat. Amet adipisicing quis fugiat magna reprehenderit officia adipisicing cillum non. Enim velit velit deserunt aliquip enim sunt adipisicing commodo esse fugiat pariatur adipisicing ut non.</p>
-            <p>Et dolore proident dolor adipisicing adipisicing consequat tempor velit occaecat. Reprehenderit qui commodo ad esse commodo laborum adipisicing. Veniam sit ad nulla minim voluptate elit voluptate cupidatat magna labore id anim magna labore. Mollit adipisicing deserunt voluptate adipisicing adipisicing tempor quis non aliquip pariatur ex duis nulla.</p>
+            <h3 class="reset--top">Dialog Box</h3>
+            <p>Bond's dialog boxes are set to a maximum height which overflows gracefully when exceeded. This means that the contents of the dialog box can be anything from forms, paragraphs, images, video and more.</p>
+            <p>In addition, the dialog can easily be closed in a variety of ways including clicking the close button in the top-right corner, clicking the overlay outside of the dialog, or by pressing the Esc key.</p>
         </div>
 
         <!-- Gallery (Full) -->
@@ -1384,6 +1450,20 @@
 
         <!-- Component Script: Gallery -->
         <script src="assets/js/components/gallery/gallery.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.demo-nav__item-link').on('click', function(e) {
+                    $('.demo-nav__item-link').removeClass('current');
+                    $(this).addClass('current');
+                    $('div[data-sidebar-pane]').removeClass('current');
+                    $('ul[data-sidebar-level]').removeClass('current');
+                    $('a[data-sidebar-pane]').removeClass('current');
+                    $('.sidebar-nav__overlay').removeClass('show');
+                    $('html').removeClass('hide-overflow');
+                });
+            });
+        </script>
 
     </body>
 
