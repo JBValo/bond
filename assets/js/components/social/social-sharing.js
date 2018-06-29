@@ -19,7 +19,7 @@
         });
 
         // Email Option
-        $('.social-sharing__list-item-link--email').on('click', function(e) {
+        $('.social-sharing__email-trigger').on('click', function(e) {
             $('.social-sharing__email-form').addClass('show');
         });
 

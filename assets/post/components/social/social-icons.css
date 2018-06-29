@@ -16,6 +16,7 @@
     /* Links */
     $social-icons-link-radius: 100%;
     $social-icons-link-size: 3rem; /* sets both width and height to the box */
+    $social-icons-link-background: $black;
 
     /* Icons */
     $social-icons-icon-size: 1.5rem;
@@ -60,14 +61,32 @@
 }
 
 /* Links ==================================================================== */
-.social-icons__item-link {
+.social-icons__item-link,
+[class*="social-icons__item-link--"] {
     border-radius: $social-icons-link-radius;
     width: $social-icons-link-size;
     height: $social-icons-link-size;
+    background: $social-icons-link-background;
     text-align: center;
     position: relative;
     padding: 50% 0;
     display: block;
+
+    /* All Icons */
+    [class*="core-icon--"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        fill: $social-icons-icon-color;
+        width: $social-icons-icon-size;
+        height: $social-icons-icon-size;
+
+        use {
+            fill: $social-icons-icon-color;
+        }
+
+    }
 
     /* Dribbble */
     &[href*="dribbble.com"] {
@@ -159,13 +178,90 @@
 
 }
 
-/* Icons ==================================================================== */
-.social-icons__item [class*="core-icon--"] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%,-50%,0);
-    fill: $social-icons-icon-color;
-    width: $social-icons-icon-size;
-    height: $social-icons-icon-size;
+/* No Background Option ===================================================== */
+.social-icons.no-bg {
+
+    .social-icons__item-link,
+    [class*="social-icons__item-link--"] {
+        background: transparent !important;
+
+        /* All Icons */
+        [class*="core-icon--"] use {
+            fill: $black;
+        }
+
+        /* Dribbble */
+        &[href*="dribbble.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $dribbble-brand;
+            }
+
+        }
+
+        /* Facebook */
+        &[href*="facebook"] {
+
+            [class*="core-icon--"] use {
+                fill: $facebook-brand;
+            }
+
+        }
+
+        /* Google Plus */
+        &[href*="plus.google.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $gplus-brand;
+            }
+
+        }
+
+        /* Instagram */
+        &[href*="instagram.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $instagram-brand;
+            }
+
+        }
+
+        /* LinkedIn */
+        &[href*="linkedin"] {
+
+            [class*="core-icon--"] use {
+                fill: $linkedin-brand;
+            }
+
+        }
+
+        /* Pinterest */
+        &[href*="pinterest.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $pinterest-brand;
+            }
+
+        }
+
+        /* Twitter */
+        &[href*="twitter"] {
+
+            [class*="core-icon--"] use {
+                fill: $twitter-brand;
+            }
+
+        }
+
+        /* YouTube */
+        &[href*="youtube.com"] {
+
+            [class*="core-icon--"] use {
+                fill: $youtube-brand;
+            }
+
+        }
+
+    }
+
 }
