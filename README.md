@@ -8,7 +8,7 @@ A front-end component library and framework based on PostCSS and Atomic Design.
 * Brew
 * Yarn
 
-#### Getting Started
+#### Installation
 
 1. Create a new directory for your project.
 2. `cd my-project`
@@ -17,7 +17,11 @@ A front-end component library and framework based on PostCSS and Atomic Design.
 5. `npm run bond`
 6. Customize components to your needs.
 
-Bond provides you with a "kitchen sink" of components within `index.html`. All components, including their various states, are included. It is best to create your own HTML files for each of your project's pages and pick and choose which components you need from `index.html`.
+### Getting Started
+
+Out of the box, Bond includes two primary HTML files: `starter.html` and `index.html`. The `index.html` file serves as the primary demo page and includes some unnecessary scripts, styling and content that will likely be irrelevant to your project. As such, it is best to delete `index.html` and rename `starter.html` to `index.html`.
+
+Bond provides you with a "kitchen sink" of components within `starter.html`. All components, including their various states and orientations, are included by default so you can get the most out of Bond. Start your project by determining which Bond components you need and deleting the ones you don't!
 
 For more detailed information, I encourage you to check out the complete [Bond Docs](http://bond.codeandmortar.com/docs).
 

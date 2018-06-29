@@ -37,11 +37,11 @@
 }
 
 /* Padding ================================================================== */
-.flush-top {
+.flush--top {
     padding-top: 0 !important;
 }
 
-.flush-bottom {
+.flush--bottom {
     padding-bottom: 0 !important;
 }
 
@@ -50,16 +50,16 @@
 }
 
 /* Margins ================================================================== */
-.reset {
-    margin: 0;
-}
-
 .reset--top {
     margin-top: 0;
 }
 
 .reset--bottom {
     margin-bottom: 0;
+}
+
+.reset {
+    margin: 0;
 }
 
 /* Lists ==================================================================== */
