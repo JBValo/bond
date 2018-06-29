@@ -23,9 +23,9 @@
     /* Links */
     $basic-nav-link-color: $black;
     $basic-nav-link-font-family: $global-font-family;
-    $basic-nav-link-font-size: 0.75rem;
+    $basic-nav-link-font-size: 1rem;
     $basic-nav-link-text-transform: none;
-    $basic-nav-link-font-weight: 600;
+    $basic-nav-link-font-weight: normal;
     $basic-nav-link-text-decoration: none;
     $basic-nav-link-font-style: normal;
 
@@ -58,9 +58,9 @@
     /* Links */
     $basic-nav-submenu-link-color: $black;
     $basic-nav-submenu-link-font-family: $global-font-family;
-    $basic-nav-submenu-link-font-size: 0.65rem;
+    $basic-nav-submenu-link-font-size: 0.85rem;
     $basic-nav-submenu-link-text-transform: none;
-    $basic-nav-submenu-link-font-weight: bold;
+    $basic-nav-submenu-link-font-weight: normal;
     $basic-nav-submenu-link-text-decoration: none;
     $basic-nav-submenu-link-font-style: normal;
 

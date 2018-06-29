@@ -38,7 +38,7 @@
     $button-color--highlight: $button-color;
 
         /* Highlight: Hover */
-        $button-background--highlight--hover: color($button-background--highlight tint(20%));
+        $button-background--highlight--hover: $black;
         $button-color--highlight--hover: white;
 
 /* Form Buttons ============================================================= */

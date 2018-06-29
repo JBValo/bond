@@ -11,8 +11,8 @@
 /* Variables ================================================================ */
 
     /* Top Level: Container (The Sidebar) */
-    $sidebar-nav-background: white;
-    $sidebar-nav-border: 1px solid #ccc;
+    $sidebar-nav-background: $black;
+    $sidebar-nav-border: 1px solid rgba(255,255,255,0.2);
 
     /* Top Level: Links */
     $sidebar-nav-link-text-align: center;
@@ -21,7 +21,7 @@
     $sidebar-nav-link-font-size: 0.6rem;
     $sidebar-nav-link-font-style: normal;
     $sidebar-nav-link-text-transform: uppercase;
-    $sidebar-nav-link-color: $black;
+    $sidebar-nav-link-color: white;
     $sidebar-nav-link-padding: 1rem;
     $sidebar-nav-link-padding--tab-bar: 1rem 0.25rem;
     $sidebar-nav-link-border: $sidebar-nav-border;
@@ -29,11 +29,11 @@
     $sidebar-nav-link-background: white;
 
         /* Top Level: Links: Hover */
-        $sidebar-nav-link-background--hover: $grey-95;
-        $sidebar-nav-link-color--hover: $black;
+        $sidebar-nav-link-background--hover: $highlight;
+        $sidebar-nav-link-color--hover: white;
 
         /* Top Level: Links: Current */
-        $sidebar-nav-link-background--current: $black;
+        $sidebar-nav-link-background--current: $highlight;
         $sidebar-nav-link-color--current: white;
 
     /* Icons */
@@ -42,7 +42,7 @@
     $sidebar-nav-link-icon-spacing: 0 0 0.25rem;
 
         /* Icons: Hover */
-        $sidebar-nav-link-icon-color--hover: $pink;
+        $sidebar-nav-link-icon-color--hover: $sidebar-nav-link-color--hover;
 
         /* Icons: Current */
         $sidebar-nav-link-icon-color--current: $sidebar-nav-link-color--current;
@@ -616,7 +616,7 @@ a[data-sidebar-level] {
         &.current {
 
             &:after {
-                border-color: transparent transparent transparent $sidebar-nav-pane-nav-link-color--hover;
+                border-color: transparent transparent transparent $sidebar-nav-pane-nav-link-color--current !important;
             }
 
         }

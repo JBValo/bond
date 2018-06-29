@@ -70,6 +70,10 @@
         border-left-color: $breadcrumbs-divider-color;
     }
 
+    &:first-child {
+        margin-left: 0;
+    }
+
     &:last-child {
 
         &:after {

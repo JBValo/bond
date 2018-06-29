@@ -15,11 +15,6 @@
 
 /* Containers =============================================================== */
 .map__wrapper {
-    height: $map-height-mobile;
-
-    @media $(l-tablet) {
-        height: $map-height-desktop;
-    }
 
 }
 
@@ -27,5 +22,10 @@
 .map__embed {
     display: block;
     width: 100%;
-    height: 100%;
+    height: $map-height-mobile;
+
+    @media $(l-tablet) {
+        height: $map-height-desktop;
+    }
+    
 }

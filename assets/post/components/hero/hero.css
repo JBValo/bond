@@ -241,8 +241,13 @@
 
         &.slick-active {
 
-            button:after {
-                display: block;
+            button {
+                background: transparent;
+
+                &:after {
+                    display: block;
+                }
+
             }
 
         }

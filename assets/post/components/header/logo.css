@@ -10,7 +10,7 @@
 
 /* Variables ================================================================ */
 
-    $main-logo-desktop-width: 250px;
+    $main-logo-desktop-width: 200px;
     $main-logo-mobile-width: 40%;
 
 /* Logo Container =========================================================== */
@@ -30,7 +30,7 @@
         @media $menu-media-query {
             margin: 0;
         }
-        
+
     }
 
 }

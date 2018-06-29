@@ -16,6 +16,10 @@
     /* Links */
     $social-sharing-icons-link-radius: 0;
     $social-sharing-icons-link-size: 3rem; /* sets both width and height to the box */
+    $social-sharing-icons-icon-background: $black;
+
+        /* Links: Hover */
+        $social-sharing-icons-icon-background--hover: $highlight;
 
     /* Icons */
     $social-sharing-icons-icon-size: 1.5rem;
@@ -45,6 +49,20 @@
         /* Youtube */
         $social-sharing-icons-icon-size--youtube: $social-sharing-icons-icon-size;
 
+    /* Email */
+    $social-sharing-email-form-margin: 1.5rem 0 0;
+
+        /* Email: Form Title */
+        $social-sharing-email-form-title-margin: 0 0 0.5rem;
+        $social-sharing-email-form-title-font-size: 1rem;
+        $social-sharing-email-form-title-font-weight: normal;
+        $social-sharing-email-form-title-font-style: normal;
+        $social-sharing-email-form-title-text-transform: none;
+        $social-sharing-email-form-title-color: $black;
+
+        /* Email: Input */
+        $social-sharing-email-form-input-spacing: 0 1rem 0 0;
+
 /* Container ================================================================ */
 .social-sharing__list {
     margin: 0;
@@ -66,7 +84,8 @@
 }
 
 /* Links ==================================================================== */
-.social-sharing__list-item-link {
+.social-sharing__list-item-link,
+[class*="social-sharing__list-item-link--"] {
     border-radius: $social-sharing-icons-link-radius;
     width: $social-sharing-icons-link-size;
     height: $social-sharing-icons-link-size;
@@ -74,6 +93,7 @@
     position: relative;
     padding: 50% 0;
     display: block;
+    background: $social-sharing-icons-icon-background;
 
     /* Dribbble */
     &[href*="dribbble.com"] {
@@ -165,6 +185,16 @@
 
 }
 
+    /* Links: Hover */
+    .social-sharing__list-item-link,
+    [class*="social-sharing__list-item-link--"] {
+
+        &:hover {
+            background: $social-sharing-icons-icon-background--hover;
+        }
+
+    }
+
 /* Icons ==================================================================== */
 .social-sharing__list-item [class*="core-icon--"] {
     position: absolute;
@@ -174,4 +204,52 @@
     fill: $social-sharing-icons-icon-color;
     width: $social-sharing-icons-icon-size;
     height: $social-sharing-icons-icon-size;
+}
+
+/* Email Option ============================================================= */
+.social-sharing__email-form {
+    display: none;
+    margin: $social-sharing-email-form-margin;
+
+    &.show {
+        display: block;
+    }
+
+}
+
+.social-sharing__email-form-title {
+    margin: $social-sharing-email-form-title-margin;
+    font-size: $social-sharing-email-form-title-font-size;
+    font-weight: $social-sharing-email-form-title-font-weight;
+    font-style: $social-sharing-email-form-title-font-style;
+    text-transform: $social-sharing-email-form-title-text-transform;
+    color: $social-sharing-email-form-title-color;
+
+}
+
+.social-sharing__email-layout {
+    display: flex;
+    flex-flow: row;
+}
+
+[class*="social-sharing__email-layout-item--"] {
+
+}
+
+.social-sharing__email-layout-item--input {
+    flex: 1;
+    display: flex;
+    padding: $social-sharing-email-form-input-spacing;
+}
+
+.social-sharing__email-layout-item--button {
+
+}
+
+.social-sharing__email-input {
+
+}
+
+.social-sharing__email-button {
+
 }

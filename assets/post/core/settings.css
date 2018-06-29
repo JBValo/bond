@@ -66,7 +66,7 @@ $page-width-xl: 100em;       /* 1600px */
 /* Sets width for sidebar and equivalent <body> padding. */
 $sidebar-nav-width--tablet: 10vw;
 $sidebar-nav-width--cinema: 8vw;
-$sidebar-nav-width--cinema-xl: 8vw;
+$sidebar-nav-width--cinema-xl: 7vw;
 
 /* Animations =============================================================== */
 $global-easing: ease;
@@ -173,6 +173,11 @@ section {
     /* Small */
     .container--small {
         @mixin container-small;
+    }
+
+    /* Small */
+    .container--xsmall {
+        @mixin container-xsmall;
     }
 
 /* Section Padding ========================================================== */
