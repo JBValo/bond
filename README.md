@@ -17,7 +17,7 @@ A front-end component library and framework based on PostCSS and Atomic Design.
 5. `npm run bond`
 6. Customize components to your needs.
 
-### Getting Started
+#### Getting Started
 
 Out of the box, Bond includes two primary HTML files: `starter.html` and `index.html`. The `index.html` file serves as the primary demo page and includes some unnecessary scripts, styling and content that will likely be irrelevant to your project. As such, it is best to delete `index.html` and rename `starter.html` to `index.html`.
 
