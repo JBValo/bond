@@ -6,44 +6,56 @@
 
         <!-- Meta Data -->
         <meta charset="utf-8">
-        <title>Site Title</title>
+        <title>Bond: Component Library Starter Pack (The Kitchen Sink)</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Fonts -->
         <!-- Use Google Fonts or Typekit -->
         <!-- Typekit now supports <link>. This method is preferred over JS inclusion. -->
+        <!-- Your combined custom font libraries should not exceed 300kb. -->
 
         <!-- Favicons -->
         <!-- Use realfavicongenerator.net -->
 
         <!-- Vendor Dependencies -->
-        <!-- If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json. See documentation. -->
-
-        <!-- jQuery -->
-        <script src="assets/vendor/jquery.min.js"></script>
-
-        <!-- Modernizr -->
-        <script src="assets/vendor/modernizr.js"></script>
-
-        <!-- Fonts -->
-        <link href="//fonts.googleapis.com/css?family=Roboto:400,400i,700i,900" rel="stylesheet">
-        <link rel="stylesheet" href="//use.typekit.net/urw6fuc.css">
+        <!-- If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json. See documentation at https://bond.codeandmortar.com/docs. -->
 
         <!-- Vendor CSS: Normalize -->
-        <link rel="stylesheet" href="assets/vendor/normalize.css" type="text/css" media="all">
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/normalize.css">
 
         <!-- Vendor CSS: Slick -->
-        <link rel="stylesheet" href="assets/vendor/slick.css" type="text/css" media="all" />
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/slick.css">
 
         <!-- Vendor CSS: Pikaday -->
-        <link rel="stylesheet" href="assets/vendor/pikaday.css" type="text/css" media="all" />
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/pikaday.css">
 
         <!-- Vendor CSS: Select2 -->
-        <link rel="stylesheet" href="assets/vendor/select2.min.css" type="text/css" media="all" />
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/select2.min.css">
 
         <!-- Primary Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/style.css">
+
+        <noscript>
+            <link rel="stylesheet" href="assets/vendor/normalize.css">
+            <link rel="stylesheet" href="assets/vendor/slick.css">
+            <link rel="stylesheet" href="assets/vendor/pikaday.css">
+            <link rel="stylesheet" href="assets/vendor/select2.min.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+        </noscript>
+
+        <!-- Javascripts -->
+        <!-- JS should always be included AFTER your CSS. -->
+        <!-- JS files that do not rely or are not relied upon by other JS should get an 'async' attribute. JS files that DO rely or are relied upon by other JS should get a 'defer' attribute. -->
+
+        <!-- jQuery -->
+        <script async src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Modernizr -->
+        <script async src="assets/vendor/modernizr.js"></script>
+
+        <!-- LazyLoad -->
+        <script defer src="assets/vendor/lazyload.min.js"></script>
 
     </head>
 
@@ -60,7 +72,7 @@
         <ul class="sidebar-nav tab-bar--4-up">
             <li class="sidebar-nav__item--logo">
                 <a href="/" class="sidebar-nav__item-link">
-                    <img src="http://placehold.it/250x150" alt="Logo">
+                    <img src="http://bond.codeandmortar.com/assets/bond-logo.svg" alt="Logo">
                 </a>
             </li>
             <li class="sidebar-nav__item in-tab-bar">
@@ -82,7 +94,7 @@
                         </svg>
                         <span class="sidebar-nav__item-icon--close"></span>
                     </div>
-                    <span class="sidebar-nav__item-text">About</span>
+                    <span class="sidebar-nav__item-text">Content</span>
                 </a>
             </li>
             <li class="sidebar-nav__item in-tab-bar">
@@ -93,17 +105,7 @@
                         </svg>
                         <span class="sidebar-nav__item-icon--close"></span>
                     </div>
-                    <span class="sidebar-nav__item-text">Projects</span>
-                </a>
-            </li>
-            <li class="sidebar-nav__item in-tab-bar">
-                <a href="#" class="sidebar-nav__item-link">
-                    <div class="sidebar-nav__item-icon-wrapper">
-                        <svg viewBox="0 0 24 24" class="sidebar-nav__item-icon">
-                            <use xlink:href="#core-icon--placeholder"></use>
-                        </svg>
-                    </div>
-                    <span class="sidebar-nav__item-text">Events</span>
+                    <span class="sidebar-nav__item-text">Submenus</span>
                 </a>
             </li>
             <li class="sidebar-nav__item">
@@ -113,7 +115,7 @@
                             <use xlink:href="#core-icon--placeholder"></use>
                         </svg>
                     </div>
-                    <span class="sidebar-nav__item-text">Contact</span>
+                    <span class="sidebar-nav__item-text">Single</span>
                 </a>
             </li>
             <li class="sidebar-nav__item--language in-tab-bar">
@@ -144,17 +146,22 @@
 
         <!-- Sidebar Menu: Content Pane -->
         <div class="sidebar-nav__pane--content" data-sidebar-pane="pane-about">
-            <h2 class="sidebar-nav__pane-title">About</h2>
-            <p>Commodo officia reprehenderit velit ex eiusmod labore commodo pariatur occaecat est eu quis anim fugiat in aliqua qui. Dolore qui commodo anim cupidatat Lorem occaecat est enim ad eiusmod deserunt labore nulla sint nulla reprehenderit anim. Ex eu deserunt elit magna ea eu nisi officia nisi elit dolor. Magna ullamco minim ullamco sunt reprehenderit irure irure. Deserunt laborum sit ipsum ut occaecat pariatur officia officia. Laboris cupidatat nostrud nulla Lorem occaecat aliquip cillum. Qui non proident enim ipsum reprehenderit fugiat ad sunt.</p>
+            <h2 class="sidebar-nav__pane-title">Content Panes</h2>
+            <p>Need a way to include more robust, content-based panes in your sidebar navigation? No problem. Bond includes a pre-built pane specifically made to accept any type of content you throw at it. This is especially useful for creating a Contact pane with multiple addresses, a form, and even a map!</p>
+            <p>Content panes adapt automatically to the length of your content so don't worry about fitting it all into one pane. If your content exceeds the device's height, it will automatically become scrollable.</p>
         </div>
 
         <!-- Sidebar Menu: Search Pane -->
         <div class="sidebar-nav__pane--content search-pane full" data-sidebar-pane="pane-search">
-            <h2 class="sidebar-nav__pane-title sidebar-nav__search-form-title">Search</h2>
-            <p class="sidebar-nav__pane-content sidebar-nav__search-form-content">Id amet velit sit proident pariatur ea sunt qui consequat reprehenderit quis in.</p>
+            <h2 class="sidebar-nav__pane-title sidebar-nav__search-form-title">Search Pane</h2>
+            <p class="sidebar-nav__pane-content sidebar-nav__search-form-content">Bond includes a simple, full-width search panel for layouts that use a sidebar menu.</p>
             <form class="sidebar-nav__search-form">
-                <input type="text" class="sidebar-nav__search-input" placeholder="What can we help you find today?">
-                <button class="sidebar-nav__search-button button--basic">Search</button>
+                <div class="sidebar-nav__search-form-item--input">
+                    <input type="text" class="sidebar-nav__search-input" placeholder="What can we help you find today?">
+                </div>
+                <div class="sidebar-nav__search-form-item--button">
+                    <button class="sidebar-nav__search-button button--basic">Search</button>
+                </div>
             </form>
         </div>
 
@@ -239,11 +246,11 @@
             <a href="#" class="nav-toggle">Menu</a>
 
             <!-- Header -->
-            <header class="main-header">
+            <header class="main-header" id="section--header">
                 <div class="main-header__container flex--justify-between flex--align-middle">
                     <!-- Logo -->
                     <a href="/" class="main-header__logo-link">
-                        <img src="https://placehold.it/250x125" class="main-header__logo" alt="Site Logo">
+                        <img src="http://bond.codeandmortar.com/assets/bond-logo.svg" class="main-header__logo" alt="Site Logo">
                     </a>
                     <!-- Language Toggle (Basic) -->
                     <ul class="language-toggle--basic">
@@ -297,34 +304,41 @@
             </header>
 
             <!-- Hero -->
-            <section class="hero">
-                <!-- Slide: With Video -->
-                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=435')">
+            <section class="hero" id="section--hero">
+                <!-- Slide: Intro -->
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=440')">
                     <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Subtitle</h5>
-                        <h1 class="hero__slide-title">Slide Title</h1>
-                        <p class="hero__slide-content">Lorem ipsum dolor sit amet consectetuer.</p>
-                        <a href="" class="hero__slide-cta button--basic">Learn More</a>
+                        <h5 class="hero__slide-subtitle">Welcome</h5>
+                        <h1 class="hero__slide-title">Bond Framework</h1>
+                        <p class="hero__slide-content">This slide contains a textural background image.</p>
+                        <a href="" class="hero__slide-cta button--highlight">Learn More</a>
                     </div>
-                    <!--
+                </div>
+                <!-- Slide: With Video -->
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=430')">
+                    <div class="hero__slide-content-container container--small">
+                        <h5 class="hero__slide-subtitle">Slide One</h5>
+                        <h1 class="hero__slide-title">Slide with Video</h1>
+                        <p class="hero__slide-content">This slide contains a textural background video in multiple formats.</p>
+                        <a href="" class="hero__slide-cta button--highlight">Learn More</a>
+                    </div>
                     <div class="hero__video-container">
                         <video autoplay loop id="bg-video" muted>
-                            <source src="assets/vid/bg-vid.webm" type="video/webm" />Your browser does not support the video tag.
-                            <source src="assets/vid/bg-vid.mp4" type="video/mp4" />Your browser does not support the video tag.
+                            <source src="assets/vid/bg-vid.webm" type="video/webm">Your browser does not support the video tag.
+                            <source src="assets/vid/bg-vid.mp4" type="video/mp4">Your browser does not support the video tag.
                         </video>
                         <div class="hero__video-poster">
                             <img src="assets/vid/bg-vid.jpg" alt="">
                         </div>
                     </div>
-                    -->
                 </div>
                 <!-- Slide: With Image -->
-                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=435')">
+                <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=432')">
                     <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Subtitle</h5>
-                        <h1 class="hero__slide-title">Slide Title</h1>
-                        <p class="hero__slide-content">Tempor consectetur fugiat laborum sint sit dolor dolor excepteur cupidatat ad occaecat ut cillum quis ad. Et laboris irure culpa anim cupidatat cupidatat cupidatat culpa consequat id laborum fugiat proident officia aliqua mollit. Sint culpa deserunt excepteur aliquip adipisicing ut Lorem ipsum est Lorem ipsum adipisicing ad. Ipsum non laborum reprehenderit quis veniam ipsum reprehenderit elit ea duis irure tempor eiusmod irure fugiat ad. Reprehenderit laboris eiusmod tempor ut ut aute esse officia tempor exercitation elit incididunt eiusmod. Qui quis id elit cillum nostrud Lorem culpa pariatur ullamco do pariatur ex velit consequat. Eiusmod fugiat duis ullamco fugiat magna aliquip anim reprehenderit eiusmod irure aliquip.</p>
-                        <a href="" class="hero__slide-cta button--basic">Learn More</a>
+                        <h5 class="hero__slide-subtitle">Slide Two</h5>
+                        <h1 class="hero__slide-title">Slide with Image</h1>
+                        <p class="hero__slide-content">This slide contains a textural background image.</p>
+                        <a href="" class="hero__slide-cta button--highlight">Learn More</a>
                     </div>
                 </div>
             </section>
@@ -333,13 +347,13 @@
             <section class="page-section">
                 <div class="container--small">
                     <!-- Section Title -->
-                    <div class="page-section__title-wrapper text-center">
+                    <div class="page-section__title-wrapper text-center" id="section--section-title">
                         <h5 class="page-section__subtitle with-divider">Section Subtitle</h5>
                         <h1 class="page-section__title">Section Title</h1>
-                        <p class="page-section__title-content">Cillum commodo do enim aliqua nostrud amet quis dolore proident. Ut Lorem reprehenderit commodo quis pariatur quis.</p>
+                        <p class="page-section__title-content">The section title component offers a quick and easy way to include modular identifiers for your site's sections. Includes support for an optional subtitle and multiple calls to action.</p>
                     </div>
                     <!-- Button Group -->
-                    <ul class="button-group text-center">
+                    <ul class="button-group text-center" id="section--button-group">
                         <li class="button-group__item">
                             <a href="#" class="button-group__button button--basic">Button</a>
                         </li>
@@ -351,15 +365,18 @@
                         </li>
                     </ul>
                     <br><br><br>
-                    <div class="content-area">
-                        <h3>Overview</h3>
+                    <div class="content-area" id="section--content">
+                        <h3>Basic Content Area</h3>
                         <!-- Wordpress Images (Basic) -->
                         <div>
-                            <img src="https://unsplash.it/250" alt="Wordpress Image" class="wp-image filter--gray alignleft">
+                            <img src="https://picsum.photos/255" alt="Wordpress Image" class="wp-image alignleft" id="section--wp-images">
                         </div>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
-                        <ul>
+                        <h5 class="reset--bottom">Overview</h5>
+                        <p>The basic content area includes default styling for all usable elements within a WYSIWYG section. This area is especially useful for WordPress sites or other sites that require a CMS feature.</p>
+                        <h5 class="reset--bottom">Images</h5>
+                        <p>To the left is a floated image specifically styled for WordPress' built-in image alignment classes (left, center and right).</p>
+                        <h5 class="reset--bottom">Ordered &amp; Unordered Lists</h5>
+                        <ul id="section--lists">
                             <li>The face of the moon was in shadow.</li>
                             <li>I watched the storm, so beautiful yet terrific.</li>
                             <li>Almost before we knew it, we had left the ground.</li>
@@ -372,15 +389,15 @@
                         <hr>
                         <!-- Wordpress Images (Captioned) -->
                         <div class="wp-caption wp-image alignright">
-                            <img src="https://unsplash.it/250" alt="Wordpress Image" class="filter--gray">
-                            <p class="wp-caption-text">Some sample caption text.</p>
+                            <img src="https://picsum.photos/400/250" alt="Wordpress Image" class="filter--gray">
+                            <p class="wp-caption-text">Bond supports WordPress caption syntax right out of the box!</p>
                         </div>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip <a href="#234234">dolore officia</a> anim aute dolore nostrud consequat officia mollit Lorem. Anim occaecat officia id occaecat nulla ex aliquip quis nostrud magna exercitation sit aliquip. Velit nulla deserunt elit ipsum mollit commodo deserunt esse culpa amet fugiat consectetur cillum officia. Aliquip ea eu eiusmod eu incididunt adipisicing tempor minim aliqua commodo ex. Nisi quis veniam ullamco reprehenderit labore est excepteur voluptate duis Lorem dolore enim culpa tempor proident ea esse.</p>
-                        <p>Minim sit ad occaecat ex esse non proident velit ipsum dolore pariatur voluptate. Incididunt est qui commodo veniam officia cupidatat irure voluptate. Sunt quis enim excepteur veniam elit ullamco aliquip dolore officia anim aute dolore nostrud consequat officia mollit Lorem.</p>
-                        <blockquote>
-                            Eu aliquip adipisicing do dolore labore irure commodo eu in exercitation sit elit.
+                        <h5 class="reset--bottom">Other Image Features</h5>
+                        <p>There are also built-in styles for WordPress image captions as well (see right)! Additionally, you can apply a specific "filter--gray" class to convert your images to grayscale where necessary.</p>
+                        <blockquote id="section--blockquotes">
+                            Blockquotes are pre-styled with multiple options and variables for customization.
                         </blockquote>
-                        <h1>Heading 1</h1>
+                        <h1 id="section--headings">Heading 1</h1>
                         <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
                         <h4>Heading 4</h4>
@@ -388,14 +405,20 @@
                         <h6>Heading 6</h6>
                         <br>
                         <!-- Broken Images -->
+                        <h5 class="reset--bottom" id="section--broken-images">Broken Images</h5>
+                        <p>If the path to any image is broken or missing, Bond gracefully handles the fallback by informing your user that the image was not found, along with the title and URL.</p>
                         <img src="assets/img/rafting.jpg" alt="A Group of People White Water Rafting">
                         <br><br>
                         <!-- Responsive Embed -->
+                        <h5 class="reset--bottom" id="section--embeds">Responsive Embeds</h5>
+                        <p>All forms of embeds are supported and are responsive out of the box. Whether you're using Vimeo, YouTube, Daily Motion or any other type of embed, the frame will automatically scale and maintain aspect ratio on any device.</p>
                         <div class="embed__container">
-                            <iframe src="https://www.youtube.com/embed/QILiHiTD3uc" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/l6nfTkoAmn8" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <br><br><br>
                         <!-- Responsive Tables -->
+                        <h5 class="reset--bottom" id="section--tables">Responsive Tables</h5>
+                        <p>All tables inserted into a WYSIWYG will automatically become responsive with Bond. At a certain device width the table becomes horizontally scrollable within a parent container to ensure mobile users are able to comfortably view it.</p>
                         <table>
                             <thead>
                                 <tr>
@@ -425,97 +448,125 @@
             </section>
 
             <!-- Social Sharing -->
-            <section class="page-section text-center flush--top">
-                <div class="container--medium">
+            <section class="page-section flush--top" id="section--sharing">
+                <div class="container--small">
+                    <h5 class="reset" id="section--tables">Page Sharing</h5>
+                    <p>Page sharing is made simple with Bond: click a button, get your sharing options! It's that easy. Social account icons are automatically color coded based on the target URL. All swatches are exact and on-brand.</p>
                     <a href="#" class="social-sharing__trigger button--basic">Share This Page</a>
-                    <ul class="social-sharing__list">
-                        <li class="social-sharing__list-item">
-                            <a href="https://facebook.com" class="social-sharing__list-item-link">
+                    <ul class="social-sharing__list social-icons no-bg">
+                        <li class="social-icons__item">
+                            <a href="https://facebook.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--facebook">
                                     <use xlink:href="#core-icon--facebook"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://twitter.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://twitter.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--twitter">
                                     <use xlink:href="#core-icon--twitter"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://linkedin.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://linkedin.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--linkedin">
                                     <use xlink:href="#core-icon--linkedin"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://plus.google.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://plus.google.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--google-plus">
                                     <use xlink:href="#core-icon--google-plus"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://youtube.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://youtube.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--youtube">
                                     <use xlink:href="#core-icon--youtube"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://pinterest.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://pinterest.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--pinterest">
                                     <use xlink:href="#core-icon--pinterest"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://instagram.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://instagram.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--instagram">
                                     <use xlink:href="#core-icon--instagram"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-sharing__list-item">
-                            <a href="https://dribbble.com" class="social-sharing__list-item-link">
+                        <li class="social-icons__item">
+                            <a href="https://dribbble.com" class="social-icons__item-link">
                                 <svg viewBox="0 0 24 24" class="core-icon--dribbble">
                                     <use xlink:href="#core-icon--dribbble"></use>
                                 </svg>
                             </a>
                         </li>
+                        <li class="social-icons__item">
+                            <a href="#" class="social-icons__item-link--email social-sharing__email-trigger">
+                                <svg viewBox="0 0 24 24" class="core-icon--email">
+                                    <use xlink:href="#core-icon--email"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
+                    <!-- Email Sharing -->
+                    <form class="social-sharing__email-form">
+                        <h5 class="social-sharing__email-form-title">Share with Friends</h5>
+                        <ul class="social-sharing__email-layout ul-reset">
+                            <li class="social-sharing__email-layout-item--input">
+                                <input type="email" class="" placeholder="Enter your email address">
+                            </li>
+                            <li class="social-sharing__email-layout-item--button">
+                                <button type="submit" class="button--basic">Share</button>
+                            </li>
+                        </ul>
+                    </form>
                 </div>
             </section>
 
             <!-- Google Map Embed -->
-            <section class="map__wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.347869262907!2d-63.58461768417729!3d44.65124389533759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a23d47824d011%3A0x65efda1894b1f1d3!2s2050+Gottingen+St%2C+Halifax%2C+NS+B3K+3A9!5e0!3m2!1sen!2sca!4v1503510091838" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map__embed"></iframe>
+            <section class="map__wrapper" id="section--maps">
+                <div class="container--small">
+                    <h5 class="reset" id="section--tables">Map Embeds</h5>
+                    <p>Embed Google Map iframes quickly with Bond. Preset heights and style resets ensure a consistent experience cross-platform.</p>
+                    <br>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2692505416344!2d-79.3892454845026!3d43.642566179121665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN+Tower!5e0!3m2!1sen!2sca!4v1530206355182" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map__embed"></iframe>
             </section>
 
             <!-- Alerts -->
-            <section class="page-section">
+            <section class="page-section" id="section--alerts">
                 <div class="container--small">
+                    <h5 class="reset" id="section--tables">Alerts</h5>
+                    <p>Four different styles of alert are available out of the box (danger, warning, success and neutral).</p>
                     <ul class="alert__list">
                         <!-- Alert: Danger -->
                         <li class="alert__list-item--danger">
-                            <p class="alert__list-item-content">This is a danger alert. <a href="#">Learn More</a></p>
+                            <p class="alert__list-item-content">This is a danger alert. <a href="#" class="alert__list-item-link">Learn More</a></p>
                             <a href="#" class="alert__list-item-close"></a>
                         </li>
                         <!-- Alert: Warning -->
                         <li class="alert__list-item--warning">
-                            <p class="alert__list-item-content">This is a warning alert. <a href="#">Learn More</a></p>
+                            <p class="alert__list-item-content">This is a warning alert. <a href="#" class="alert__list-item-link">Learn More</a></p>
                             <a href="#" class="alert__list-item-close"></a>
                         </li>
                         <!-- Alert: Success -->
                         <li class="alert__list-item--success">
-                            <p class="alert__list-item-content">This is a success alert. <a href="#">Learn More</a></p>
+                            <p class="alert__list-item-content">This is a success alert. <a href="#" class="alert__list-item-link">Learn More</a></p>
                             <a href="#" class="alert__list-item-close"></a>
                         </li>
                         <!-- Alert: Neutral -->
                         <li class="alert__list-item--neutral">
-                            <p class="alert__list-item-content">This is a neutral alert. <a href="#">Learn More</a></p>
+                            <p class="alert__list-item-content">This is a neutral alert. <a href="#" class="alert__list-item-link">Learn More</a></p>
                             <a href="#" class="alert__list-item-close"></a>
                         </li>
                     </ul>
@@ -523,8 +574,11 @@
             </section>
 
             <!-- Pagination -->
-            <section class="page-section flush--top text-center">
+            <section class="page-section flush--top" id="section--pagination">
                 <div class="container--small">
+                    <h5 class="reset">Pagination</h5>
+                    <p>Need pagination? No problem. Would you prefer the classic numbered style or a lazy load style? With Bond, either is achieveable within minutes.</p>
+                    <br>
                     <!-- Pagination: Basic -->
                     <div class="pagination--basic">
                         <ul class="pagination__list">
@@ -561,12 +615,16 @@
             </section>
 
             <!-- Blocks -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--blocks">
+                <div class="container--small">
+                    <h5 class="reset">Blocks</h5>
+                    <p>Bond's block layouts utilize the latest features of the CSS grid syntax. Easily create block grids with simple classes like 'three-up' or 'four-up'. Additionally, each block contains a stack of elements that suit news and blog grids perfectly such as excerpts, CTA's, tags, and more.</p>
+                </div>
                 <div class="container--xl">
                     <div class="blocks__group three-up stretch">
                         <article class="block">
                             <a href="#" class="block__image-link">
-                                <img src="https://placehold.it/650x400" alt="" class="block__image">
+                                <img src="https://picsum.photos/650/400?image=1024" alt="" class="block__image">
                             </a>
                             <div class="block__content-wrapper">
                                 <h5 class="block__subtitle">Block Label</h5>
@@ -574,8 +632,8 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--link block__cta--link">Read More</a>
-                                <ul class="tags">
+                                <a href="#" class="button--basic block__cta--link">Read More</a>
+                                <ul class="tags--linked">
                                     <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
                                     <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
                                     <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
@@ -584,7 +642,7 @@
                         </article>
                         <article class="block">
                             <a href="#" class="block__image-link">
-                                <img src="https://placehold.it/650x400" alt="" class="block__image">
+                                <img src="https://picsum.photos/650/400?image=1026" alt="" class="block__image">
                             </a>
                             <div class="block__content-wrapper">
                                 <h5 class="block__subtitle">Block Label</h5>
@@ -592,7 +650,7 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--link block__cta--link">Read More</a>
+                                <a href="#" class="button--basic block__cta--link">Read More</a>
                                 <ul class="tags">
                                     <li class="tags__item">Tag Title</li>
                                     <li class="tags__item">Tag Title</li>
@@ -602,7 +660,7 @@
                         </article>
                         <article class="block">
                             <a href="#" class="block__image-link">
-                                <img src="https://placehold.it/650x400" alt="" class="block__image">
+                                <img src="https://picsum.photos/650/400?image=1025" alt="" class="block__image">
                             </a>
                             <div class="block__content-wrapper">
                                 <h5 class="block__subtitle">Block Label</h5>
@@ -610,7 +668,7 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--link block__cta--link">Read More</a>
+                                <a href="#" class="button--basic block__cta--link">Read More</a>
                             </div>
                         </article>
                     </div>
@@ -618,30 +676,32 @@
             </section>
 
             <!-- Accordions -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--accordions">
                 <div class="container--small">
+                    <h5 class="reset">Accordions</h5>
+                    <p>Rapidly create an FAQ section with Bond's built-in accordions!</p>
                     <ul class="accordions">
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">How long did it take to create Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>Starting in the summer of 2017, Bond's full development cycle took approximately 2 weeks to complete from start to finish.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">Who is best suited to use Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>Bond is best suited for front-end developers with an intermediate to expert understanding of HTML, CSS and Javascript along with fundamental principles surrounding good code structure.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="accordions__item">
-                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">This is a frequently asked question?</a></h4>
+                            <h4 class="accordions__item-title"><a href="#" class="accordions__item-title-link">What's next for Bond?</a></h4>
                             <div class="accordions__item-content">
                                 <div class="content-area">
-                                    <p>Quis in anim excepteur est culpa laboris pariatur eiusmod amet enim non cupidatat veniam minim ea. Enim ut sunt esse et adipisicing reprehenderit reprehenderit irure eu proident aliqua id id est.</p>
+                                    <p>A fully automated installation and update process is coming soon! Install and update, pick and choose components, and customize directly from the command line.</p>
                                 </div>
                             </div>
                         </li>
@@ -650,39 +710,37 @@
             </section>
 
             <!-- Tabs -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--tabs">
                 <div class="container--small">
+                    <h5 class="reset">Tabs</h5>
+                    <br>
                     <ul class="tabs--overlap">
                         <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link current" data-tab="overview">Overview</a>
+                            <a href="#" class="tabs__tab-item-link current" data-tab="overview">Tab 1</a>
                         </li>
                         <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link" data-tab="contact">Contact</a>
-                        </li>
-                        <li class="tabs__tab-item">
-                            <a href="#" class="tabs__tab-item-link" data-tab="other">Other</a>
+                            <a href="#" class="tabs__tab-item-link" data-tab="contact">Tab 2</a>
                         </li>
                     </ul>
                     <div class="tabs__tab-content current" data-tab="overview">
                         <div class="content-area">
-                            <p>OVERVIEW TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                            <p>Bond includes easy to use, already functional tabbed layout right out of the box.</p>
                         </div>
                     </div>
                     <div class="tabs__tab-content" data-tab="contact">
                         <div class="content-area">
-                            <p>CONTACT TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
-                        </div>
-                    </div>
-                    <div class="tabs__tab-content" data-tab="other">
-                        <div class="content-area">
-                            <p>OTHER TAB: Aliquip tempor ex cillum irure pariatur ullamco sunt anim dolore laborum id deserunt. Velit elit sit eu consectetur Lorem adipisicing laboris et aliquip cupidatat labore. Exercitation duis et pariatur fugiat reprehenderit id eu exercitation sunt labore qui reprehenderit Lorem sint ex do sint. Enim culpa culpa proident magna non aliqua aliquip incididunt anim minim duis et eiusmod non.</p>
+                            <p>Choose between two styles: folder-like (overlap) or basic!</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Partners List -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--partners">
+                <div class="container--small">
+                    <h5 class="reset">Partner Groups</h5>
+                    <p>Many websites require a method to display sponsors, partners or supporters. With Bond, it's as easy as including the Partners Group component.</p>
+                </div>
                 <div class="container--medium">
                     <div class="partners__group">
                         <h4 class="partners__group-title">Partner Group 1</h4>
@@ -716,28 +774,34 @@
             </section>
 
             <!-- Breadcrumbs -->
-            <section class="page-section flush--top text-center">
-                <div class="container--medium">
+            <section class="page-section flush--top" id="section--breadcrumbs">
+                <div class="container--small">
+                    <h5 class="reset">Breadcrumbs</h5>
+                    <p>Show your users exactly where they are with breadcrumbs. With Bond, there's no need to add separate HTML elements for dividers; it's built right into the default styling.</p>
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Home</a></li>
                         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">About</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Services</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Contacts</a></li>
-                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Projects</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">History</a></li>
                         <li class="breadcrumbs__item">Vision &amp; Mission</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Dialog Trigger -->
-            <section class="page-section flush--top text-center">
-                <div class="container--medium">
+            <section class="page-section flush--top" id="section--dialogs">
+                <div class="container--small">
+                    <h5 class="reset">Dialogs and Modals</h5>
+                    <p>Rapidly create confirmation modals, in-context forms, and more with Bond's dialog component.</p>
                     <a href="#" class="dialog__trigger button--basic" data-dialog="dialog-1">Open Dialog</a>
                 </div>
             </section>
 
             <!-- Photo Gallery -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--galleries">
+                <div class="container--small">
+                    <h5 class="reset">Photo Galleries</h5>
+                    <p>Custom photo galleries are easy to implement with Bond. Clicking a thumbnail opens a pre-styled, full-screen gallery that supports multiple photo sizes and orientations with Slick carousel.</p>
+                </div>
                 <div class="container--xl">
                     <ul class="gallery">
                         <li class="gallery__item">
@@ -760,30 +824,31 @@
             </section>
 
             <!-- Page Title (Subpage Banner) -->
-            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://unsplash.it/1920');">
+            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920?image=440');" id="section--page-title">
                 <div class="page-title__container container--medium">
                     <h6 class="page-title__subtitle">Subtitle</h6>
                     <h1 class="page-title__title">Page Title</h1>
-                    <p class="page-title__content">Reprehenderit ea eiusmod magna aliqua sint deserunt veniam enim amet et elit commodo nisi.</p>
+                    <p class="page-title__content">The page title component allows you to create a visually interesting and robust page heading area in seconds.</p>
                     <ul class="page-title__meta">
-                        <li class="page-title__meta-item">August 28, 2018</li>
-                        <li class="page-title__meta-item">Published by <a href="#" class="page-title__meta-item-link">Joe Brown</a></li>
+                        <li class="page-title__meta-item">August 28, 2020</li>
+                        <li class="page-title__meta-item">Published by <a href="#" class="page-title__meta-item-link">John Q. Public</a></li>
                         <li class="page-title__meta-item">Category Name</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Sticky Helper -->
-            <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;">
-                <p>This is a sticky bar.</p>
+            <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;" id="section--sticky">
+                <p style="margin:0;">This is a sticky bar which uses the position: sticky spec from CSS3. Apply a 'sticky' class to any statically positioned element.</p>
             </div>
 
             <!-- Forms -->
-            <section class="page-section">
+            <section class="page-section" id="section--forms">
                 <div class="container--medium">
                     <form>
                         <div class="gform_heading">
-                            <h3 class="gform_title">Form Example</h3>
+                            <h3 class="gform_title">Forms</h3>
+                            <p>Bond includes styles specifically crafted for Gravity Forms. All of Gravity Forms common controls such as text inputs, file inputs, select boxes, checkboxes, radio buttons and more have been pre-styled for you. This allows your administrators to create robust forms without needing to worry about the potential for styling issues.</p>
                         </div>
                         <div class="gform_body">
                             <ul class="gform_fields top_label form_sublabel_below description_below">
@@ -873,7 +938,7 @@
                                     <h2 class="gsection_title">How Can We Reach You?</h2>
                                     <div class="gsection_description">We would love to chat with you.</div>
                                 </li>
-                                <li class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                <li class="gfield field_sublabel_below field_description_below gfield_visibility_visible" id="section--datepicker">
                                     <label class="gfield_label" for="input_596_11">Preferred Method of Contact</label>
                                     <div class="ginput_container ginput_container_select">
                                         <select name="input_11" id="input_596_11" onchange="gf_apply_rules(596,[5,12]);" class="medium gfield_select" tabindex="10" aria-invalid="false">
@@ -935,10 +1000,11 @@
             </section>
 
             <!-- Filters -->
-            <section class="page-section flush--top">
+            <section class="page-section flush--top" id="section--filters">
                 <div class="container--medium">
-                    <h4 class="filters__title text-center">Filter Results</h4>
-                    <form>
+                    <h4 class="filters__title reset--bottom">Filters</h4>
+                    <p class="filters__content">The filters component utilizes Select2 for searchability and multi-select features.</p>
+                    <form class="filters__form">
                         <ul class="filters--3-up">
                             <li class="filters__item">
                                 <label class="filters__item-label">Disabled Filter</label>
@@ -979,22 +1045,22 @@
             </section>
 
             <!-- Search Results -->
-            <section class="search-results column-section">
+            <section class="search-results column-section" id="section--columns">
                 <div class="search-results__results column--left">
                     <div class="container--xl">
                         <h2>Search Results</h2>
-                        <p>Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
+                        <p>Bond includes a column-based layout intended specifically for a search results page. The left column houses the results themselves while the right column acts as a quick filter sidebar.</p>
                         <a href="#search-results__filters" class="search-results__filter-trigger button--basic">Filter Results</a>
 
                         <!-- Search Results: Single Group -->
-                        <div class="search-results__result-group">
-                            <h3 class="search-results__result-group-title" id="result-category--news">News</h3>
+                        <div class="search-results__result-group" id="section--cards">
+                            <h3 class="search-results__result-group-title" id="result-category--news">Cards</h3>
                             <!-- Search Results: Single Result -->
                             <div class="search-results__result is-card">
-                                <h6 class="search-results__result-label">News</h6>
-                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">News Title</a></h4>
-                                <h5 class="search-results__result-meta">August 17, 2018</h5>
-                                <p class="search-results__result-excerpt">Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
+                                <h6 class="search-results__result-label">Card Label</h6>
+                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">Card Title</a></h4>
+                                <h5 class="search-results__result-meta">Card Meta Info (e.g. August 12, 2020)</h5>
+                                <p class="search-results__result-excerpt">With Bond, anything can become a card simply by applying an 'is-card' class! Card styles are based on Google's Material Design methodology and automatically apply a drop shadow / interior padding and a subtle border to mimic the properties of a card in reality.</p>
                             </div>
                         </div>
 
@@ -1015,17 +1081,18 @@
                 <aside class="search-results__categories column--right" id="search-results__filters">
                     <div class="container--xl">
                         <h5 class="search-results__categories-title">Filter Results</h5>
+                        <p>The search results sidebar offers your users an at-a-glance overview of what categories were returned based on their search term. Clicking a "filter" automatically scrolls the user directly to that grouping of results.</p>
                         <ul class="search-results__categories-list">
                             <li class="search-results__categories-list-item">
                                 <a href="#result-category--news" class="search-results__categories-list-item-link">
-                                    News
-                                    <span class="search-results__categories-list-item-count">3</span>
+                                    Cards
+                                    <span class="search-results__categories-list-item-count">1</span>
                                 </a>
                             </li>
                             <li class="search-results__categories-list-item">
                                 <a href="#result-category--events" class="search-results__categories-list-item-link">
                                     Events
-                                    <span class="search-results__categories-list-item-count">10</span>
+                                    <span class="search-results__categories-list-item-count">1</span>
                                 </a>
                             </li>
                         </ul>
@@ -1034,7 +1101,7 @@
             </section>
 
             <!-- Footer -->
-            <footer class="main-footer">
+            <footer class="main-footer" id="section--footer">
                 <div class="main-footer__container">
                     <div class="main-footer__group flex--justify-between flex--align-middle">
                         <!-- Quick Links -->
@@ -1055,7 +1122,7 @@
                             </ul>
                         </nav>
                         <!-- Social Icons -->
-                        <ul class="social-icons">
+                        <ul class="social-icons no-bg">
                             <li class="social-icons__item">
                                 <a href="https://facebook.com" class="social-icons__item-link">
                                     <svg viewBox="0 0 24 24" class="core-icon--facebook">
@@ -1135,10 +1202,9 @@
                 </svg>
             </a>
             <!-- Content -->
-            <h3>Dialog</h3>
-            <p>Laboris Lorem duis eiusmod velit tempor enim adipisicing veniam amet. Est voluptate laboris in cillum nisi voluptate anim dolor mollit culpa esse. Dolor consequat incididunt occaecat ad reprehenderit mollit ullamco. Fugiat fugiat cupidatat nisi exercitation fugiat commodo est reprehenderit ad ea. Quis ex non eu anim voluptate deserunt et culpa aute reprehenderit eu officia esse. Magna cillum do qui excepteur tempor cillum laborum quis quis deserunt in excepteur sit.</p>
-            <p>Dolore do veniam reprehenderit reprehenderit non officia nisi. Pariatur sint Lorem non sint nostrud sunt ut duis deserunt proident nisi qui laborum in anim exercitation. Eu et minim veniam pariatur occaecat qui laboris laborum veniam non consequat consequat. Amet adipisicing quis fugiat magna reprehenderit officia adipisicing cillum non. Enim velit velit deserunt aliquip enim sunt adipisicing commodo esse fugiat pariatur adipisicing ut non.</p>
-            <p>Et dolore proident dolor adipisicing adipisicing consequat tempor velit occaecat. Reprehenderit qui commodo ad esse commodo laborum adipisicing. Veniam sit ad nulla minim voluptate elit voluptate cupidatat magna labore id anim magna labore. Mollit adipisicing deserunt voluptate adipisicing adipisicing tempor quis non aliquip pariatur ex duis nulla.</p>
+            <h3 class="reset--top">Dialog Box</h3>
+            <p>Bond's dialog boxes are set to a maximum height which overflows gracefully when exceeded. This means that the contents of the dialog box can be anything from forms, paragraphs, images, video and more.</p>
+            <p>In addition, the dialog can easily be closed in a variety of ways including clicking the close button in the top-right corner, clicking the overlay outside of the dialog, or by pressing the Esc key.</p>
         </div>
 
         <!-- Gallery (Full) -->
@@ -1172,64 +1238,64 @@
         <!-- DEV-NOTE: Analytics Reminder -->
 
         <!-- Vendor Script: MatchMedia -->
-        <script src="assets/vendor/matchMedia.js"></script>
+        <script async src="assets/vendor/matchMedia.js"></script>
 
         <!-- Vendor Script: Slick -->
-        <script src="assets/vendor/slick.js"></script>
+        <script defer src="assets/vendor/slick.js"></script>
 
         <!-- Vendor Script: Pikaday -->
-        <script src="assets/vendor/pikaday.js"></script>
+        <script defer src="assets/vendor/pikaday.js"></script>
 
         <!-- Vendor Script: Select2 -->
-        <script src="assets/vendor/select2.min.js"></script>
+        <script defer src="assets/vendor/select2.min.js"></script>
 
         <!-- Core Script: Base -->
-        <script src="assets/js/core.js"></script>
+        <script async src="assets/js/core.js"></script>
 
         <!-- Component Script: Icons -->
-        <script src="assets/js/components/icons/icons.js"></script>
+        <script defer src="assets/js/components/icons/icons.js"></script>
 
         <!-- Component Script: Alerts -->
-        <script src="assets/js/components/alerts/alerts.js"></script>
+        <script defer src="assets/js/components/alerts/alerts.js"></script>
 
         <!-- Component Script: Hero -->
-        <script src="assets/js/components/hero/hero.js"></script>
+        <script defer src="assets/js/components/hero/hero.js"></script>
 
         <!-- Component Script: Content -->
-        <script src="assets/js/components/content/content.js"></script>
+        <script defer src="assets/js/components/content/content.js"></script>
 
         <!-- Component Script: Navigation (Basic) -->
-        <script src="assets/js/components/navigation/navigation-basic.js"></script>
+        <script defer src="assets/js/components/navigation/navigation-basic.js"></script>
 
         <!-- Component Script: Navigation (Sidebar) -->
-        <script src="assets/js/components/navigation/navigation-sidebar.js"></script>
+        <script defer src="assets/js/components/navigation/navigation-sidebar.js"></script>
 
         <!-- Component Script: Pagination -->
-        <script src="assets/js/components/pagination/pagination.js"></script>
+        <script defer src="assets/js/components/pagination/pagination.js"></script>
 
         <!-- Component Script: Accordions -->
-        <script src="assets/js/components/accordions/accordions.js"></script>
+        <script defer src="assets/js/components/accordions/accordions.js"></script>
 
         <!-- Component Script: Tabs -->
-        <script src="assets/js/components/tabs/tabs.js"></script>
+        <script defer src="assets/js/components/tabs/tabs.js"></script>
 
         <!-- Component Script: Social Sharing -->
-        <script src="assets/js/components/social/social-sharing.js"></script>
+        <script defer src="assets/js/components/social/social-sharing.js"></script>
 
         <!-- Component Script: Language -->
-        <script src="assets/js/components/language/language-toggle.js"></script>
+        <script defer src="assets/js/components/language/language-toggle.js"></script>
 
         <!-- Component Script: Forms -->
-        <script src="assets/js/components/forms/forms.js"></script>
+        <script defer src="assets/js/components/forms/forms.js"></script>
 
         <!-- Component Script: Modals -->
-        <script src="assets/js/components/dialog/dialog.js"></script>
+        <script defer src="assets/js/components/dialog/dialog.js"></script>
 
         <!-- Component Script: Datepicker (Pikaday) -->
-        <script src="assets/js/components/datepicker/datepicker.js"></script>
+        <script defer src="assets/js/components/datepicker/datepicker.js"></script>
 
         <!-- Component Script: Gallery -->
-        <script src="assets/js/components/gallery/gallery.js"></script>
+        <script defer src="assets/js/components/gallery/gallery.js"></script>
 
     </body>
 

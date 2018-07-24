@@ -162,7 +162,6 @@
         padding: $search-results-categories-link-padding;
         border-bottom: $search-results-categories-link-border;
         color: $search-result-categories-link-color;
-        display: block;
         text-decoration: none;
         display: grid;
         grid-template-columns: 3fr 1fr;

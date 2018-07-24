@@ -149,7 +149,7 @@ p {
 
 /* Blockquotes ============================================================== */
 blockquote {
-    border: $blockquote-border-width solid $blockquote-border-color;
+    border: 0px solid $blockquote-border-color;
     border-width: $blockquote-border-width;
     padding: $blockquote-padding;
     margin: $blockquote-margin;

@@ -87,7 +87,6 @@
 /* Links ==================================================================== */
 .breadcrumbs__item-link {
     display: block;
-    text-decoration: none;
     color: $breadcrumbs-item-link-color;
     background: $breadcrumbs-item-link-background;
     padding: $breadcrumbs-item-link-padding;

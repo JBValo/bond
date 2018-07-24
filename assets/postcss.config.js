@@ -3,15 +3,19 @@ module.exports = {
         require('postcss-import')({}),
         require('postcss-mixins')({}),
         require('postcss-nested')({}),
-        require('autoprefixer')({
-            browsers: '> 2.5% in CZ',
-            flexbox: 'no-2009'}
-        ),
         require('postcss-simple-vars')({}),
         require('postcss-responsive-type')({}),
         require('postcss-color-function')({}),
-        require('cssnano')({
-            autoprefixer: false
-        })
     ]
 };
+
+var critical = require('critical');
+
+critical.generate({
+    base: '../',
+    src: 'index.html',
+    dest: 'assets/css/style.min.css',
+    minify: true,
+    width: 1300,
+    height: 900
+});

@@ -31,7 +31,7 @@
         @import "core/grid/grid-flex.css";
 
         /* Core: Flexbox Fallback (IE11) */
-        @import "core/grid/grid-flex-fallback.css";
+        /* @import "core/grid/grid-flex-fallback.css"; */
 
 /* SPEC ===================================================================== */
 

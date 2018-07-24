@@ -21,6 +21,11 @@
         ua = ua.toString();
         $('body').attr('id', ua);
 
+        // LazyLoad Images =====================================================
+        var myLazyLoad = new LazyLoad({
+            elements_selector: "img"
+        });
+
         // Smooth Scrolling (Page Anchors) =====================================
         $('a[href*="#"]:not([href="#"])').on('click',function() {
             $root.animate({
