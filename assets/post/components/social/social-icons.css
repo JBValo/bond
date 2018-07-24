@@ -100,7 +100,7 @@
     }
 
     /* Facebook */
-    &[href*="facebook"] {
+    &[href*="facebook.com"] {
         background: $facebook-brand;
 
         [class*="core-icon--"] {
@@ -133,7 +133,7 @@
     }
 
     /* LinkedIn */
-    &[href*="linkedin"] {
+    &[href*="linkedin.com"] {
         background: $linkedin-brand;
 
         [class*="core-icon--"] {
@@ -155,7 +155,7 @@
     }
 
     /* Twitter */
-    &[href*="twitter"] {
+    &[href*="twitter.com"] {
         background: $twitter-brand;
 
         [class*="core-icon--"] {
@@ -200,7 +200,7 @@
         }
 
         /* Facebook */
-        &[href*="facebook"] {
+        &[href*="facebook.com"] {
 
             [class*="core-icon--"] use {
                 fill: $facebook-brand;
@@ -227,7 +227,7 @@
         }
 
         /* LinkedIn */
-        &[href*="linkedin"] {
+        &[href*="linkedin.com"] {
 
             [class*="core-icon--"] use {
                 fill: $linkedin-brand;
@@ -245,7 +245,7 @@
         }
 
         /* Twitter */
-        &[href*="twitter"] {
+        &[href*="twitter.com"] {
 
             [class*="core-icon--"] use {
                 fill: $twitter-brand;
