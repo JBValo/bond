@@ -122,6 +122,7 @@
 
 .slick-slide {
     outline: none;
+    overflow: hidden;
 }
 
 /* Hero: Slides ============================================================= */
@@ -320,6 +321,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    z-index: -1;
 
     video {
         position: absolute;

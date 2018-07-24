@@ -4017,6 +4017,7 @@ a[data-sidebar-level] {
 
 .slick-slide {
     outline: none;
+    overflow: hidden;
 }
 
 /* Hero: Slides ============================================================= */
@@ -4217,6 +4218,7 @@ a[data-sidebar-level] {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    z-index: -1;
 
 }
 
