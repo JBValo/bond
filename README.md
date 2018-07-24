@@ -31,6 +31,7 @@ For more detailed information, I encourage you to check out the complete [Bond D
 * [CORE] - The `postcss-color-function` plugin has been replaced with the [PostCSS Color Mod](https://github.com/jonathantneal/postcss-color-mod-function) plugin for better CSS variable support and spec/syntax parity with CSS3.
 * [CORE] - PostCSS color variables in `palette.css` have been changed to use CSS3 `:root` variable syntax. This allows for better theming on a global level.
 * [CORE] - Added global `$paragraph-font-family`, `$paragraph-color`, and `$paragraph-font-size` variables to `typography.css` for better global customization.
+* [CORE] - Updated syntax for padding and margin resets for more verbose and descriptive classes.
 * [PERFORMANCE] - Moved all Javascript requests after CSS requests. No more render blocking.
 * [PERFORMANCE] - Added `async` and `defer` attributes for all Javascript requests where applicable.
 * [PERFORMANCE] - Added `preconnect` and `crossorigin` attributes to custom font requests.

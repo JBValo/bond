@@ -414,29 +414,29 @@ is open such as a modal or a mobile menu. */
 
 /* Padding ================================================================== */
 
-.flush--top {
+.reset--padding--top {
     padding-top: 0 !important;
 }
 
-.flush--bottom {
+.reset--padding--bottom {
     padding-bottom: 0 !important;
 }
 
-.flush {
+.reset--padding {
     padding: 0 !important;
 }
 
 /* Margins ================================================================== */
 
-.reset--top {
+.reset--margin--top {
     margin-top: 0;
 }
 
-.reset--bottom {
+.reset--margin--bottom {
     margin-bottom: 0;
 }
 
-.reset {
+.reset--margin {
     margin: 0;
 }
 
