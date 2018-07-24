@@ -180,6 +180,29 @@ iframe {
     max-width: 100%;
 }
 
+/* Images =================================================================== */
+img:not([src]) {
+    visibility: hidden;
+}
+
+img[data-src],
+img[data-srcset] {
+  display: block;
+  min-height: 1px;
+
+  &.loading {
+      /* background: var(--gray--mid); */
+      opacity: 0;
+      transition: opacity $global-timing $global-easing 0ms;
+  }
+
+  &.loaded {
+      opacity: 1;
+      transition: opacity $global-timing $global-easing 0ms;
+  }
+
+}
+
 /* Responsive Embeds ======================================================== */
 .embed__container {
     position: relative;

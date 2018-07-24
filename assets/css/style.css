@@ -275,6 +275,30 @@ iframe {
     max-width: 100%;
 }
 
+/* Images =================================================================== */
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+img[data-src],
+img[data-srcset] {
+  display: block;
+  min-height: 1px;
+
+}
+
+img[data-src].loading, img[data-srcset].loading {
+      /* background: var(--gray--mid); */
+      opacity: 0;
+      transition: opacity 300ms ease 0ms;
+  }
+
+img[data-src].loaded, img[data-srcset].loaded {
+      opacity: 1;
+      transition: opacity 300ms ease 0ms;
+  }
+
 /* Responsive Embeds ======================================================== */
 
 .embed__container {
