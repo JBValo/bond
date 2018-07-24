@@ -14,7 +14,7 @@
     $hero-height: 85vh; /* Sets the minimum height of the hero */
 
     /* Overlay */
-    $hero-overlay-background: linear-gradient(-45deg, color($highlight a(85%)), color($black a(85%)));
+    $hero-overlay-background: linear-gradient(-45deg, color-mod(var(--highlight) a(85%)), color-mod(var(--black) a(85%)));
 
     /* Slide Content */
     $hero-slide-alignment: center;
@@ -68,7 +68,7 @@
     $hero-dot-container-padding: 1rem;
 
         /* Dots: Current */
-        $hero-dot-color--current: $highlight;
+        $hero-dot-color--current: var(--highlight);
         $hero-dot-inner-size: $hero-dot-size;
 
 /* Layering (Z-Index) ======================================================= */

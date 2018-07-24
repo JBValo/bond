@@ -19,7 +19,7 @@
     $wp-image-caption-color: white;
     $wp-image-caption-font-weight: bold;
     $wp-image-caption-font-style: normal;
-    $wp-image-caption-background: $black;
+    $wp-image-caption-background: var(--black);
     $wp-image-caption-padding: 0.5rem 1rem;
     $wp-image-caption-margin: 0;
     $wp-image-caption-alignment: left;

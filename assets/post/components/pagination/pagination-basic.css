@@ -20,36 +20,36 @@
     $pagination-number-font-family: $global-font-family;
     $pagination-number-padding: 0.25rem 0.5rem;
     $pagination-number-font-size: 1rem;
-    $pagination-number-color: $black;
+    $pagination-number-color: var(--black);
     $pagination-number-font-weight: bold;
     $pagination-number-font-style: normal;
-    $pagination-number-border: 2px solid $black;
+    $pagination-number-border: 2px solid var(--black);
     $pagination-number-background: transparent;
 
         /* Number: Hover */
-        $pagination-number-background--hover: $black;
+        $pagination-number-background--hover: var(--black);
         $pagination-number-color--hover: white;
-        $pagination-number-border--hover: 2px solid $black;
+        $pagination-number-border--hover: 2px solid var(--black);
 
         /* Number: Current */
-        $pagination-number-background--current: $black;
+        $pagination-number-background--current: var(--black);
         $pagination-number-color--current: white;
-        $pagination-number-border--current: 2px solid $black;
+        $pagination-number-border--current: 2px solid var(--black);
 
     /* Nav */
     $pagination-nav-font-family: $global-font-family;
     $pagination-nav-padding: 0.25rem 0.5rem;
     $pagination-nav-font-size: 1rem;
-    $pagination-nav-color: $black;
+    $pagination-nav-color: var(--black);
     $pagination-nav-font-weight: bold;
     $pagination-nav-font-style: normal;
-    $pagination-nav-border: 2px solid $black;
+    $pagination-nav-border: 2px solid var(--black);
     $pagination-nav-background: transparent;
 
         /* Nav: Hover */
-        $pagination-nav-background--hover: $black;
+        $pagination-nav-background--hover: var(--black);
         $pagination-nav-color--hover: white;
-        $pagination-nav-border--hover: 2px solid $black;
+        $pagination-nav-border--hover: 2px solid var(--black);
 
 /* Containers =============================================================== */
 .pagination--basic {

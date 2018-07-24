@@ -11,14 +11,14 @@
 /* Variables ================================================================ */
 
     /* Tab List */
-    $tab-list-border: 2px solid $black;
+    $tab-list-border: 2px solid var(--black);
 
     /* Tab Items */
     $tab-item-spacing: 0.25rem;
 
     /* Tab Links */
-    $tab-link-background: $black;
-    $tab-link-border: 2px solid $black;
+    $tab-link-background: var(--black);
+    $tab-link-border: 2px solid var(--black);
     $tab-link-padding: 0.5rem 1rem;
     $tab-link-font-size: 1rem;
     $tab-link-font-family: $global-font-family;
@@ -29,14 +29,14 @@
     $tab-link-radius: 5px;
 
         /* Tab Links: Hover */
-        $tab-link-background--hover: $highlight;
-        $tab-link-border--hover: $black;
+        $tab-link-background--hover: var(--highlight);
+        $tab-link-border--hover: var(--black);
         $tab-link-color--hover: white;
 
         /* Tab Links: Current */
-        $tab-link-border--current: $black;
+        $tab-link-border--current: var(--black);
         $tab-link-background--current: white;
-        $tab-link-color--current: $highlight;
+        $tab-link-color--current: var(--highlight);
 
 /* Tab Navigation (All) ===================================================== */
 

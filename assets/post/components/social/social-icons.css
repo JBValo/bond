@@ -16,7 +16,7 @@
     /* Links */
     $social-icons-link-radius: 100%;
     $social-icons-link-size: 3rem; /* sets both width and height to the box */
-    $social-icons-link-background: $black;
+    $social-icons-link-background: var(--black);
 
     /* Icons */
     $social-icons-icon-size: 1.5rem;
@@ -187,7 +187,7 @@
 
         /* All Icons */
         [class*="core-icon--"] use {
-            fill: $black;
+            fill: var(--black);
         }
 
         /* Dribbble */

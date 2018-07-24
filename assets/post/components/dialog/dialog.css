@@ -27,7 +27,7 @@
     /* Close Button */
     $dialog-close-top-offset: 0;
     $dialog-close-right-offset: 0;
-    $dialog-close-background: $black;
+    $dialog-close-background: var(--black);
     $dialog-close-color: white;
     $dialog-close-padding: 0 0.25rem;
     $dialog-close-size: 2rem;

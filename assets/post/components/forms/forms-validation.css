@@ -32,7 +32,7 @@
 
     /* In-context Error Message */
     .validation_message {
-        background: $color-utility--danger;
+        background: var(--color-utility--danger);
         font-family: Helvetica, Arial, sans-serif;
         padding: 0.25rem 0.5rem;
         color: #fff;
@@ -46,7 +46,7 @@
 
     /* Primary Error Message ================================================ */
     .validation_error {
-        color: $color-utility--danger;
+        color: var(--color-utility--danger);
         font-weight: normal;
         margin-top: 1rem;
         line-height: 1.25;

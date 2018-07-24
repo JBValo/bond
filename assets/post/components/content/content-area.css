@@ -14,8 +14,8 @@
     $table-alt-row-background: $grey-95;
 
         /* Tables: Headings */
-        $table-heading-background: $black;
-        $table-heading-border: 1px solid color($table-heading-background tint(20%));
+        $table-heading-background: var(--black);
+        $table-heading-border: 1px solid color-mod($table-heading-background tint(20%));
         $table-heading-padding: 1rem;
         $table-heading-font-family: $global-font-family;
         $table-heading-font-size: 1rem;
@@ -34,13 +34,13 @@
         $table-cell-font-weight: normal;
         $table-cell-font-style: normal;
         $table-cell-text-transform: none;
-        $table-cell-color: $black;
+        $table-cell-color: var(--black);
         $table-cell-alignment: left;
 
     /* Images */
     /* TRANSLATION-ITEM */
     $broken-image-content: "Sorry, this image is missing.";
-    $broken-image-background: $black;
+    $broken-image-background: var(--black);
     $broken-image-font-color: white;
     /* $broken-image-padding: 2rem; */
 

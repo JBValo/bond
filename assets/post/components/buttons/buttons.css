@@ -18,7 +18,7 @@
     $button-font-weight: 600;
     $button-font-style: normal;
     $button-text-transform: uppercase;
-    $button-background: $black;
+    $button-background: var(--black);
     $button-color: white;
 
         /* Basic: Hover */
@@ -30,15 +30,15 @@
     $button-color--neutral: white;
 
         /* Neutral: Hover */
-        $button-background--neutral--hover: $color-utility--danger;
+        $button-background--neutral--hover: var(--color-utility--danger);
         $button-color--neutral--hover: white;
 
     /* Highlight */
-    $button-background--highlight: $highlight;
+    $button-background--highlight: var(--highlight);
     $button-color--highlight: $button-color;
 
         /* Highlight: Hover */
-        $button-background--highlight--hover: $black;
+        $button-background--highlight--hover: var(--black);
         $button-color--highlight--hover: white;
 
 /* Form Buttons ============================================================= */

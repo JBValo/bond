@@ -16,9 +16,9 @@ $form-section-padding: 1rem 0;
     $form-section-title-font-weight: bold;
     $form-section-title-font-style: normal;
     $form-section-title-font-size: $font-scale-h4;
-    $form-section-title-color: $black;
+    $form-section-title-color: var(--black);
     $form-section-title-text-transform: none;
-    $form-section-title-border: 2px solid $black;
+    $form-section-title-border: 2px solid var(--black);
     $form-section-title-padding: 0 0 0.5rem;
     $form-section-title-margin: 0 0 0.5rem;
 
@@ -37,7 +37,7 @@ $form-section-padding: 1rem 0;
     /* Labels: Primary */
     $form-label-font-family: $global-font-family;
     $form-label-font-size: 0.85rem;
-    $form-label-color: $black;
+    $form-label-color: var(--black);
     $form-label-font-weight: 600;
     $form-label-font-style: normal;
     $form-label-margin: 0 0 0.5rem;
@@ -61,22 +61,22 @@ $form-field-font-size: $font-scale-baseline;
 $form-field-font-weight: normal;
 $form-field-padding: 0.5rem;
 $form-field-background: white;
-$form-field-color: $black;
+$form-field-color: var(--black);
 
     /* Fields: Hover */
     $form-field-border-color--hover: $gray-60;
 
     /* Fields: Focus */
-    $form-field-border-color--focus: $highlight;
+    $form-field-border-color--focus: var(--highlight);
 
     /* Fields: Textarea */
     $form-field-textarea-height: 250px;
 
     /* Fields: Select */
-    $form-field-select-background--hover: color($form-field-border-color--focus tint(95%));
+    $form-field-select-background--hover: color-mod($form-field-border-color--focus tint(95%));
 
     /* Fields: File */
-    $form-field-file-background: $black;
+    $form-field-file-background: var(--black);
     $form-field-border-radius: $form-field-border-radius;
     $form-field-file-padding: $form-field-padding;
     $form-field-file-color: white;
@@ -87,7 +87,7 @@ $form-field-color: $black;
     $form-field-file-font-size: $form-field-font-size;
 
 /* Errors */
-$form-field-color-error: $color-utility--danger;
+$form-field-color-error: var(--color-utility--danger);
 $form-field-font-error: $global-font-family;
 
 /* Submit Button */

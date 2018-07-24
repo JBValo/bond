@@ -12,7 +12,7 @@
 
     /* Title */
     $sidebar-search-title-margin: 0;
-    $sidebar-search-title-color: $black;
+    $sidebar-search-title-color: var(--black);
     $sidebar-search-title-font-family: $global-font-family;
     $sidebar-search-title-font-weight: bold;
     $sidebar-search-title-font-style: normal;
@@ -20,7 +20,7 @@
 
     /* Content */
     $sidebar-search-content-margin: 0;
-    $sidebar-search-content-color: $black;
+    $sidebar-search-content-color: var(--black);
     $sidebar-search-content-font-family: $global-font-family;
     $sidebar-search-content-font-weight: normal;
     $sidebar-search-content-font-style: normal;

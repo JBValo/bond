@@ -64,10 +64,10 @@
 
             /* Dropdown: Options (Selected) */
             $select2-dropdown-item-background--selected: $grey-95;
-            $select2-dropdown-item-color--selected: $black;
+            $select2-dropdown-item-color--selected: var(--black);
 
             /* Dropdown: Options (Selected > Hover) */
-            $select2-dropdown-item-background--selected--hover: $color-utility--danger;
+            $select2-dropdown-item-background--selected--hover: var(--color-utility--danger);
             $select2-dropdown-item-color--selected--hover: white;
 
             /* Dropdown: Options (Disabled) */

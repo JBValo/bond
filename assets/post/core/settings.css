@@ -115,17 +115,6 @@ $global-timing: 300ms;
     $gray-95: hsla(0, 0%, 95%, 1);
     $white: rgba(255, 255, 255, 1);
 
-    /* Utility Colors */
-    $color-utility--danger: #e14a4d;
-    $color-utility--warning: #cda358;
-    $color-utility--success: #528c4b;
-    $color-utility--neutral: #1790e7;
-
-    $color-utility--danger--pale: #fbecec;
-    $color-utility--warning--pale: #fbf5e2;
-    $color-utility--success--pale: #dff0d9;
-    $color-utility--neutral--pale: #daeefc;
-
     /* Social Colours */
     $dribbble-brand: #ea4c89;
     $gplus-brand: #dd4b39;
@@ -217,7 +206,7 @@ iframe {
 
 /* Outdated Browser Note ==================================================== */
 .dated-browser-note {
-    background: $color-utility--danger;
+    background: var(--color-utility--danger);
     position: fixed;
     top: 0;
     left: 0;

@@ -4,8 +4,8 @@ module.exports = {
         require('postcss-mixins')({}),
         require('postcss-nested')({}),
         require('postcss-simple-vars')({}),
+        require('postcss-color-mod-function')({}),
         require('postcss-responsive-type')({}),
-        require('postcss-color-function')({}),
     ]
 };
 

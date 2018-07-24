@@ -16,7 +16,7 @@
 
     /* Group Titles */
     $partners-item-title-margin: 0 0 1rem;
-    $partners-item-title-color: $black;
+    $partners-item-title-color: var(--black);
     $partners-item-title-font-weight: bold;
     $partners-item-title-font-style: normal;
     $partners-item-title-text-transform: none;
@@ -24,7 +24,7 @@
     /* Items */
     $partners-item-font-family: $list-font-family;
     $partners-item-font-size: $font-scale-baseline;
-    $partners-item-color: $black;
+    $partners-item-color: var(--black);
     $partners-item-font-weight: normal;
     $partners-item-font-style: normal;
     $partners-item-text-transform: none;

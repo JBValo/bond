@@ -22,7 +22,7 @@
         $social-sharing-email-form-title-font-weight: normal;
         $social-sharing-email-form-title-font-style: normal;
         $social-sharing-email-form-title-text-transform: none;
-        $social-sharing-email-form-title-color: $black;
+        $social-sharing-email-form-title-color: var(--black);
 
         /* Email: Input */
         $social-sharing-email-form-input-spacing: 0 1rem 0 0;

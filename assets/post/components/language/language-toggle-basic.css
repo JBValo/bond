@@ -23,10 +23,10 @@
     $language-toggle-item-text-decoration--basic: none;
 
         /* Links: Current */
-        $language-toggle-item-link-color--basic--current: $black;
+        $language-toggle-item-link-color--basic--current: var(--black);
 
         /* Links: Hover */
-        $language-toggle-item-link-color--basic--hover: $highlight;
+        $language-toggle-item-link-color--basic--hover: var(--highlight);
 
 /* Basic ==================================================================== */
 

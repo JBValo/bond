@@ -24,7 +24,7 @@
 
         /* Title */
         $block-title-font-weight: bold;
-        $block-title-color: $black;
+        $block-title-color: var(--black);
         $block-title-margin: 0;
 
             /* Title: Title Link */
@@ -38,7 +38,7 @@
         $block-subtitle-font-weight: bold;
         $block-subtitle-font-style: normal;
         $block-subtitle-text-transform: none;
-        $block-subtitle-color: $black;
+        $block-subtitle-color: var(--black);
         $block-subtitle-background: transparent;
         $block-subtitle-padding: 0;
         $block-subtitle-margin: initial;
@@ -49,7 +49,7 @@
         $block-content-font-weight: bold;
         $block-content-font-style: normal;
         $block-content-text-transform: none;
-        $block-content-color: $black;
+        $block-content-color: var(--black);
         $block-content-margin: initial;
 
         /* CTA */

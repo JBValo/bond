@@ -50,14 +50,14 @@
     $blockquote-font-size: 1.5rem;
     $blockquote-font-style: normal;
     $blockquote-font-weight: bold;
-    $blockquote-color: $black;
+    $blockquote-color: var(--black);
     $blockquote-border-size: 10px;
     $blockquote-border-width: 0 0 0 $blockquote-border-size;
-    $blockquote-border-color: $highlight;
+    $blockquote-border-color: var(--highlight);
 
 /* Selection Color ========================================================== */
 ::selection {
-    background: $black;
+    background: var(--black);
     color: $white;
 }
 
@@ -223,17 +223,17 @@ blockquote {
 
 /* Links ==================================================================== */
 
-$link-color: $highlight;
+$link-color: var(--highlight);
 $link-text-decoration: underline;
 
     /* Links: Active */
-    $link-color--active: color($link-color shade(90%));
+    $link-color--active: color-mod($link-color shade(90%));
 
     /* Links: Visited */
-    $link-color--visited: color($link-color s(-15));
+    $link-color--visited: color-mod($link-color saturation(-15%));
 
     /* Links: Hover */
-    $link-color--hover: color($link-color s(+50));
+    $link-color--hover: color-mod($link-color saturation(50%));
 
 :any-link {
     outline: none;

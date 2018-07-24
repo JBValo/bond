@@ -11,7 +11,7 @@
 /* Variables ================================================================ */
 
     /* Top Level: Container (The Sidebar) */
-    $sidebar-nav-background: $black;
+    $sidebar-nav-background: var(--black);
     $sidebar-nav-border: 1px solid rgba(255,255,255,0.2);
 
     /* Top Level: Links */
@@ -29,11 +29,11 @@
     $sidebar-nav-link-background: white;
 
         /* Top Level: Links: Hover */
-        $sidebar-nav-link-background--hover: $highlight;
+        $sidebar-nav-link-background--hover: var(--highlight);
         $sidebar-nav-link-color--hover: white;
 
         /* Top Level: Links: Current */
-        $sidebar-nav-link-background--current: $highlight;
+        $sidebar-nav-link-background--current: var(--highlight);
         $sidebar-nav-link-color--current: white;
 
     /* Icons */
@@ -56,7 +56,7 @@
     $sidebar-nav-pane-transition: transform $global-timing $global-easing 0ms;
 
         /* Panes: Titles */
-        $sidebar-nav-pane-title-color: $black;
+        $sidebar-nav-pane-title-color: var(--black);
         /* $sidebar-nav-pane-title-font-size: initial; */
         $sidebar-nav-pane-title-font-weight: bold;
         $sidebar-nav-pane-title-font-style: normal;
@@ -103,10 +103,10 @@
 
             /* Pane Nav: Links: Hover */
             $sidebar-nav-pane-nav-link-background--hover: $grey-95;
-            $sidebar-nav-pane-nav-link-color--hover: $black;
+            $sidebar-nav-pane-nav-link-color--hover: var(--black);
 
             /* Pane Nav: Links: Current */
-            $sidebar-nav-pane-nav-link-background--current: $black;
+            $sidebar-nav-pane-nav-link-background--current: var(--black);
             $sidebar-nav-pane-nav-link-color--current: white;
 
     /* Overlay */
