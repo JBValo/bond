@@ -23,15 +23,15 @@
 
     /* Global */
     $global-font-family: 'Do Hyeon', Arial, Helvetica, sans-serif;
-    $paragraph-font-family: 'Roboto', Arial, Helvetica, sans-serif;
 
     /* Headings */
     $heading-font-family: $global-font-family;
 
     /* Paragraphs */
-    $paragraph-leading--desktop: 1.5;
+    $paragraph-font-family: 'Roboto', Arial, Helvetica, sans-serif;
     $paragraph-font-size: 0.85rem;
     $paragraph-color: $gray-30;
+    $paragraph-leading--desktop: 1.5;
 
     /* Lists */
     $list-font-family: $global-font-family;
