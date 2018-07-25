@@ -240,6 +240,7 @@ img[data-srcset] {
     z-index: 9999;
     text-align: center;
     display: block;
+    margin: 0;
 
     a {
         color: inherit;

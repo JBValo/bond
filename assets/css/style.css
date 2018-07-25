@@ -339,6 +339,7 @@ img[data-src].loaded, img[data-srcset].loaded {
     z-index: 9999;
     text-align: center;
     display: block;
+    margin: 0;
 
 }
 
@@ -1966,24 +1967,6 @@ blockquote {
 /* Links: Visited */
 
 /* Links: Hover */
-
-:any-link {
-    outline: none;
-
-}
-
-/* Exclude any custom classes that you don't want these styles to apply to. */
-
-:any-link:not([class*="button"]):not(.alert__list-item-link):not([class*="nav"]):not(.breadcrumbs__item-link):not(.tags__item-link):not(.tabs__tab-item-link):not(.pagination__number):not(.page-title__meta-item-link):not(.language-toggle__item-link):not([class*="social-icons__item-item-link"]) {
-        color: var(--highlight);
-        font-weight: normal;
-        transition: color 300ms ease 0ms;
-    }
-
-.no-touchevents :any-link:not([class*="button"]):not(.alert__list-item-link):not([class*="nav"]):not(.breadcrumbs__item-link):not(.tags__item-link):not(.tabs__tab-item-link):not(.pagination__number):not(.page-title__meta-item-link):not(.language-toggle__item-link):not([class*="social-icons__item-item-link"]):hover {
-                color: hsl(338.2456140350877, 50%, 51.9607843137%);
-                transition: color 300ms ease 0ms;
-            }
 
 /* Layers (Z-Index) */
 
@@ -5395,10 +5378,6 @@ form input:disabled + label {
 .social-sharing__email-layout {
     display: flex;
     flex-flow: row;
-}
-
-[class*="social-sharing__email-layout-item--"] {
-
 }
 
 .social-sharing__email-layout-item--input {

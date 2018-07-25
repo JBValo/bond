@@ -73,10 +73,6 @@
     flex-flow: row;
 }
 
-[class*="social-sharing__email-layout-item--"] {
-
-}
-
 .social-sharing__email-layout-item--input {
     flex: 1;
     display: flex;
