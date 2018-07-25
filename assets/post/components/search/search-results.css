@@ -120,22 +120,7 @@
         margin: $search-results-result-meta-margin;
     }
 
-    /* Single: Excerpt */
-    .search-results__result-excerpt {
-
-    }
-
-    /* Single: CTA */
-    .search-results__result-cta {
-
-    }
-
 /* Categories Sidebar ======================================================= */
-
-    /* Container */
-    .search-results__categories {
-
-    }
 
     /* Title */
     .search-results__categories-title {
@@ -147,11 +132,6 @@
         margin: $search-results-categories-margin;
         padding: 0;
         list-style: none;
-    }
-
-    /* List Item */
-    .search-results__categories-list-item {
-
     }
 
     /* List Item Link */

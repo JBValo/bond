@@ -52,10 +52,6 @@
         $pagination-nav-border--hover: 2px solid var(--black);
 
 /* Containers =============================================================== */
-.pagination--basic {
-
-}
-
 .pagination__list {
     list-style: none;
     margin: 0;

@@ -73,8 +73,11 @@
 
 /* Layering (Z-Index) ======================================================= */
 .hero {
+    position: relative;
 
     .slick-list {
+        min-height: $hero-height;
+        position: relative;
         z-index: 10;
     }
 
@@ -84,25 +87,6 @@
 
     .slick-dots {
         z-index: 20;
-    }
-
-}
-
-.hero__slide-content-container {
-    z-index: 20;
-}
-
-/* Base ===================================================================== */
-.hero {
-    position: relative;
-}
-
-/* Slick Specific =========================================================== */
-.hero {
-
-    .slick-list {
-        min-height: $hero-height;
-        position: relative;
     }
 
     .slick-track {
@@ -120,6 +104,11 @@
 
 }
 
+.hero__slide-content-container {
+    z-index: 20;
+}
+
+/* Slick Specific =========================================================== */
 .slick-slide {
     outline: none;
     overflow: hidden;

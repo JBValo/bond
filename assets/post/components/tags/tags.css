@@ -80,7 +80,6 @@
 /* Links ==================================================================== */
 .tags__item-link {
     display: block;
-    text-decoration: none;
     color: $tags-item-link-color;
     background: $tags-item-link-background;
     padding: $tags-item-link-padding;

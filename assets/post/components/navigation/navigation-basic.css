@@ -158,7 +158,6 @@
         position: absolute;
         min-width: 200px;
         display: none;
-        padding: 0;
         padding: $basic-nav-submenu-padding;
         border: $basic-nav-submenu-border;
     }

@@ -13,11 +13,6 @@
     $map-height-mobile: 80vh;
     $map-height-desktop: 50vh;
 
-/* Containers =============================================================== */
-.map__wrapper {
-
-}
-
 /* Map Embed ================================================================ */
 .map__embed {
     display: block;
@@ -27,5 +22,5 @@
     @media $(l-tablet) {
         height: $map-height-desktop;
     }
-    
+
 }

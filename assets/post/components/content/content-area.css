@@ -51,40 +51,6 @@
 /* All Styles =============================================================== */
 .content-area {
 
-    /* Headings */
-    h1, h2, h3, h4, h5, h6 {
-
-    }
-
-    h1 {
-
-    }
-
-    h2 {
-
-    }
-
-    h3 {
-
-    }
-
-    h4 {
-
-    }
-
-    h5 {
-
-    }
-
-    h6 {
-
-    }
-
-    /* Paragraphs */
-    p {
-
-    }
-
     /* Links */
     a {
         color: $link-color;
@@ -102,35 +68,6 @@
         }
 
     }
-
-    /* Lists */
-
-        /* All */
-        ul, ol {
-
-            li {
-
-            }
-
-        }
-
-        /* Unordered */
-        ul {
-
-            li {
-
-            }
-
-        }
-
-        /* Ordered */
-        ol {
-
-            li {
-
-            }
-
-        }
 
     /* Tables */
     table {

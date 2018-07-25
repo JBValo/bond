@@ -129,24 +129,6 @@ p {
 
     }
 
-    /* Lists: Unordered */
-    ul {
-
-        li {
-
-        }
-
-    }
-
-    /* Lists: Ordered */
-    ol {
-
-        li {
-
-        }
-
-    }
-
 /* Blockquotes ============================================================== */
 blockquote {
     border: 0px solid $blockquote-border-color;
