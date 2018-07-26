@@ -4,9 +4,9 @@ A front-end component library and framework based on PostCSS and Atomic Design.
 
 #### Prerequisites
 
-* Node
-* Brew
-* Yarn
+* [Node](https://nodejs.org/)
+* [Brew](https://brew.sh/)
+* [Yarn](https://yarnpkg.com/lang/en/)
 
 #### Installation
 
@@ -19,11 +19,15 @@ A front-end component library and framework based on PostCSS and Atomic Design.
 
 #### Getting Started
 
-Out of the box, Bond includes two primary HTML files: `starter.html` and `index.html`. The `index.html` file serves as the primary demo page and includes some unnecessary scripts, styling and content that will likely be irrelevant to your project. As such, it is best to delete `index.html` and rename `starter.html` to `index.html`.
+Bond includes two primary HTML files: `starter.html` and `index.html`. The `index.html` file serves as the primary demo page and includes some unnecessary scripts, styling and content that will likely be irrelevant to your project. As such, it is best to delete `index.html` and rename `starter.html` to `index.html`.
 
-Bond provides you with a "kitchen sink" of components within `starter.html`. All components, including their various states and orientations, are included by default so you can get the most out of Bond. Start your project by determining which Bond components you need and deleting the ones you don't.
+Bond provides you with a "kitchen sink" of components within `starter.html`. All components, including their various states and orientations, are included by default so you can get the most out of Bond. Start your project by reviewing the demo page, determining which Bond components you need, and deleting the ones you don't.
 
 For more detailed information, I encourage you to check out the complete [Bond Docs](http://bond.codeandmortar.com/docs).
+
+#### Local Development
+
+For efficiency I strongly recommend using [BrowserSync](https://browsersync.io/). Simply `cd` into your project's development directory and run BrowserSync to start developing right away.
 
 #### Change Log
 
