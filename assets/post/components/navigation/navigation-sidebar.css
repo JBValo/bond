@@ -399,13 +399,13 @@
     /* Level 1 */
     .sidebar-nav__pane-nav--level-1 {
         background: $sidebar-nav-pane-nav-level-1-background;
-        border-right: 1px solid $sidebar-nav-pane-nav-level-1-border;
+        border-right: $sidebar-nav-pane-nav-level-1-border;
     }
 
     /* Level 2 */
     .sidebar-nav__pane-nav--level-2 {
         background: $sidebar-nav-pane-nav-level-2-background;
-        border-right: 1px solid $sidebar-nav-pane-nav-level-2-border;
+        border-right: $sidebar-nav-pane-nav-level-2-border;
         transform: translate3d(0,100%,0);
 
         &.current {
@@ -426,7 +426,7 @@
     /* Level 3 */
     .sidebar-nav__pane-nav--level-3 {
         background: $sidebar-nav-pane-nav-level-3-background;
-        border-right: 1px solid $sidebar-nav-pane-nav-level-3-border;
+        border-right: $sidebar-nav-pane-nav-level-3-border;
         transform: translate3d(0,100%,0);
 
         &.current {

@@ -69,8 +69,8 @@ $sidebar-nav-width--cinema: 8vw;
 $sidebar-nav-width--cinema-xl: 7vw;
 
 /* Animations =============================================================== */
-$global-easing: ease;
-$global-timing: 300ms;
+$global-easing: cubic-bezier(0.2,1,0.3,1);
+$global-timing: 400ms;
 
 /* Core Colors ============================================================== */
 

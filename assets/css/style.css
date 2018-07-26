@@ -291,12 +291,12 @@ img[data-srcset] {
 img[data-src].loading, img[data-srcset].loading {
       /* background: var(--gray--mid); */
       opacity: 0;
-      transition: opacity 300ms ease 0ms;
+      transition: opacity 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
   }
 
 img[data-src].loaded, img[data-srcset].loaded {
       opacity: 1;
-      transition: opacity 300ms ease 0ms;
+      transition: opacity 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
   }
 
 /* Responsive Embeds ======================================================== */
@@ -3091,13 +3091,13 @@ button.disabled,
     height: 100%;
     position: fixed;
     transform: translate3d(0,100%,0);
-    transition: transform 300ms ease 0ms;
+    transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
 
 }
 
 [class*="sidebar-nav__pane--"].current {
         transform: translate3d(0,0,0);
-        transition: transform 300ms ease 0ms;
+        transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
     }
 
 @media screen and (min-width: 64em) {
@@ -3233,63 +3233,63 @@ button.disabled,
         width: inherit;
         height: 100%;
         overflow: auto;
-        transition: transform 300ms ease 0ms;
+        transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
 
     }
 
 [class*="sidebar-nav__pane-nav--"].current {
-            transition: transform 300ms ease 0ms;
+            transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
 
         }
 
 /* Level 1 */
 
 [class*="sidebar-nav__pane-nav--"].current[class*="level-1"] {
-                transition-duration: 300ms;
+                transition-duration: 400ms;
             }
 
 /* Level 2 */
 
 [class*="sidebar-nav__pane-nav--"].current[class*="level-2"] {
-                transition-duration: calc(300ms * 1.25);
+                transition-duration: calc(400ms * 1.25);
             }
 
 /* Level 3 */
 
 [class*="sidebar-nav__pane-nav--"].current[class*="level-3"] {
-                transition-duration: calc(300ms * 1.5);
+                transition-duration: calc(400ms * 1.5);
             }
 
 /* Level 1 */
 
 [class*="sidebar-nav__pane-nav--"][class*="level-1"] {
-            transition-duration: 300ms;
+            transition-duration: 400ms;
         }
 
 /* Level 2 */
 
 [class*="sidebar-nav__pane-nav--"][class*="level-2"] {
-            transition-duration: calc(300ms * 1.25);
+            transition-duration: calc(400ms * 1.25);
         }
 
 /* Level 3 */
 
 [class*="sidebar-nav__pane-nav--"][class*="level-3"] {
-            transition-duration: calc(300ms * 1.5);
+            transition-duration: calc(400ms * 1.5);
         }
 
 /* Level 1 */
 
 .sidebar-nav__pane-nav--level-1 {
         background: white;
-        border-right: 1px solid 1px solid #ccc;
+        border-right: 1px solid #ccc;
     }
 
 /* Level 2 */
 
 .sidebar-nav__pane-nav--level-2 {
         background: white;
-        border-right: 1px solid 1px solid #ccc;
+        border-right: 1px solid #ccc;
         transform: translate3d(0,100%,0);
 
     }
@@ -3319,7 +3319,7 @@ button.disabled,
 
 .sidebar-nav__pane-nav--level-3 {
         background: white;
-        border-right: 1px solid 1px solid #ccc;
+        border-right: 1px solid #ccc;
         transform: translate3d(0,100%,0);
 
     }
@@ -3476,15 +3476,15 @@ button.disabled,
         height: 100%;
         background: rgba(0,0,0,0);
         transform: translate3d(0,-100%,0);
-        transition: background 300ms ease 0ms,
-                    transform 0ms linear 300ms
+        transition: background 400ms cubic-bezier(0.2,1,0.3,1) 0ms,
+                    transform 0ms linear 400ms
 
 }
 
         .sidebar-nav__overlay.show {
             background: rgba(0,0,0,0.9);
             transform: translate3d(0,0,0);
-            transition: background 300ms ease 0ms;
+            transition: background 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
         }
 
     }
@@ -6637,7 +6637,7 @@ form input:disabled + label {
         background: var(--black);
         min-width: 100%;
         transform: translate3d(0,100%,0);
-        transition: transform 300ms ease 0ms;
+        transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
 
     }
 
@@ -6655,7 +6655,7 @@ form input:disabled + label {
 
 .language-toggle--sidebar.show {
             transform: translate3d(0,0,0);
-            transition: transform 300ms ease 0ms;
+            transition: transform 400ms cubic-bezier(0.2,1,0.3,1) 0ms;
         }
 
 /* Basic: Items */
@@ -6893,13 +6893,13 @@ form input:disabled + label {
     max-height: 80%;
     overflow: auto;
     transform: translate3d(-50%,100vh,0);
-    transition: transform 250ms ease 0ms;
+    transition: transform 250ms cubic-bezier(0.2,1,0.3,1) 0ms;
 
 }
 
 .dialog.open {
         transform: translate3d(-50%,-50%,0);
-        transition: transform 250ms ease 0ms;
+        transition: transform 250ms cubic-bezier(0.2,1,0.3,1) 0ms;
     }
 
 @media screen and (min-width: 48em) {
@@ -6948,7 +6948,7 @@ form input:disabled + label {
     position: fixed;
     transform: translate3d(0,100%,0);
     opacity: 0;
-    transition: opacity 250ms ease 0ms,
+    transition: opacity 250ms cubic-bezier(0.2,1,0.3,1) 0ms,
                 transform 0ms ease 250ms;
 
 }
@@ -6956,7 +6956,7 @@ form input:disabled + label {
 .dialog__overlay.open {
         transform: translate3d(0,0,0);
         opacity: 1;
-        transition: opacity 250ms ease 0ms;
+        transition: opacity 250ms cubic-bezier(0.2,1,0.3,1) 0ms;
     }
 
 /* Close Button ============================================================= */
@@ -7237,7 +7237,7 @@ form input:disabled + label {
         align-items: center;
         transform: translate3d(0,-100%,0);
         opacity: 0;
-        transition: opacity 250ms ease 0ms,
+        transition: opacity 250ms cubic-bezier(0.2,1,0.3,1) 0ms,
                     transform 0ms ease 250ms;
 
     }
@@ -7245,7 +7245,7 @@ form input:disabled + label {
 .gallery--full.open {
             transform: translate3d(0,0,0);
             opacity: 1;
-            transition: opacity 250ms ease 0ms;
+            transition: opacity 250ms cubic-bezier(0.2,1,0.3,1) 0ms;
         }
 
 /* Slides */

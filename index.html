@@ -4,30 +4,33 @@
 
     <head>
 
-        <!-- Meta Data -->
+        <!-- ### Meta Data ### -->
         <meta charset="utf-8">
         <title>Bond: Component Library Demo</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <!-- Use Google Fonts or Typekit -->
-        <!-- Typekit now supports <link>. This method is preferred over JS inclusion. -->
-        <!-- Your combined custom font libraries should not exceed 300kb. -->
-
-        <!-- Favicons -->
+        <!-- ### Favicons ### -->
         <!-- Use realfavicongenerator.net -->
 
-        <!-- Vendor Dependencies -->
-        <!-- If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json. See documentation at https://bond.codeandmortar.com/docs. -->
+        <!-- ### Fonts ### -->
+        <!--
+            Typekit now supports <link>. This method is preferred over JS inclusion for performance reasons. Your combined custom font libraries should not exceed 300kb.
+            When using custom fonts, always 'preconnect' to the target server (without the specific font names / requests), then 'preload' the actual assets afterwards.
+        -->
 
-        <!-- Early Connections -->
+        <!-- Fonts: 1. Early Connections (Preconnect) -->
         <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="//use.typekit.net" crossorigin>
 
-        <!-- Fonts -->
+        <!-- Fonts: 2. Asset Requests (Preload) -->
         <link rel="preload" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Roboto:400,400i,700i,900|Do+Hyeon">
         <link rel="preload" as="style" onload="this.rel='stylesheet'" href="//use.typekit.net/urw6fuc.css">
+
+        <!-- ### Vendor Dependencies ### -->
+        <!--
+            If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json. See documentation at https://bond.codeandmortar.com/docs.
+        -->
 
         <!-- Vendor CSS: Normalize -->
         <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/normalize.css">
@@ -41,7 +44,7 @@
         <!-- Vendor CSS: Select2 -->
         <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/vendor/select2.min.css">
 
-        <!-- Primary Stylesheet -->
+        <!-- ### Primary CSS ### -->
         <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/style.css">
 
         <noscript>
@@ -53,6 +56,8 @@
             <link rel="stylesheet" href="assets/vendor/select2.min.css">
             <link rel="stylesheet" href="assets/css/style.css">
         </noscript>
+
+        <!-- All JS and CSS files should be concatenated into one file per type to reduce HTTP requests. -->
 
         <style>
             .demo-nav__wrapper .sidebar-nav__pane-nav-item {
@@ -83,14 +88,19 @@
             }
         </style>
 
-        <!-- Javascripts -->
-        <!-- JS should always be included AFTER your CSS. -->
-        <!-- JS files that do not rely or are not relied upon by other JS should get an 'async' attribute. JS files that DO rely or are relied upon by other JS should get a 'defer' attribute. -->
+        <!-- Javascript -->
+        <!--
+            JS should always be included AFTER your CSS.
+            JS files that do not rely on or are not relied upon by other JS should get an 'async' attribute. JS files that DO rely or are relied upon by other JS should get a 'defer' attribute.
+        -->
 
-        <!-- jQuery -->
+        <!-- Vendor JS: jQuery -->
+        <!--
+            The core jQuery script should never include the `async` or `defer` attributes to avoid dependency issues.
+        -->
         <script src="assets/vendor/jquery.min.js"></script>
 
-        <!-- Modernizr -->
+        <!-- Vendor JS: Modernizr -->
         <script async src="assets/vendor/modernizr.js"></script>
 
     </head>
@@ -1403,19 +1413,19 @@
             <!-- Slides -->
             <div class="gallery__slides">
                 <div class="gallery__slide">
-                    <img data-src="https://placehold.it/768x250" alt="" class="gallery__item-image--full">
+                    <img data-lazy="https://placehold.it/768x250" alt="" class="gallery__item-image--full">
                 </div>
                 <div class="gallery__slide">
-                    <img data-src="https://placehold.it/480" alt="" class="gallery__item-image--full">
+                    <img data-lazy="https://placehold.it/480" alt="" class="gallery__item-image--full">
                 </div>
                 <div class="gallery__slide">
-                    <img data-src="https://placehold.it/1440" alt="" class="gallery__item-image--full">
+                    <img data-lazy="https://placehold.it/1440" alt="" class="gallery__item-image--full">
                 </div>
                 <div class="gallery__slide">
-                    <img data-src="https://placehold.it/800x1440" alt="" class="gallery__item-image--full">
+                    <img data-lazy="https://placehold.it/800x1440" alt="" class="gallery__item-image--full">
                 </div>
                 <div class="gallery__slide">
-                    <img data-src="https://placehold.it/700x1220" alt="" class="gallery__item-image--full">
+                    <img data-lazy="https://placehold.it/700x1220" alt="" class="gallery__item-image--full">
                 </div>
             </div>
         </div>
@@ -1431,64 +1441,64 @@
 
         <script async src="assets/vendor/lazyload.min.js"></script>
 
-        <!-- Vendor Script: MatchMedia -->
+        <!-- Vendor JS: MatchMedia -->
         <script async src="assets/vendor/matchMedia.js"></script>
 
-        <!-- Vendor Script: Slick -->
+        <!-- Vendor JS: Slick -->
         <script defer src="assets/vendor/slick.js"></script>
 
-        <!-- Vendor Script: Pikaday -->
+        <!-- Vendor JS: Pikaday -->
         <script defer src="assets/vendor/pikaday.js"></script>
 
-        <!-- Vendor Script: Select2 -->
+        <!-- Vendor JS: Select2 -->
         <script defer src="assets/vendor/select2.min.js"></script>
 
-        <!-- Core Script: Base -->
+        <!-- Core JS: Base -->
         <script async src="assets/js/core.js"></script>
 
-        <!-- Component Script: Alerts -->
+        <!-- Component JS: Alerts -->
         <script defer src="assets/js/components/alerts/alerts.js"></script>
 
-        <!-- Component Script: Hero -->
+        <!-- Component JS: Hero -->
         <script defer src="assets/js/components/hero/hero.js"></script>
 
-        <!-- Component Script: Content -->
+        <!-- Component JS: Content -->
         <script defer src="assets/js/components/content/content.js"></script>
 
-        <!-- Component Script: Navigation (Basic) -->
+        <!-- Component JS: Navigation (Basic) -->
         <script defer src="assets/js/components/navigation/navigation-basic.js"></script>
 
-        <!-- Component Script: Navigation (Sidebar) -->
+        <!-- Component JS: Navigation (Sidebar) -->
         <script defer src="assets/js/components/navigation/navigation-sidebar.js"></script>
 
-        <!-- Component Script: Pagination -->
+        <!-- Component JS: Pagination -->
         <script defer src="assets/js/components/pagination/pagination.js"></script>
 
-        <!-- Component Script: Accordions -->
+        <!-- Component JS: Accordions -->
         <script defer src="assets/js/components/accordions/accordions.js"></script>
 
-        <!-- Component Script: Tabs -->
+        <!-- Component JS: Tabs -->
         <script defer src="assets/js/components/tabs/tabs.js"></script>
 
-        <!-- Component Script: Social Sharing -->
+        <!-- Component JS: Social Sharing -->
         <script defer src="assets/js/components/social/social-sharing.js"></script>
 
-        <!-- Component Script: Language -->
+        <!-- Component JS: Language -->
         <script defer src="assets/js/components/language/language-toggle.js"></script>
 
-        <!-- Component Script: Forms -->
+        <!-- Component JS: Forms -->
         <script defer src="assets/js/components/forms/forms.js"></script>
 
-        <!-- Component Script: Modals -->
+        <!-- Component JS: Modals -->
         <script defer src="assets/js/components/dialog/dialog.js"></script>
 
-        <!-- Component Script: Datepicker (Pikaday) -->
+        <!-- Component JS: Datepicker (Pikaday) -->
         <script defer src="assets/js/components/datepicker/datepicker.js"></script>
 
-        <!-- Component Script: Gallery -->
+        <!-- Component JS: Gallery -->
         <script defer src="assets/js/components/gallery/gallery.js"></script>
 
-        <!-- Component Script: Demo Nav -->
+        <!-- Component JS: Demo Nav -->
         <script defer src="assets/js/components/bond/demo-nav.js"></script>
 
     </body>

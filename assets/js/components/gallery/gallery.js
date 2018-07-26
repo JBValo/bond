@@ -17,6 +17,7 @@
             $('.gallery__slides').slick({
                 dots: false,
                 infinite: true,
+                lazyLoad: 'ondemand',
                 speed: 300,
                 slidesToShow: 1,
                 centerMode: true,
