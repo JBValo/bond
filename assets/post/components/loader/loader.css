@@ -1,0 +1,97 @@
+/* =============================================================================
+
+    PAGE LOADER CSS
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+============================================================================= */
+
+/* Variables ================================================================ */
+
+    /* Container */
+    $loader-background: var(--black);
+
+    /* Title */
+    $loader-title-font-family: $heading-font-family;
+    $loader-title-text-transform: uppercase;
+    $loader-title-font-size: 1rem;
+    $loader-title-font-weight: bold;
+    $loader-title-tracking: 1px;
+    $loader-title-color: var(--highlight);
+
+    /* Message */
+    $loader-message-font-family: $global-font-family;
+    $loader-message-text-transform: none;
+    $loader-message-font-size: $font-scale-small;
+    $loader-message-font-weight: normal;
+    $loader-message-color: white;
+
+    /* Icon */
+    $loader-icon-color: white;
+
+/* Containers =============================================================== */
+.page-loader {
+    background: $loader-background;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    &.loaded {
+        opacity: 0;
+        transform: translate3d(0,-100%,0);
+        transition: opacity $global-timing $global-easing 0ms,
+                    transform $global-timing $global-easing $global-timing;
+    }
+
+}
+
+.page-loader__container {
+    text-align: center;
+}
+
+/* Title & Message ========================================================== */
+.page-loader__title,
+.page-loader__message {
+    margin: 0;
+    padding: 0;
+}
+
+.page-loader__title {
+    font-family: $loader-title-font-family;
+    text-transform: $loader-title-text-transform;
+    font-size: $loader-title-font-size;
+    font-weight: $loader-title-font-weight;
+    letter-spacing: $loader-title-tracking;
+    color: $loader-title-color;
+}
+
+.page-loader__message {
+    font-family: $loader-message-font-family;
+    text-transform: $loader-message-text-transform;
+    font-size: $loader-message-font-size;
+    font-weight: $loader-message-font-weight;
+    color: $loader-message-color;
+}
+
+/* Icon ===================================================================== */
+.page-loader__icon {
+    margin: 0 0 1rem;
+}
+
+.page-loader__icon-animation {
+
+    circle {
+        fill: $loader-icon-color !important;
+    }
+
+}

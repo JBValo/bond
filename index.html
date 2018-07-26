@@ -110,6 +110,37 @@
             <p class="dated-browser-note">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="page-loader__container container--small">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="24" height="24" class="page-loader__icon">
+                    <g>
+                        <g class="page-loader__icon-animation" transform="rotate(135 12 12)">
+                            <circle fill="#ffffff" cx="12" cy="2" r="2"/>
+                            <circle fill="#ffffff" cx="19.0710678" cy="4.9289322" r="2" style="opacity: 0.4;"/>
+                            <circle fill="#ffffff" cx="22" cy="12" r="2" style="opacity: 0.4;"/>
+                            <circle fill="#ffffff" cx="19.0710678" cy="19.0710678" r="2" style="opacity: 0.4;"/>
+                            <circle fill="#ffffff" cx="12" cy="22" r="2" style="opacity: 0.4;"/>
+                            <circle fill="#ffffff" cx="4.9289322" cy="19.0710678" r="2" style="opacity: 0.4;"/>
+                            <circle fill="#ffffff" cx="2" cy="12" r="2" style="opacity: 0.6;"/>
+                            <circle fill="#ffffff" cx="4.9289322" cy="4.9289322" r="2" style="opacity: 0.8;"/>
+                        </g>
+                        <script>
+                            !function(){function t(t){this.element=t,this.animationId,this.start=null,this.init()}if(!window.requestAnimationFrame){var i=null;window.requestAnimationFrame=function(t,n){var e=(new Date).getTime();i||(i=e);var a=Math.max(0,16-(e-i)),o=window.setTimeout(function(){t(e+a)},a);return i=e+a,o}}t.prototype.init=function(){var t=this;this.animationId=window.requestAnimationFrame(t.triggerAnimation.bind(t))},t.prototype.reset=function(){var t=this;window.cancelAnimationFrame(t.animationId)},t.prototype.triggerAnimation=function(t){var i=this;this.start||(this.start=t);var n=t-this.start;800>n||(this.start=this.start+800),this.element.setAttribute("transform","rotate("+parseInt(Math.min(n/100,8))%8*45+" 12 12)");if(document.documentElement.contains(this.element))window.requestAnimationFrame(i.triggerAnimation.bind(i))};var n=document.getElementsByClassName("page-loader__icon-animation"),e=[];if(n)for(var a=0;n.length>a;a++)!function(i){e.push(new t(n[i]))}(a);document.addEventListener("visibilitychange",function(){"hidden"==document.visibilityState?e.forEach(function(t){t.reset()}):e.forEach(function(t){t.init()})})}();
+                        </script>
+                    </g>
+                </svg>
+                <p class="page-loader__title">Welcome to Bond</p>
+                <p class="page-loader__message">Please wait while we clean up a few things.</p>
+            </div>
+        </div>
+
+        <script>
+            $(window).on('load', function() {
+                $('.page-loader').addClass('loaded');
+            });
+        </script>
+
         <!-- Core Icons Include -->
         <div class="core-icons" style="display:none;"></div>
 

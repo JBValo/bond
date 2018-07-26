@@ -36,6 +36,7 @@ For efficiency I strongly recommend using [BrowserSync](https://browsersync.io/)
 * [CORE] - PostCSS color variables in `palette.css` have been changed to use CSS3 `:root` variable syntax. This allows for better theming on a global level.
 * [CORE] - Added global `$paragraph-font-family`, `$paragraph-color`, and `$paragraph-font-size` variables to `typography.css` for better global customization.
 * [CORE] - Updated syntax for padding and margin resets for more verbose and descriptive classes.
+* [NEW COMPONENT] - Page Loader. The page loader prevents the display of partially rendered content as your page loads.
 * [PERFORMANCE] - Core PostCSS files have been significantly optimized to reduce load strain / lengthy lookup times.
 * [PERFORMANCE] - Moved all Javascript requests after CSS requests. No more render blocking.
 * [PERFORMANCE] - Added `async` and `defer` attributes for all Javascript requests where applicable.

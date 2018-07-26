@@ -212,3 +212,8 @@
 
     /* Gallery: Base */
     @import "components/gallery/gallery.css";
+
+/* COMPONENTS: LOADER ======================================================= */
+
+    /* Page Loader: Base */
+    @import "components/loader/loader.css";
