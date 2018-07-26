@@ -74,51 +74,42 @@
         border-collapse: collapse;
         overflow: auto;
         width: 100%;
+    }
 
-        thead {
+    thead {
 
-            tr {
-
-                td {
-                    background: $table-heading-background;
-                    border: $table-heading-border;
-                    padding: $table-heading-padding;
-                    font-family: $table-heading-font-family;
-                    font-size: $table-heading-font-size;
-                    font-weight: $table-heading-font-weight;
-                    font-style: $table-heading-font-style;
-                    text-transform: $table-heading-text-transform;
-                    color: $table-heading-color;
-                    text-align: $table-heading-alignment;
-                }
-
-            }
-
+        td {
+            background: $table-heading-background;
+            border: $table-heading-border;
+            padding: $table-heading-padding;
+            font-family: $table-heading-font-family;
+            font-size: $table-heading-font-size;
+            font-weight: $table-heading-font-weight;
+            font-style: $table-heading-font-style;
+            text-transform: $table-heading-text-transform;
+            color: $table-heading-color;
+            text-align: $table-heading-alignment;
         }
 
-        tbody {
+    }
 
-            tr {
+    tbody {
 
-                td {
-                    background: $table-cell-background;
-                    border: $table-cell-border;
-                    padding: $table-cell-padding;
-                    font-family: $table-cell-font-family;
-                    font-size: $table-cell-font-size;
-                    font-weight: $table-cell-font-weight;
-                    font-style: $table-cell-font-style;
-                    text-transform: $table-cell-text-transform;
-                    color: $table-cell-color;
-                    text-align: $table-cell-alignment;
-                }
+        td {
+            background: $table-cell-background;
+            border: $table-cell-border;
+            padding: $table-cell-padding;
+            font-family: $table-cell-font-family;
+            font-size: $table-cell-font-size;
+            font-weight: $table-cell-font-weight;
+            font-style: $table-cell-font-style;
+            text-transform: $table-cell-text-transform;
+            color: $table-cell-color;
+            text-align: $table-cell-alignment;
+        }
 
-                &:nth-child(even) {
-                    background: $table-alt-row-background;
-                }
-
-            }
-
+        &:nth-child(even) {
+            background: $table-alt-row-background;
         }
 
     }

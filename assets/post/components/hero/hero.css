@@ -228,16 +228,15 @@
     li {
         display: inline-block;
         padding: 0 $hero-dot-spacing;
+    }
 
-        &.slick-active {
+    .slick-active {
 
-            button {
-                background: transparent;
+        button {
+            background: transparent;
 
-                &:after {
-                    display: block;
-                }
-
+            &:after {
+                display: block;
             }
 
         }

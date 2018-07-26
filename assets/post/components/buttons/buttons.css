@@ -109,15 +109,9 @@ input[type="submit"] {
     }
 
 /* State: Disabled ========================================================== */
-button,
-input[type="submit"],
-[class*="button--"] {
-
-    &.disabled,
-    &[disabled] {
-        pointer-events: none;
-        opacity: 0.35;
-        cursor: not-allowed;
-    }
-
+.disabled,
+[disabled] {
+    pointer-events: none;
+    opacity: 0.35;
+    cursor: not-allowed;
 }
