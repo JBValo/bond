@@ -90,8 +90,8 @@
 
         <!-- Javascript -->
         <!--
-            JS should always be included AFTER your CSS.
-            JS files that do not rely on or are not relied upon by other JS should get an 'async' attribute. JS files that DO rely or are relied upon by other JS should get a 'defer' attribute.
+            JS should always be included AFTER your CSS. Ask yourself these questions when including a script:
+            - Is this script required for initial page load? If so, use the `async` attribute. If not, use `defer`.
         -->
 
         <!-- Vendor JS: jQuery -->
@@ -1445,13 +1445,13 @@
         <script async src="assets/vendor/matchMedia.js"></script>
 
         <!-- Vendor JS: Slick -->
-        <script defer src="assets/vendor/slick.js"></script>
+        <script async src="assets/vendor/slick.js"></script>
 
         <!-- Vendor JS: Pikaday -->
         <script defer src="assets/vendor/pikaday.js"></script>
 
         <!-- Vendor JS: Select2 -->
-        <script defer src="assets/vendor/select2.min.js"></script>
+        <script async src="assets/vendor/select2.min.js"></script>
 
         <!-- Core JS: Base -->
         <script async src="assets/js/core.js"></script>
@@ -1460,10 +1460,10 @@
         <script defer src="assets/js/components/alerts/alerts.js"></script>
 
         <!-- Component JS: Hero -->
-        <script defer src="assets/js/components/hero/hero.js"></script>
+        <script async src="assets/js/components/hero/hero.js"></script>
 
         <!-- Component JS: Content -->
-        <script defer src="assets/js/components/content/content.js"></script>
+        <script async src="assets/js/components/content/content.js"></script>
 
         <!-- Component JS: Navigation (Basic) -->
         <script defer src="assets/js/components/navigation/navigation-basic.js"></script>
