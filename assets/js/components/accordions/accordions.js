@@ -19,6 +19,7 @@
                 $('.accordions__item').removeClass('show');
                 $(this).parent().parent().toggleClass('show');
             }
+            e.preventDefault();
         });
 
     });
