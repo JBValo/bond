@@ -19,30 +19,25 @@
             When using custom fonts, always 'preconnect' to the target server (without the specific font names / requests), then 'preload' the actual assets afterwards.
         -->
 
-        <!-- Fonts: 1. Early Connections (Preconnect) -->
+        <!-- Fonts: Early Connections (Preconnect) -->
         <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="//use.typekit.net" crossorigin>
-
-        <!-- Fonts: 2. Asset Requests (Preload) -->
-        <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Roboto:400,400i,700i,900|Do+Hyeon">
-        <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="//use.typekit.net/urw6fuc.css">
 
         <!-- ### Vendor Dependencies ### -->
         <!--
             If adding a new vendor dependency, please ensure you add it to the 'bond' script in package.json. See documentation at https://bond.codeandmortar.com/docs.
         -->
 
-        <!-- Vendor CSS: Normalize -->
+        <!-- Preload Method for Stylesheets -->
+        <!-- ATTN: This is currently disabled as Mozilla Firefox does NOT support this. -->
+        <!--
+        <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Roboto:400,400i,700i,900|Do+Hyeon">
+        <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="//use.typekit.net/urw6fuc.css">
         <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="assets/vendor/normalize.css">
-
-        <!-- Vendor CSS: Slick -->
         <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="assets/vendor/slick.css">
-
-        <!-- Vendor CSS: Select2 -->
         <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="assets/vendor/select2.min.css">
-
-        <!-- ### Primary CSS ### -->
         <link rel="preload" as="style" onerror="this.rel='stylesheet'" onload="this.rel='stylesheet'" href="assets/css/style.css">
+        -->
 
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400i,700i,900|Do+Hyeon">
         <link rel="stylesheet" href="//use.typekit.net/urw6fuc.css">
