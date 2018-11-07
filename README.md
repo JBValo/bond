@@ -31,6 +31,10 @@ For efficiency I strongly recommend using [BrowserSync](https://browsersync.io/)
 
 #### Change Log
 
+##### November 2018
+* [DEPENDENCIES] - Removed pikaday as a default dependency.
+* [DEPENDENCIES] - Added [hc-sticky](https://github.com/somewebmedia/hc-sticky) as a default dependency.
+
 ##### July 2018 (Summer Performance Update)
 * [CORE] - The `postcss-color-function` plugin has been replaced with the [PostCSS Color Mod](https://github.com/jonathantneal/postcss-color-mod-function) plugin for better CSS variable support and spec/syntax parity with CSS3.
 * [CORE] - PostCSS color variables in `palette.css` have been changed to use CSS3 `:root` variable syntax. This allows for better theming on a global level.

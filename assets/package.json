@@ -39,10 +39,10 @@
         "modernizr": "cd node_modules/modernizr/ && npm install && node ./bin/modernizr -c ../../modernizr-config.json && cd ../../ && cp node_modules/modernizr/modernizr.js vendor/",
         "normalize": "cp node_modules/normalize.css/normalize.css vendor/",
         "slick": "cp node_modules/slick-carousel/slick/slick.css vendor/ && cp node_modules/slick-carousel/slick/slick.js vendor/ && cp node_modules/slick-carousel/slick/slick-theme.css vendor/",
-        "datepicker": "cp node_modules/pikaday/pikaday.js vendor/ && cp node_modules/pikaday/css/pikaday.css vendor/",
         "select2": "cp node_modules/select2/dist/js/select2.min.js vendor/ && cp node_modules/select2/dist/css/select2.min.css vendor/",
         "lazyload": "cp node_modules/vanilla-lazyload/dist/lazyload.min.js vendor/",
-        "bond": "yarn install && rm -rf vendor && mkdir vendor && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick && npm run datepicker && npm run select2 && npm run lazyload",
+        "hcsticky": "cp node_modules/hc-sticky/dist/hc-sticky.js vendor/",
+        "bond": "yarn install && rm -rf vendor && mkdir vendor && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick && npm run select2 && npm run lazyload && npm run hcsticky",
         "notify": "node notify.js",
         "post": "postcss post/*.css -c postcss.config.js -d css && node notify.js",
         "watch": "npm-watch"
@@ -52,8 +52,8 @@
         "match-media": "^0.2.0",
         "modernizr": "^3.5.0",
         "normalize.css": "latest",
-        "pikaday": "^1.6.1",
         "select2": "^4.0.3",
+        "hc-sticky": "^2.2.3",
         "slick-carousel": "^1.6.0",
         "vanilla-lazyload": "^8.11.0"
     }
