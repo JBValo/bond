@@ -55,6 +55,6 @@
         "select2": "^4.0.3",
         "hc-sticky": "^2.2.3",
         "slick-carousel": "^1.6.0",
-        "vanilla-lazyload": "^8.11.0"
+        "vanilla-lazyload": "latest"
     }
 }
