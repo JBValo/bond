@@ -237,7 +237,7 @@
                     <input type="text" class="sidebar-nav__search-input" placeholder="What can we help you find today?">
                 </div>
                 <div class="sidebar-nav__search-form-item--button">
-                    <button class="sidebar-nav__search-button button--basic">Search</button>
+                    <button class="sidebar-nav__search-button button">Search</button>
                 </div>
             </form>
         </div>
@@ -352,10 +352,6 @@
                     <a href="https://bond.codeandmortar.com/docs/#cards" class="demo-nav__item-link--docs" target="_blank">Docs</a>
                 </li>
                 <li class="sidebar-nav__pane-nav-item">
-                    <a href="#section--columns" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Columns</a>
-                    <a href="https://bond.codeandmortar.com/docs/#columns" class="demo-nav__item-link--docs" target="_blank">Docs</a>
-                </li>
-                <li class="sidebar-nav__pane-nav-item">
                     <a href="#section--content" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Content</a>
                     <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
                 </li>
@@ -426,10 +422,6 @@
                 <li class="sidebar-nav__pane-nav-item">
                     <a href="#section--partners" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Partners Grid</a>
                     <a href="https://bond.codeandmortar.com/docs/#partners-grid" class="demo-nav__item-link--docs" target="_blank">Docs</a>
-                </li>
-                <li class="sidebar-nav__pane-nav-item">
-                    <a href="#section--columns" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Search Results</a>
-                    <a href="https://bond.codeandmortar.com/docs/#search" class="demo-nav__item-link--docs" target="_blank">Docs</a>
                 </li>
                 <li class="sidebar-nav__pane-nav-item">
                     <a href="#section--footer" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Social Links</a>
@@ -566,13 +558,19 @@
                     <!-- Button Group -->
                     <ul class="button-group text-center" id="section--button-group">
                         <li class="button-group__item">
-                            <a href="#" class="button-group__button button--basic">Button</a>
+                            <a href="#" class="button-group__button button">Button</a>
                         </li>
                         <li class="button-group__item">
-                            <a href="#" class="button-group__button button--basic">Button</a>
+                            <a href="#" class="button-group__button button--highlight">Highlight</a>
                         </li>
                         <li class="button-group__item">
-                            <a href="#" class="button-group__button button--basic">Button</a>
+                            <a href="#" class="button-group__button button--outline">Outline</a>
+                        </li>
+                        <li class="button-group__item">
+                            <a href="#" class="button-group__button button--success">Success</a>
+                        </li>
+                        <li class="button-group__item">
+                            <a href="#" class="button-group__button button--danger">Danger</a>
                         </li>
                     </ul>
                     <br><br><br>
@@ -663,7 +661,7 @@
                 <div class="container--small">
                     <h5 class="reset--margin" id="section--tables">Page Sharing</h5>
                     <p>Page sharing is made simple with Bond: click a button, get your sharing options! It's that easy. Social account icons are automatically color coded based on the target URL. All swatches are exact and on-brand.</p>
-                    <a href="#" class="social-sharing__trigger button--basic">Share This Page</a>
+                    <a href="#" class="social-sharing__trigger button">Share This Page</a>
                     <ul class="social-sharing__list social-icons no-bg">
                         <li class="social-icons__item">
                             <a href="https://facebook.com" class="social-icons__item-link">
@@ -737,7 +735,7 @@
                                 <input type="email" class="" placeholder="Enter your email address">
                             </li>
                             <li class="social-sharing__email-layout-item--button">
-                                <button type="submit" class="button--basic">Share</button>
+                                <button type="submit" class="button">Share</button>
                             </li>
                         </ul>
                     </form>
@@ -818,9 +816,9 @@
                     </div>
                     <!-- Pagination: Lazy -->
                     <div class="pagination--lazy">
-                        <a href="#" class="pagination__button button--basic">Load More</a>
-                        <a href="#" class="pagination__button loading button--basic">Loading</a>
-                        <a href="#" class="pagination__button all-loaded button--basic">All Posts Loaded</a>
+                        <a href="#" class="pagination__button button">Load More</a>
+                        <a href="#" class="pagination__button loading button">Loading</a>
+                        <a href="#" class="pagination__button all-loaded button">All Posts Loaded</a>
                     </div>
                 </div>
             </section>
@@ -843,7 +841,7 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--basic block__cta--link">Read More</a>
+                                <a href="#" class="button block__cta--link">Read More</a>
                                 <ul class="tags--linked">
                                     <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
                                     <li class="tags__item"><a href="#" class="tags__item-link">Tag Title</a></li>
@@ -861,7 +859,7 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--basic block__cta--link">Read More</a>
+                                <a href="#" class="button block__cta--link">Read More</a>
                                 <ul class="tags">
                                     <li class="tags__item">Tag Title</li>
                                     <li class="tags__item">Tag Title</li>
@@ -879,7 +877,7 @@
                                     <a href="#" class="block__title-link">Block Title</a>
                                 </h4>
                                 <p class="block__content">Minim aute eu aute est consequat elit cupidatat velit aute et mollit do fugiat irure velit quis labore.</p>
-                                <a href="#" class="button--basic block__cta--link">Read More</a>
+                                <a href="#" class="button block__cta--link">Read More</a>
                             </div>
                         </article>
                     </div>
@@ -1003,7 +1001,7 @@
                 <div class="container--small">
                     <h5 class="reset--margin">Dialogs and Modals</h5>
                     <p>Rapidly create confirmation modals, in-context forms, and more with Bond's dialog component.</p>
-                    <a href="#" class="dialog__trigger button--basic" data-dialog="dialog-1">Open Dialog</a>
+                    <a href="#" class="dialog__trigger button" data-dialog="dialog-1">Open Dialog</a>
                 </div>
             </section>
 
@@ -1244,71 +1242,15 @@
                         </ul>
                         <ul class="filters__buttons button-group text-center">
                             <li class="button-group__item">
-                                <a href="#" class="filters__apply-button button-group__button button--basic">Filter Results</a>
+                                <a href="#" class="filters__apply-button button-group__button button">Filter Results</a>
                             </li>
                             <li class="button-group__item">
-                                <a href="#" class="filters__reset-button button-group__button button--basic">Reset Filters</a>
+                                <a href="#" class="filters__reset-button button-group__button button">Reset Filters</a>
                             </li>
                         </ul>
                     </form>
 
                 </div>
-            </section>
-
-            <!-- Search Results -->
-            <section class="search-results column-section" id="section--columns">
-                <div class="search-results__results column--left">
-                    <div class="container--xl">
-                        <h2>Search Results</h2>
-                        <p>Bond includes a column-based layout intended specifically for a search results page. The left column houses the results themselves while the right column acts as a quick filter sidebar.</p>
-                        <a href="#search-results__filters" class="search-results__filter-trigger button--basic">Filter Results</a>
-
-                        <!-- Search Results: Single Group -->
-                        <div class="search-results__result-group" id="section--cards">
-                            <h3 class="search-results__result-group-title" id="result-category--news">Cards</h3>
-                            <!-- Search Results: Single Result -->
-                            <div class="search-results__result is-card">
-                                <h6 class="search-results__result-label">Card Label</h6>
-                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">Card Title</a></h4>
-                                <h5 class="search-results__result-meta">Card Meta Info (e.g. August 12, 2020)</h5>
-                                <p class="search-results__result-excerpt">With Bond, anything can become a card simply by applying an 'is-card' class! Card styles are based on Google's Material Design methodology and automatically apply a drop shadow / interior padding and a subtle border to mimic the properties of a card in reality.</p>
-                            </div>
-                        </div>
-
-                        <!-- Search Results: Single Group -->
-                        <div class="search-results__result-group">
-                            <h3 class="search-results__result-group-title" id="result-category--events">Events</h3>
-                            <!-- Search Results: Single Result -->
-                            <div class="search-results__result">
-                                <h6 class="search-results__result-label">Event</h6>
-                                <h4 class="search-results__result-title"><a href="#" class="search-results__result-title-link">Event Title</a></h4>
-                                <h5 class="search-results__result-meta">August 16, 2018</h5>
-                                <p class="search-results__result-excerpt">Adipisicing Lorem elit aute cillum cillum aute tempor. Reprehenderit aliqua sit tempor irure voluptate voluptate ex ea et aliqua sint commodo.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <aside class="search-results__categories column--right" id="search-results__filters">
-                    <div class="container--xl">
-                        <h5 class="search-results__categories-title">Filter Results</h5>
-                        <p>The search results sidebar offers your users an at-a-glance overview of what categories were returned based on their search term. Clicking a "filter" automatically scrolls the user directly to that grouping of results.</p>
-                        <ul class="search-results__categories-list">
-                            <li class="search-results__categories-list-item">
-                                <a href="#result-category--news" class="search-results__categories-list-item-link">
-                                    Cards
-                                    <span class="search-results__categories-list-item-count">1</span>
-                                </a>
-                            </li>
-                            <li class="search-results__categories-list-item">
-                                <a href="#result-category--events" class="search-results__categories-list-item-link">
-                                    Events
-                                    <span class="search-results__categories-list-item-count">1</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
             </section>
 
             <!-- Footer -->

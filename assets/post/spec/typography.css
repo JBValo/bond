@@ -29,12 +29,14 @@
 
     /* Paragraphs */
     $paragraph-font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    $paragraph-font-size: 0.85rem;
+    $paragraph-font-size: 1rem;
+        $paragraph-font-size--desktop: 0.85rem;
     $paragraph-color: $gray-30;
-    $paragraph-leading--desktop: 1.5;
+    $paragraph-leading: 1.35;
+        $paragraph-leading--desktop: 1.5;
 
     /* Lists */
-    $list-font-family: $global-font-family;
+    $list-font-family: $paragraph-font-family;
 
     /* Responsive Tables */
     /* TRANSLATION-ITEM */
@@ -104,9 +106,10 @@ h6 {
 p {
     font-size: $paragraph-font-size;
     font-family: $paragraph-font-family;
-    line-height: normal;
+    line-height: $paragraph-leading;
 
     @media $(l-tablet) {
+        font-size: $paragraph-font-size--desktop;
         line-height: $paragraph-leading--desktop;
     }
 
@@ -120,8 +123,10 @@ p {
         li {
             font-size: $paragraph-font-size;
             font-family: $paragraph-font-family;
+            line-height: $paragraph-leading;
 
             @media $(l-tablet) {
+                font-size: $paragraph-font-size--desktop;
                 line-height: $paragraph-leading--desktop;
             }
 

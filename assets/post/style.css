@@ -48,9 +48,6 @@
     /* Content: WYSIWYG */
     @import "components/content/content-area.css";
 
-    /* Content: Columns */
-    @import "components/content/columns.css";
-
     /* Content: Section Titles */
     @import "components/content/section-titles.css";
 
@@ -166,9 +163,6 @@
 
     /* Search: Sidebar */
     @import "components/search/search-sidebar.css";
-
-    /* Search: Results */
-    @import "components/search/search-results.css";
 
 /* COMPONENTS: CARDS ======================================================== */
 

@@ -25,21 +25,39 @@
         $button-background--hover: $link-color;
         $button-color--hover: white;
 
-    /* Neutral */
-    $button-background--neutral: gray;
-    $button-color--neutral: white;
+    /* Outline */
+    $button-background--outline: transparent;
+    $button-color--outline: $button-background;
+    $button-border--outline: 2px solid $button-background;
 
-        /* Neutral: Hover */
-        $button-background--neutral--hover: var(--color-utility--danger);
-        $button-color--neutral--hover: white;
+        /* Outline: Hover */
+        $button-background--outline--hover: $button-background;
+        $button-color--outline--hover: $button-color;
+        $button-border--outline--hover: 2px solid $button-background;
 
-    /* Highlight */
+/* Highlight */
     $button-background--highlight: var(--highlight);
     $button-color--highlight: $button-color;
 
         /* Highlight: Hover */
         $button-background--highlight--hover: var(--black);
         $button-color--highlight--hover: white;
+
+    /* Success */
+    $button-background--success: var(--color-utility--success);
+    $button-color--success: white;
+
+        /* Success: Hover */
+        $button-background--success--hover: $button-background;
+        $button-color--success--hover: $button-color--success;
+
+    /* Danger */
+    $button-background--danger: var(--color-utility--danger);
+    $button-color--danger: white;
+
+        /* Danger: Hover */
+        $button-background--danger--hover: $button-background;
+        $button-color--danger--hover: $button-color--danger;
 
 /* Form Buttons ============================================================= */
 button,
@@ -51,7 +69,8 @@ input[type="submit"] {
     outline: none;
 }
 
-[class*="button--"] {
+[class*="button--"],
+.button {
     padding: $button-padding;
     border-radius: $button-radius;
     font-family: $button-font-family;
@@ -64,7 +83,7 @@ input[type="submit"] {
 }
 
 /* Basic ==================================================================== */
-.button--basic {
+.button {
     background: $button-background;
     color: $button-color;
 }
@@ -72,7 +91,7 @@ input[type="submit"] {
     /* Basic: Hover */
     .no-touchevents {
 
-        .button--basic:hover {
+        .button:hover {
             background: $button-background--hover;
         }
 
@@ -93,17 +112,50 @@ input[type="submit"] {
 
     }
 
-/* Neutral ================================================================== */
-.button--neutral {
-    background: $button-background--neutral;
-    color: $button-color--neutral;
+/* Outline ================================================================== */
+.button--outline {
+    background: $button-background--outline;
+    color: $button-color--outline;
+    border: $button-border--outline;
 }
 
-    /* Neutral: Hover */
+    /* Outline: Hover */
     .no-touchevents {
 
-        .button--neutral:hover {
-            background: $button-background--neutral--hover;
+        .button--outline:hover {
+            background: $button-background--outline--hover;
+            color: $button-color--outline--hover;
+            border: $button-border--outline--hover;
+        }
+
+    }
+
+/* Success ==================================================================== */
+.button--success {
+    background: $button-background--success;
+    color: $button-color--success;
+}
+
+    /* Success: Hover */
+    .no-touchevents {
+
+        .button--success:hover {
+            background: $button-background--success--hover;
+        }
+
+    }
+
+/* Danger ==================================================================== */
+.button--danger {
+    background: $button-background--danger;
+    color: $button-color--danger;
+}
+
+    /* Danger: Hover */
+    .no-touchevents {
+
+        .button--danger:hover {
+            background: $button-background--danger--hover;
         }
 
     }
