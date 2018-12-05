@@ -33,13 +33,18 @@
     /* In-context Error Message */
     .validation_message {
         background: var(--color-utility--danger);
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: $paragraph-font-family;
         padding: 0.25rem 0.5rem;
         color: #fff;
-        font-size: .75rem;
         font-weight: normal;
         display: inline-block;
         text-align: left;
+        font-size: $paragraph-font-size;
+
+        @media $(l-tablet) {
+            font-size: $paragraph-font-size--desktop;
+        }
+
     }
 
 }
@@ -49,6 +54,11 @@
         color: var(--color-utility--danger);
         font-weight: normal;
         margin-top: 1rem;
-        line-height: 1.25;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: $paragraph-font-family;
+        font-size: $paragraph-font-size;
+
+        @media $(l-tablet) {
+            font-size: $paragraph-font-size--desktop;
+        }
+
     }
