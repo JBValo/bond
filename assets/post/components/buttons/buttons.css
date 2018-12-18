@@ -35,13 +35,23 @@
         $button-color--outline--hover: $button-color;
         $button-border--outline--hover: 2px solid $button-background;
 
-/* Highlight */
+    /* Highlight */
     $button-background--highlight: var(--highlight);
     $button-color--highlight: $button-color;
 
         /* Highlight: Hover */
         $button-background--highlight--hover: var(--black);
         $button-color--highlight--hover: white;
+
+    /* Outline (Highlight) */
+    $button-background--outline--highlight: transparent;
+    $button-color--outline--highlight: $button-background--highlight;
+    $button-border--outline--highlight: 2px solid $button-background--highlight;
+
+        /* Outline (Highlight): Hover */
+        $button-background--outline--highlight--hover: $button-background--hover;
+        $button-color--outline--highlight--hover: $button-color--hover;
+        $button-border--outline--highlight--hover: 2px solid $button-background--hover;
 
     /* Success */
     $button-background--success: var(--color-utility--success);
@@ -126,6 +136,24 @@ input[type="submit"] {
             background: $button-background--outline--hover;
             color: $button-color--outline--hover;
             border: $button-border--outline--hover;
+        }
+
+    }
+
+/* Outline (Highlight) ====================================================== */
+.button--outline--highlight {
+    background: $button-background--outline--highlight;
+    color: $button-color--outline--highlight;
+    border: $button-border--outline--highlight;
+}
+
+    /* Outline (Highlight): Hover */
+    .no-touchevents {
+
+        .button--outline--highlight:hover {
+            background: $button-background--outline--highlight--hover;
+            color: $button-color--outline--highlight--hover;
+            border: $button-border--outline--highlight--hover;
         }
 
     }

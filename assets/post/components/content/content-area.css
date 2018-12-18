@@ -108,7 +108,7 @@
             text-align: $table-cell-alignment;
         }
 
-        &:nth-child(even) {
+        tr:nth-child(even) {
             background: $table-alt-row-background;
         }
 

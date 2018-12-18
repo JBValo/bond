@@ -102,21 +102,21 @@
 
     /* Buttons */
     .gform_button.button {
-        padding: $form-submit-button-padding;
-        border-radius: $form-submit-button-radius;
-        font-family: $form-submit-button-font-family;
-        font-size: $form-submit-button-font-size;
-        font-weight: $form-submit-button-font-weight;
-        font-style: $form-submit-button-font-style;
-        text-transform: $form-submit-button-text-transform;
-        background: $form-submit-button-background;
-        color: $form-submit-button-color;
+        padding: $button-padding;
+        border-radius: $button-radius;
+        font-family: $button-font-family;
+        font-size: $button-font-size;
+        font-weight: $button-font-weight;
+        font-style: $button-font-style;
+        text-transform: $button-text-transform;
+        background: $button-background;
+        color: $button-color;
     }
 
         /* Buttons: Hover */
         .no-touchevents .gform_button.button:hover {
-            background: $form-submit-button-background--hover;
-            color: $form-submit-button-color--hover;
+            background: $button-background--hover;
+            color: $button-color--hover;
         }
 
     /* Form Title */
@@ -242,15 +242,15 @@ form {
 
         /* Form Elements: File: Label */
         .file-input__label {
-            background: $form-field-file-background;
-            border-radius: $form-field-border-radius;
-            padding: $form-field-file-padding;
-            color: $form-field-file-color;
-            font-family: $form-field-file-font-family;
-            font-weight: $form-field-file-font-weight;
-            font-style: $form-field-file-font-style;
-            text-transform: $form-field-file-text-transform;
-            font-size: $form-field-file-font-size;
+            padding: $button-padding;
+            border-radius: $button-radius;
+            font-family: $button-font-family;
+            font-size: $button-font-size;
+            font-weight: $button-font-weight;
+            font-style: $button-font-style;
+            text-transform: $button-text-transform;
+            background: $button-background;
+            color: $button-color;
             display: inline-block;
             cursor: pointer;
         }
@@ -276,6 +276,12 @@ form {
 
     }
 
+}
+
+/* Input Type File Hover */
+.no-touchevents .file-input__label:hover {
+    background: $button-background--hover;
+    color: $button-color--hover;
 }
 
 /* Form Elements: Captcha */

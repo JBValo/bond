@@ -75,17 +75,6 @@ $form-field-color: var(--black);
     /* Fields: Select */
     $form-field-select-background--hover: color-mod($form-field-border-color--focus tint(95%));
 
-    /* Fields: File */
-    $form-field-file-background: var(--black);
-    $form-field-border-radius: $form-field-border-radius;
-    $form-field-file-padding: $form-field-padding;
-    $form-field-file-color: white;
-    $form-field-file-font-family: $form-field-font-family;
-    $form-field-file-font-weight: bold;
-    $form-field-file-font-style: normal;
-    $form-field-file-text-transform: none;
-    $form-field-file-font-size: $form-field-font-size;
-
 /* Errors */
 $form-field-color-error: var(--color-utility--danger);
 $form-field-font-error: $global-font-family;
