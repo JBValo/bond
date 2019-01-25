@@ -157,6 +157,11 @@
             text-transform: $form-section-desc-text-transform;
             padding: $form-section-desc-padding;
             margin: $form-section-desc-margin;
+
+            @media $(l-tablet) {
+                font-size: $paragraph-font-size--desktop;
+            }
+
         }
 
     /* Footer */

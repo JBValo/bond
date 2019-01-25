@@ -20,7 +20,7 @@
     $main-footer-quick-links-text-transform: none;
 
         /* Links: Hover */
-        $main-footer-quick-links-font-color--hover: gray;
+        $main-footer-quick-links-font-color--hover: var(--highlight);
 
 /* Containers =============================================================== */
 .main-footer__quick-links-wrapper {

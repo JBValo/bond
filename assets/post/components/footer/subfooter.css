@@ -23,7 +23,7 @@
     $main-footer-subfooter-text-transform: none;
 
         /* Links: Hovers */
-        $main-footer-subfooter-font-color--hover: gray;
+        $main-footer-subfooter-font-color--hover: var(--highlight);
 
 /* Container ================================================================ */
 .main-footer__subfooter {

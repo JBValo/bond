@@ -192,11 +192,6 @@
     /* Dialog: Base */
     @import "components/dialog/dialog.css";
 
-/* COMPONENTS: DATEPICKER =================================================== */
-
-    /* Datepicker: Base */
-    @import "components/datepicker/datepicker.css";
-
 /* COMPONENTS: FILTERS ====================================================== */
 
     /* Filters: Base */
