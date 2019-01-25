@@ -12,17 +12,17 @@
         "node": ">=10.5.0"
     },
     "devDependencies": {
-        "autoprefixer": "^8.1.0",
+        "autoprefixer": "latest",
         "cssnano": "latest",
-        "node-notifier": "^5.2.1",
-        "npm-watch": "^0.3.0",
-        "postcss-cli": "^5.0.0",
-        "postcss-color-mod-function": "^2.4.3",
-        "postcss-import": "^11.1.0",
-        "postcss-mixins": "^6.2.0",
-        "postcss-nested": "^3.0.0",
+        "node-notifier": "latest",
+        "npm-watch": "latest",
+        "postcss-cli": "latest",
+        "postcss-color-mod-function": "latest",
+        "postcss-import": "latest",
+        "postcss-mixins": "latest",
+        "postcss-nested": "latest",
         "postcss-responsive-type": "latest",
-        "postcss-simple-vars": "^4.1.0"
+        "postcss-simple-vars": "latest"
     },
     "watch": {
         "post": {
@@ -48,13 +48,13 @@
         "watch": "npm-watch"
     },
     "dependencies": {
-        "jquery": "^3.2.1",
-        "match-media": "^0.2.0",
-        "modernizr": "^3.5.0",
+        "jquery": "latest",
+        "match-media": "latest",
+        "modernizr": "latest",
         "normalize.css": "latest",
-        "select2": "^4.0.3",
-        "hc-sticky": "^2.2.3",
-        "slick-carousel": "^1.6.0",
+        "select2": "latest",
+        "hc-sticky": "latest",
+        "slick-carousel": "latest",
         "vanilla-lazyload": "latest"
     }
 }
