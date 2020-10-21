@@ -6,7 +6,7 @@
 
         <!-- ### Meta Data ### -->
         <meta charset="utf-8">
-        <title>[Website Title]</title>
+        <title>Bond: Component Library Demo</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -47,6 +47,35 @@
         <link rel="stylesheet" href="assets/css/style.css">
 
         <!-- All JS and CSS files should be concatenated into one file per type to reduce HTTP requests. -->
+
+        <style>
+            .demo-nav__wrapper .sidebar-nav__pane-nav-item {
+                position: relative;
+            }
+            .demo-nav__item-link {
+                padding-right: 2.5rem;
+            }
+            .demo-nav__item-link--docs {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 20;
+                font-size: 0.75em;
+                padding: 1rem;
+                transform: translate(0,-50%);
+                text-decoration: none;
+                color: rgba(0,0,0,0.5);
+            }
+            .demo-nav__item-link.current + .demo-nav__item-link--docs {
+                color: white;
+            }
+            .demo-nav__item-link--docs:hover {
+                color: #da2f6d !important;
+            }
+            .demo-nav__item-link.current + .demo-nav__item-link--docs:hover {
+                color: #37ecba !important;
+            }
+        </style>
 
         <!-- Javascript -->
         <!--
@@ -116,6 +145,11 @@
             <li class="sidebar-nav__item--logo">
                 <a href="/" class="sidebar-nav__item-link">
                     <img src="https://bond.codeandmortar.com/assets/bond-logo.svg" alt="Logo">
+                </a>
+            </li>
+            <li class="sidebar-nav__item in-tab-bar">
+                <a href="#" class="sidebar-nav__item-link" data-sidebar-pane="pane-components">
+                    <span class="sidebar-nav__item-text">Components</span>
                 </a>
             </li>
             <li class="sidebar-nav__item in-tab-bar">
@@ -282,6 +316,132 @@
             </ul>
         </div>
 
+        <!-- Demo Navigation -->
+        <div class="sidebar-nav__pane--nav demo-nav__wrapper" data-sidebar-pane="pane-components">
+            <ul class="sidebar-nav__pane-nav--level-1">
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--accordions" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Accordions</a>
+                    <a href="https://bond.codeandmortar.com/docs/#accordions" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--alerts" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Alerts</a>
+                    <a href="https://bond.codeandmortar.com/docs/#alerts" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--blockquotes" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Blockquote</a>
+                    <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--blocks" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Blocks</a>
+                    <a href="https://bond.codeandmortar.com/docs/#blocks" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--breadcrumbs" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Breadcrumbs</a>
+                    <a href="https://bond.codeandmortar.com/docs/#breadcrumbs" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--broken-images" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Broken Images</a>
+                    <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--button-group" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Button Group</a>
+                    <a href="https://bond.codeandmortar.com/docs/#buttons" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--cards" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Cards</a>
+                    <a href="https://bond.codeandmortar.com/docs/#cards" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--content" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Content</a>
+                    <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--dialogs" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Dialog</a>
+                    <a href="https://bond.codeandmortar.com/docs/#dialog" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--embeds" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Embeds</a>
+                    <a href="https://bond.codeandmortar.com/docs/#responsive-embeds" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--filters" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Filters (Multiselect)</a>
+                    <a href="https://bond.codeandmortar.com/docs/#filters" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--footer" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Footer</a>
+                    <a href="https://bond.codeandmortar.com/docs/#footer" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--forms" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Forms</a>
+                    <a href="https://bond.codeandmortar.com/docs/#forms" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--galleries" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Gallery</a>
+                    <a href="https://bond.codeandmortar.com/docs/#galleries" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--maps" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Google Map Embed</a>
+                    <a href="https://bond.codeandmortar.com/docs/#maps" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--header" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Header</a>
+                    <a href="https://bond.codeandmortar.com/docs/#header" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--headings" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Headings</a>
+                    <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--hero" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Hero</a>
+                    <a href="https://bond.codeandmortar.com/docs/#hero" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--section-title" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Section Title</a>
+                    <a href="https://bond.codeandmortar.com/docs/#section-titles" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--wp-images" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Wordpress Images</a>
+                    <a href="https://bond.codeandmortar.com/docs/#wordpress-images" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--lists" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Lists</a>
+                    <a href="https://bond.codeandmortar.com/docs/#content" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--sharing" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Page Sharing</a>
+                    <a href="https://bond.codeandmortar.com/docs/#social" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--page-title" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Page Title (Subpage Banner)</a>
+                    <a href="https://bond.codeandmortar.com/docs/#page-titles-subpage-banners" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--pagination-basic" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Pagination</a>
+                    <a href="https://bond.codeandmortar.com/docs/#pagination" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--partners" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Partners Grid</a>
+                    <a href="https://bond.codeandmortar.com/docs/#partners-grid" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--footer" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Social Links</a>
+                    <a href="https://bond.codeandmortar.com/docs/#social" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--sticky" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Sticky Bar</a>
+                    <a href="https://bond.codeandmortar.com/docs/#sticky" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--tables" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Tables</a>
+                    <a href="https://bond.codeandmortar.com/docs/#tables-responsive" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+                <li class="sidebar-nav__pane-nav-item">
+                    <a href="#section--tabs" class="sidebar-nav__pane-nav-item-link demo-nav__item-link">Tabs</a>
+                    <a href="https://bond.codeandmortar.com/docs/#tabs" class="demo-nav__item-link--docs" target="_blank">Docs</a>
+                </li>
+            </ul>
+        </div>
+
         <!-- Start .page-wrapper -->
         <div class="page-wrapper">
 
@@ -289,7 +449,7 @@
             <a href="#" class="nav-toggle">Menu</a>
 
             <!-- Header -->
-            <header class="main-header">
+            <header class="main-header" id="section--header">
                 <div class="main-header__container flex--justify-between flex--align-middle">
                     <!-- Logo -->
                     <a href="/" class="main-header__logo-link">
@@ -347,20 +507,15 @@
             </header>
 
             <!-- Hero -->
-            <section class="hero">
+            <section class="hero" id="section--hero">
                 <!-- Slide: Intro -->
                 <div class="hero__slide bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920/1080?image=440')">
-                    <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Welcome</h5>
-                        <h1 class="hero__slide-title">Bond Framework</h1>
-                        <p class="hero__slide-content">This slide contains a textural background image.</p>
-                        <a href="" class="hero__slide-cta button--highlight">Learn More</a>
-                    </div>
+                    @@include ('slide.html')
                 </div>
                 <!-- Slide: With Video -->
                 <div class="hero__slide bg-size--cover bg-pos--center">
                     <div class="hero__slide-content-container container--small">
-                        <h5 class="hero__slide-subtitle">Slide One</h5>
+                        <h5 class="hero__slide-subtitle">Slide Onez</h5>
                         <h1 class="hero__slide-title">Slide with Video</h1>
                         <p class="hero__slide-content">This slide contains a textural background video in multiple formats.</p>
                         <a href="" class="hero__slide-cta button--highlight">Learn More</a>
@@ -388,15 +543,20 @@
 
             <!-- Content -->
             <section class="page-section">
-                <div class="container--small">
+                <div class="container--medium">
                     <!-- Section Title -->
-                    <div class="page-section__title-wrapper text-center">
+                    <div class="page-section__title-wrapper text-center" id="section--section-title">
                         <h5 class="page-section__subtitle with-divider">Section Subtitle</h5>
                         <h1 class="page-section__title">Section Title</h1>
-                        <p class="page-section__title-content">The section title component offers a quick and easy way to include modular identifiers for your site's sections. Includes support for an optional subtitle and multiple calls to action.</p>
+                        <p class="page-section__title-content">The section title component offers a quick and easy way to include modular identifiers for your site's sections. Includes support for an optional subtitles and multiple calls to action.
+
+                            Test
+                            Test
+                            Tester
+                        </p>
                     </div>
                     <!-- Button Group -->
-                    <ul class="button-group text-center">
+                    <ul class="button-group text-center" id="section--button-group">
                         <li class="button-group__item">
                             <a href="#" class="button-group__button button">Button</a>
                         </li>
@@ -407,6 +567,9 @@
                             <a href="#" class="button-group__button button--outline">Outline</a>
                         </li>
                         <li class="button-group__item">
+                            <a href="#" class="button-group__button button--outline--highlight">Outline (Highlight)</a>
+                        </li>
+                        <li class="button-group__item">
                             <a href="#" class="button-group__button button--success">Success</a>
                         </li>
                         <li class="button-group__item">
@@ -414,18 +577,18 @@
                         </li>
                     </ul>
                     <br><br><br>
-                    <div class="content-area">
+                    <div class="content-area" id="section--content">
                         <h3>Basic Content Area</h3>
                         <!-- Wordpress Images (Basic) -->
                         <div>
-                            <img data-src="https://picsum.photos/255" alt="Wordpress Image" class="wp-image alignleft">
+                            <img data-src="https://picsum.photos/255" alt="Wordpress Image" class="wp-image alignleft" id="section--wp-images">
                         </div>
                         <h5 class="reset--margin--bottom">Overview</h5>
                         <p>The basic content area includes default styling for all usable elements within a WYSIWYG section. This area is especially useful for WordPress sites or other sites that require a CMS feature.</p>
                         <h5 class="reset--margin--bottom">Images</h5>
                         <p>To the left is a floated image specifically styled for WordPress' built-in image alignment classes (left, center and right).</p>
                         <h5 class="reset--margin--bottom">Ordered &amp; Unordered Lists</h5>
-                        <ul>
+                        <ul id="section--lists">
                             <li>The face of the moon was in shadow.</li>
                             <li>I watched the storm, so beautiful yet terrific.</li>
                             <li>Almost before we knew it, we had left the ground.</li>
@@ -443,10 +606,10 @@
                         </div>
                         <h5 class="reset--margin--bottom">Other Image Features</h5>
                         <p>There are also built-in styles for WordPress image captions as well (see right)! Additionally, you can apply a specific "filter--gray" class to convert your images to grayscale where necessary.</p>
-                        <blockquote>
+                        <blockquote id="section--blockquotes">
                             Blockquotes are pre-styled with multiple options and variables for customization.
                         </blockquote>
-                        <h1>Heading 1</h1>
+                        <h1 id="section--headings">Heading 1</h1>
                         <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
                         <h4>Heading 4</h4>
@@ -454,19 +617,19 @@
                         <h6>Heading 6</h6>
                         <br>
                         <!-- Broken Images -->
-                        <h5 class="reset--margin--bottom">Broken Images</h5>
+                        <h5 class="reset--margin--bottom" id="section--broken-images">Broken Images</h5>
                         <p>If the path to any image is broken or missing, Bond gracefully handles the fallback by informing your user that the image was not found, along with the title and URL.</p>
                         <img data-src="assets/img/rafting.jpg" alt="A Group of People White Water Rafting">
                         <br><br>
                         <!-- Responsive Embed -->
-                        <h5 class="reset--margin--bottom">Responsive Embeds</h5>
+                        <h5 class="reset--margin--bottom" id="section--embeds">Responsive Embeds</h5>
                         <p>All forms of embeds are supported and are responsive out of the box. Whether you're using Vimeo, YouTube, Daily Motion or any other type of embed, the frame will automatically scale and maintain aspect ratio on any device.</p>
                         <div class="embed__container">
                             <iframe src="https://www.youtube.com/embed/l6nfTkoAmn8" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <br><br><br>
                         <!-- Responsive Tables -->
-                        <h5 class="reset--margin--bottom">Responsive Tables</h5>
+                        <h5 class="reset--margin--bottom" id="section--tables">Responsive Tables</h5>
                         <p>All tables inserted into a WYSIWYG will automatically become responsive with Bond. At a certain device width the table becomes horizontally scrollable within a parent container to ensure mobile users are able to comfortably view it.</p>
                         <table>
                             <thead>
@@ -497,9 +660,9 @@
             </section>
 
             <!-- Social Sharing -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--sharing">
                 <div class="container--small">
-                    <h5 class="reset--margin">Page Sharing</h5>
+                    <h5 class="reset--margin" id="section--tables">Page Sharing</h5>
                     <p>Page sharing is made simple with Bond: click a button, get your sharing options! It's that easy. Social account icons are automatically color coded based on the target URL. All swatches are exact and on-brand.</p>
                     <a href="#" class="social-sharing__trigger button">Share This Page</a>
                     <ul class="social-sharing__list social-icons no-bg">
@@ -583,9 +746,9 @@
             </section>
 
             <!-- Google Map Embed -->
-            <section class="map__wrapper">
+            <section class="map__wrapper" id="section--maps">
                 <div class="container--small">
-                    <h5 class="reset--margin">Map Embeds</h5>
+                    <h5 class="reset--margin" id="section--tables">Map Embeds</h5>
                     <p>Embed Google Map iframes quickly with Bond. Preset heights and style resets ensure a consistent experience cross-platform.</p>
                     <br>
                 </div>
@@ -593,9 +756,9 @@
             </section>
 
             <!-- Alerts -->
-            <section class="page-section">
+            <section class="page-section" id="section--alerts">
                 <div class="container--small">
-                    <h5 class="reset--margin">Alerts</h5>
+                    <h5 class="reset--margin" id="section--tables">Alerts</h5>
                     <p>Four different styles of alert are available out of the box (danger, warning, success and neutral).</p>
                     <ul class="alert__list">
                         <!-- Alert: Danger -->
@@ -623,7 +786,7 @@
             </section>
 
             <!-- Pagination -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--pagination">
                 <div class="container--small">
                     <h5 class="reset--margin">Pagination</h5>
                     <p>Need pagination? No problem. Would you prefer the classic numbered style or a lazy load style? With Bond, either is achieveable within minutes.</p>
@@ -664,7 +827,7 @@
             </section>
 
             <!-- Blocks -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--blocks">
                 <div class="container--small">
                     <h5 class="reset--margin">Blocks</h5>
                     <p>Bond's block layouts utilize the latest features of the CSS grid syntax. Easily create block grids with simple classes like 'three-up' or 'four-up'. Additionally, each block contains a stack of elements that suit news and blog grids perfectly such as excerpts, CTA's, tags, and more.</p>
@@ -725,7 +888,7 @@
             </section>
 
             <!-- Accordions -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--accordions">
                 <div class="container--small">
                     <h5 class="reset--margin">Accordions</h5>
                     <p>Rapidly create an FAQ section with Bond's built-in accordions!</p>
@@ -759,7 +922,7 @@
             </section>
 
             <!-- Tabs -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--tabs">
                 <div class="container--small">
                     <h5 class="reset--margin">Tabs</h5>
                     <br>
@@ -785,7 +948,7 @@
             </section>
 
             <!-- Partners List -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--partners">
                 <div class="container--small">
                     <h5 class="reset--margin">Partner Groups</h5>
                     <p>Many websites require a method to display sponsors, partners or supporters. With Bond, it's as easy as including the Partners Group component.</p>
@@ -823,7 +986,7 @@
             </section>
 
             <!-- Breadcrumbs -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--breadcrumbs">
                 <div class="container--small">
                     <h5 class="reset--margin">Breadcrumbs</h5>
                     <p>Show your users exactly where they are with breadcrumbs. With Bond, there's no need to add separate HTML elements for dividers; it's built right into the default styling.</p>
@@ -837,7 +1000,7 @@
             </section>
 
             <!-- Dialog Trigger -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--dialogs">
                 <div class="container--small">
                     <h5 class="reset--margin">Dialogs and Modals</h5>
                     <p>Rapidly create confirmation modals, in-context forms, and more with Bond's dialog component.</p>
@@ -846,7 +1009,7 @@
             </section>
 
             <!-- Photo Gallery -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--galleries">
                 <div class="container--small">
                     <h5 class="reset--margin">Photo Galleries</h5>
                     <p>Custom photo galleries are easy to implement with Bond. Clicking a thumbnail opens a pre-styled, full-screen gallery that supports multiple photo sizes and orientations with Slick carousel.</p>
@@ -873,7 +1036,7 @@
             </section>
 
             <!-- Page Title (Subpage Banner) -->
-            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920?image=440');">
+            <section class="page-title bg-size--cover bg-pos--center" style="background-image:url('https://picsum.photos/1920?image=440');" id="section--page-title">
                 <div class="page-title__container container--medium">
                     <h6 class="page-title__subtitle">Subtitle</h6>
                     <h1 class="page-title__title">Page Title</h1>
@@ -887,12 +1050,12 @@
             </section>
 
             <!-- Sticky Helper -->
-            <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;">
+            <div class="test-bar sticky" style="padding: 1rem;border: 1px solid #ccc;border-width: 1px 0;background: white;" id="section--sticky">
                 <p style="margin:0;">This is a sticky bar which uses the position: sticky spec from CSS3. Apply a 'sticky' class to any statically positioned element.</p>
             </div>
 
             <!-- Forms -->
-            <section class="page-section">
+            <section class="page-section" id="section--forms">
                 <div class="container--medium">
                     <form>
                         <div class="gform_heading">
@@ -987,7 +1150,7 @@
                                     <h2 class="gsection_title">How Can We Reach You?</h2>
                                     <div class="gsection_description">We would love to chat with you.</div>
                                 </li>
-                                <li class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                <li class="gfield field_sublabel_below field_description_below gfield_visibility_visible" id="section--datepicker">
                                     <label class="gfield_label" for="input_596_11">Preferred Method of Contact</label>
                                     <div class="ginput_container ginput_container_select">
                                         <select name="input_11" id="input_596_11" onchange="gf_apply_rules(596,[5,12]);" class="medium gfield_select" tabindex="10" aria-invalid="false">
@@ -1049,7 +1212,7 @@
             </section>
 
             <!-- Filters -->
-            <section class="page-section reset--padding--top">
+            <section class="page-section reset--padding--top" id="section--filters">
                 <div class="container--medium">
                     <h4 class="filters__title reset--margin--bottom">Filters</h4>
                     <p class="filters__content">The filters component utilizes Select2 for searchability and multi-select features.</p>
@@ -1094,7 +1257,7 @@
             </section>
 
             <!-- Footer -->
-            <footer class="main-footer">
+            <footer class="main-footer" id="section--footer">
                 <div class="main-footer__container">
                     <div class="main-footer__group flex--justify-between flex--align-middle">
                         <!-- Quick Links -->
@@ -1292,6 +1455,9 @@
 
         <!-- Component JS: Gallery -->
         <script defer src="assets/js/components/gallery/gallery.js"></script>
+
+        <!-- Component JS: Demo Nav -->
+        <script defer src="assets/js/components/bond/demo-nav.js"></script>
 
     </body>
 

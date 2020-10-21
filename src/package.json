@@ -13,7 +13,12 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.7.6",
+        "browser-sync": "^2.26.13",
         "cssnano": "^4.1.10",
+        "gulp": "^4.0.2",
+        "gulp-file-include": "^2.2.2",
+        "gulp-postcss": "^9.0.0",
+        "gulp-watch": "^5.0.1",
         "node-notifier": "^7.0.0",
         "npm-watch": "latest",
         "postcss-cli": "^7.1.1",
