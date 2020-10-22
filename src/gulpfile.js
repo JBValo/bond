@@ -1,35 +1,33 @@
-const gulp = require('gulp'),
-      postcss = require('gulp-postcss'),
-      cssImport = require('postcss-import'),
-      mixins = require('postcss-mixins'),
-      nested = require('postcss-nested'),
-      cssvars = require('postcss-simple-vars'),
-      autoprefixer = require('autoprefixer'),
-      colormod = require('postcss-color-mod-function'),
-      respType = require('postcss-responsive-type'),
-      cssnano = require('cssnano'),
-      fileinclude = require('gulp-file-include'),
-      watch = require('gulp-watch'),
-      browserSync = require('browser-sync').create();
+var cssImport = require('postcss-import'),
+    postcss = require('gulp-postcss'),
+    gulp = require('gulp'),
+    mixins = require('postcss-mixins'),
+    nested = require('postcss-nested'),
+    cssvars = require('postcss-simple-vars'),
+    autoprefixer = require('autoprefixer'),
+    colormod = require('postcss-color-mod-function'),
+    respType = require('postcss-responsive-type'),
+    cssnano = require('cssnano'),
+    fileinclude = require('gulp-file-include'),
+    watch = require('gulp-watch'),
+    browserSync = require('browser-sync').create();
 
-gulp.task('styles', function(done){
-  gulp.src('assets/post/*.css')
-      .pipe(postcss([cssImport, mixins, nested, cssvars, autoprefixer, colormod, respType, cssnano]))
+var postFiles = './assets/post/*.css',
+    cssOutputPath = '../dist/assets/css';
+
+gulp.task('css', function(done){
+  gulp.src(postFiles)
+      .pipe(postcss([cssImport, mixins, nested, autoprefixer, cssvars, colormod, respType, cssnano]))
       .on('error', function(errorInfo){
         console.log(errorInfo.toString());
         this.emit('end');
       })
-      .pipe(gulp.dest('../dist/assets/css'))
-  done();
-});
-
-gulp.task('css', gulp.series('styles'), function(done){
-  gulp.src('../dist/assets/css/style.css')
+      .pipe(gulp.dest(cssOutputPath))
   done();
 });
 
 gulp.task('html', function(done){
-  gulp.src(['*.html'])
+  gulp.src(['./*.html'])
   .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -52,8 +50,8 @@ gulp.task('watch', function(done){
     }
   });
 
-  gulp.watch('*.html', gulp.series('html','browserSyncReload'));
-  gulp.watch('assets/post/**/*.css', gulp.series('css', 'browserSyncReload'));
+  gulp.watch('./*.html', gulp.series('html','browserSyncReload'));
+  gulp.watch('./assets/post/**/*.css', gulp.series('css','browserSyncReload'));
 
   done();
 
